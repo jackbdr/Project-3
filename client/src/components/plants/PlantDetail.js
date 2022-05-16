@@ -3,7 +3,7 @@
 
 const PlantDetail = () => {
   return (
-    <h1>PlantDetail</h1>
+    <h1>Plant Details</h1>
   )
 }
 

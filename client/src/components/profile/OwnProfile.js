@@ -1,10 +1,14 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Accordion from 'react-bootstrap/Accordion'
+import Badge from 'react-bootstrap/Badge'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+// import Carousel from 'react-multi-carousel';
 
 const OwnProfile = () => {
+
   return (
     <>
       <Container id='profilePage' className='mt-4'>
@@ -15,18 +19,36 @@ const OwnProfile = () => {
           <p>Date Joined: 16/05/2022</p>
           </Col>
           <Col id='profileinfo'>
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-  <Tab eventKey="plantCollection" title="Number of plants in collection">
-    <p>4</p>
-  </Tab>
-  <Tab eventKey="profile" title="Profile">
-    
-  </Tab>
-</Tabs>
-            
-            
-            <h3>Number of Plants in Collection:</h3>
-            <p>3</p>
+          <Accordion flush>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Plants in Collection<span><Badge>3</Badge></span></Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>
+                Big Plant
+                  </li>
+                  <li>
+                Small Plant
+                  </li>
+                  <li>
+                Medium Plant
+                  </li>
+                </ul>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>Plants Added<span><Badge>1</Badge></span></Accordion.Header>
+                <Accordion.Body>
+                  Big Plant
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>Ratings<span><Badge>0</Badge></span></Accordion.Header>
+                <Accordion.Body>
+                  
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
           </Col>
           <Col id='following'>
           <div>
@@ -39,6 +61,17 @@ const OwnProfile = () => {
           </div>
           </Col>
         </Row>
+        <h2>Comments</h2>
+        <div id='added_plants'>
+          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
+            <Tab eventKey="bigPlant" title="Big Plant">
+            I really like the big plant. It's a lot bigger than I thought it would be!
+            </Tab>
+            <Tab eventKey="cheesePlant" title="Cheese Plant">
+              Kinda does smell like cheese!
+            </Tab>
+          </Tabs>
+        </div>
       </Container>
     </>
   )

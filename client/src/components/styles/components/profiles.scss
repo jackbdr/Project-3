@@ -23,6 +23,9 @@ body{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      span{
+        margin-left: 20px;
+      }
   }
 
   #profileimg{
@@ -36,12 +39,6 @@ body{
     }
   }
   
-  .row{
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  
   ul{
     padding: 0;
     li{
@@ -52,6 +49,7 @@ body{
   #following{
     text-align: center;
     width: 30%;
+    margin-top: 50px;
     div{
       background-color: #f0f0f0;
       width: 100%;
@@ -63,5 +61,11 @@ body{
       }
     }
   }
-
+  h2 {
+    text-align: center;
+  }
+  #added_plants{
+    width: 50%;
+    margin: 0 auto;
+  }
 }

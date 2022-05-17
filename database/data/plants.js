@@ -4,7 +4,7 @@ export default [
     sciName: 'Monstera deliciosa',
   },
   {
-    name: 'snake plant',
+    name: 'snakes plant',
     sciName: 'Dracaena trifasciata',
   }
 ] 

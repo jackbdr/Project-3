@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { showPlants, showSinglePlant } from '../controllers/AllPlants.js'
+import { showPlants, showSinglePlant, changePlant, deletePlant } from '../controllers/AllPlants.js'
 
 const router = express.Router()
 
@@ -9,7 +9,8 @@ router.route('/plants')
 
 router.route('/plants/:id')
   .get(showSinglePlant)
-
+  .put(changePlant)
+  .delete(deletePlant)
 
 
 export default router

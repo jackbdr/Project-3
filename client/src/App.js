@@ -20,8 +20,6 @@ import OwnProfile from "./components/profile/OwnProfile"
 const App = () => {
 
 
-
-
   return (
     <main className="site-wrapper">
       <BrowserRouter>

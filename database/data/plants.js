@@ -97,5 +97,71 @@ export default [
     description: 'Dracaena trifasciata is a species of flowering plant in the family Asparagaceae, native to tropical West Africa from Nigeria east to the Congo. It is most commonly known as the snake plant, Saint George\'s sword, mother-in-law\'s tongue, and viper\'s bowstring hemp, among other names. Until 2017, it was known under the synonym Sansevieria trifasciata.',
     priceRange: '£10-100',
     buyLink: '',
+  },
+  {
+    name: 'Money Tree Plant',
+    sciName: 'Pachira Aquatica',
+    image: '',
+    origin: 'South & Central America',
+    watering: 'Thoroughly water the plant once the soil becomes dry and remove excess water from the pot tray. During the winter the pachira will slow it\'s growth right down and will not need to be watered anywhere near as much like in spring and summer. Do not over-water or have the plant in a pot which can become waterlogged.',    
+    temp: '18-24°C',
+    tempDetail: 'No lower than 10°C',
+    light: 'Try your best to provide the plant with as much light as possible - without direct sunlight which can scorch the leaves.',
+    fertilizer: 'A balanced liquid fertilizer diluted should be fed to the plant every 2 weeks which will encourage growth and healthy leaves. Feed from spring and stop just before winter or when growth really slows down, whichever comes first.',
+    pruning: 'You can prune the tree down to the size you find suitable if the foliage becomes overgrown. Leave half inch of stem above a node and petiole with a leaf attached when cutting a stem.',
+    problems: [
+      {
+        prob1: 'Leaves yellowing and dropping can be caused by over feeding or over watering.',
+        prob2: 'Leaves turning brown could be caused by dry air, too much or too little light or water, or even cold drafts.',
+        prob3: 'Leaves dropping can be caused by sudden changes in temperature and lighting conditions becoming lower.',
+      }
+    ],
+    solutions: [
+      {
+        sol1: 'Stop both activities and resume watering once the soil has become dry.',
+        sol2: 'A process of elimination is the best solution for this.',
+        sol3: 'You may need to change the location of the plant.',
+      }
+    ],
+    maxGrowth: '3 metres',
+    annualGrowth: '20-50cm',
+    poisonous: 'Non toxic for cats and dogs.',
+    easeRating: 4,
+    description: 'The Pachira aquatica has many common names including Mexican fortune tree, braided money tree, malabar chestnut, guiana chestnut and a few others. Growing in it\'s natural habitat - this native to south and central America plant grows in swamps up to 20 metres tall, which is surprising considering how well it\'s adapted to become an easy to care for indoor tree.',
+    priceRange: '£10-150',
+    buyLink: '',
+  },
+  {
+    name: 'Madagascar Dragon Tree',
+    sciName: 'Dracaena Marginata',
+    image: '',
+    origin: 'Madagascar',
+    watering: 'Keeping the soil slightly moist is the best indicator of correct watering. During the winter, like most plants they need much less.',    
+    temp: '18-24°C',
+    tempDetail: 'They will live through much colder temperatures during winter, but keeping them in optimal health requires the room to be no less than 10°C.',
+    light: 'Bright conditions with shade is suitable for the dragon plant. Direct sunlight will damage the leaves.',
+    fertilizer: 'You can remove old leaves that are ready to fall from the bottom of the trunk which will make it look more attractive. And, cut back stems to keep the plant to the size you want.',
+    pruning: 'You can remove old leaves that are ready to fall from the bottom of the trunk which will make it look more attractive. And, cut back stems to keep the plant to the size you want.',
+    problems: [
+      {
+        prob1: 'Brown leaf tips could be caused by dry air, cold drafts or under watering.',
+        prob2: 'Brown spots on leaves could be caused by a lack of water.',
+        prob3: 'Bottom leaves becoming yellow.',
+      }
+    ],
+    solutions: [
+      {
+        sol1: 'You should check room humidity and water levels, then see if there are any drafts to identify the cause.',
+        sol2: 'The plant should be watered more often and keep the soil slightly moist.',
+        sol3: 'This is normal - the plant is shedding lower leaves to allow new growth.',
+      }
+    ],
+    maxGrowth: '3 metres',
+    annualGrowth: '10-30cm',
+    poisonous: 'Mildly toxic for cats and dogs.',
+    easeRating: 4,
+    description: 'The Madagascar Dragon Tree is most definitely one of the easiest indoor plants to grow and maintain. Dracaena Marginata trees can grow up to 6ft high indoors, and they\'re slow growing.',
+    priceRange: '£10-60',
+    buyLink: '',
   }
 ] 

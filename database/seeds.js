@@ -11,7 +11,7 @@ const seedDatabase = async () => {
     console.log(console.log('🚀 Database connected'))
 
     // Remove data from database
-    await mongoose.conneection.db.dropDatabase() 
+    await mongoose.connection.db.dropDatabase() 
     console.log('👍 Database dropped')
 
     // Add seeds data back in
@@ -19,7 +19,7 @@ const seedDatabase = async () => {
     console.log(`🌱 Database seeded with ${plantsAdded.length} plants`)
 
     // Close connection
-    await mongoose.connecvtion.close()
+    await mongoose.connection.close()
     console.log('👋 Bye')
 
   } catch (err) {

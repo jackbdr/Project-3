@@ -1,6 +1,6 @@
 import Select from 'react-select'
 
-
+// import Camel from '../../../public/images/camel.png'
 
 const PlantOverview = () => {
 
@@ -27,17 +27,19 @@ const PlantOverview = () => {
         </select>
       </div>
       <div>
+        <div className='react-select'>
         <Select
           options={options}
           isMulti
           // onChange={(selected) => handleMultiChange(selected, 'findMyPlant')}
         />
+        </div>
         <div>
           <div>
-            <img src='../images/camel.png' alt='camel'></img>
+            <img src='../../../public/images/camel.png' alt='camel'></img>
           </div>
           <div className="grid-wrapper">
-            
+
           </div>
         </div>
       </div>

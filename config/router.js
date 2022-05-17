@@ -6,6 +6,8 @@ const router = express.Router()
 
 router.route('/plants')
   .get(showPlants)
+
+router.route('/plants/:id')
   .get(showSinglePlant)
 
 

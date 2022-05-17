@@ -15,6 +15,7 @@ export const showPlants = async(req, res) => {
 // Get Single Plants
 export const showSinglePlant = async(req, res) => {
   try {
+    console.log(req.params)
     const { id } = req.params
     const plant = await Plant.findById(id)
     if (!plant) throw new Error('Plant not found')

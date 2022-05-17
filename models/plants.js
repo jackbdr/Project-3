@@ -10,4 +10,4 @@ const plantSchema = new mongoose.Schema({
 
 
 
-export default mongoose.model('Plants', plantSchema)
+export default mongoose.model('Plant', plantSchema)

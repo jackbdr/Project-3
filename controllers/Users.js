@@ -4,27 +4,30 @@ import User from '../models/users.js'
 // ? GET REQUESTS
 // View Profile
 export const viewProfile = async(req, res) => {
-  const { id } = req.params
+  const { username } = req.params
+  const profileToView = await User.findOne({ username: username })
+  return res.status(200).json(profileToView)
 }
 
 // ? PUT REQUESTS
 // Edit Profile
-export const editProfile = async() => {
-
-}
-
-
-
-export const loginUser = async(req, res) => {
-  const { username, password } = req.body
+export const editProfile = async(req, res) => {
+  const { username } = req.params
+  const { body: editUser } = req
   try {
-    const userLogin = await User.findOne({ username: username })
-    if (!userLogin || !userLogin.validatePassword(password)) throw new Error
+    const profileToEdit = await User.findOne({ username: username })
+    if (req.verifiedUser.username !== profileToEdit.username){
+      console.log('not the same')
+      throw new Error('Unauthorised')
+    }
+    
+    Object.assign(profileToEdit, editUser)
 
-    const token = jwt.sign({ sub: userLogin._id }, process.env.SECRET, { expiresIn: '1h' })
-    return res.status(200).json({ message: `Welcome back ${userLogin.username}`, token: token })
+    await profileToEdit.save()
+
+    return res.status(200).json(profileToEdit)
   } catch (error) {
-    return res.status(422).json({ message: 'Unauthorised' })
+    return res.status(422).json({ message: 'not working' })
   }
-
+  
 }

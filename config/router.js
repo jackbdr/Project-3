@@ -1,6 +1,7 @@
 import express from 'express'
 
 import { showPlants, showSinglePlant, changePlant, deletePlant } from '../controllers/AllPlants.js'
+import { secureRoute } from './secureRoute.js'
 import { registerUser, loginUser } from '../controllers/Auth.js'
 import { editProfile, viewProfile } from '../controllers/Users.js'
 
@@ -11,13 +12,9 @@ router.route('/plants')
 
 router.route('/plants/:id')
   .get(showSinglePlant)
-  .put(changePlant)
-  .delete(deletePlant)
+  .put(secureRoute, changePlant)
+  .delete(secureRoute, deletePlant)
 
-router.route('/randomPlant')
-  .get()
-
-  
 // User Features
 router.route('/register')
   .post(registerUser)
@@ -25,14 +22,9 @@ router.route('/register')
 router.route('/login')
   .post(loginUser)
 
-router.route('/profile/:id')
-  .get(viewProfile)
-  .put(editProfile)
-
-
-
-// Get random plant, edit profile, get profile
-
+router.route('/profile/:username')
+  .get(secureRoute, viewProfile)
+  .put(secureRoute, editProfile)
 
 
 export default router

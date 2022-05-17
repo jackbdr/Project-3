@@ -23,7 +23,6 @@ export const showSinglePlant = async(req, res) => {
   }
 }
 
-
 // ? PUT REQUESTS
 // Edit a Plant
 export const changePlant = async(req, res) => {

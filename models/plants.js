@@ -2,7 +2,6 @@ import mongoose from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
 
-
 const plantSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   sciName: { type: String, required: true, unique: true },
@@ -39,6 +38,7 @@ const plantSchema = new mongoose.Schema({
   buyLink: { type: String, required: true },
   //addedBy: { type: mongoose.Schema.objectId, ref: 'User', required: true },
   id: false,
+  seededSays: { type: String, required: true },
 })
 
 

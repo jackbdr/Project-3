@@ -1,5 +1,22 @@
-section {
-  .filter {
-    text-align: center;
+.plants-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 65%;
+  margin: 0 auto;
+  .plant{
+    width: calc(100% / 4 - 12.5px);
+    .plant-image{
+      text-align: center;
+      img{
+        max-width: 100%;
+        max-height: 220px;
+        // object-fit: cover;
+        // object-position: 0 0;
+      }
+    }
+    .plant-name{
+      text-align: center;
+    }
   }
 }

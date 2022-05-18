@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
 const PlantOverview = () => {
 
-  useEffect(() => {
+  const [plants, setPlants] = useState([])
 
+  useEffect(() => {
     const getPlants = async () => {
       try {
-        const response = await axios.get('/api/plants')
-        console.log(response)
+        const { data } = await axios.get('/api/plants')
+        setPlants(data)
+        console.log(data[0].image)
       } catch (err) {
         console.log(err)
       }
@@ -20,21 +22,20 @@ const PlantOverview = () => {
 
   return (
     <section>
-      <div className="filter">
-        <input type="text" placeholder="Search..." id="search" />
-        <select className="sort-by">
-          <option value="all">All</option>
-          <option value="price">Price: low to high</option>
-          <option value="care">Ease of care</option>
-          <option value="clout">Most popular</option>
-        </select>
-      </div>
-      <div>
-        <div>
-          <div className="grid-wrapper">
-            <img src={'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652882951/plant_pngs/snake_xexssl.png'} alt='snake plant' />
-          </div>
-        </div>
+      <div className='plants-wrapper'>
+        {plants.map(plant => {
+          const { name, image, _id } = plant
+          return (
+            <div className='plant' key={_id}>
+              <div className='plant-image'>
+                <img src={image} alt={name} />
+              </div>
+              <div className='plant-name'>
+                <p>{name}</p>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </section >
   )

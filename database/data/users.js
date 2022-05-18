@@ -1,5 +1,11 @@
 export default [
   {
+    username: 'admin',
+    email: 'admin@mail.com',
+    password: '100',
+    passwordConfirmation: '100',
+  },
+  {
     username: 'jdkuligowski',
     email: 'james@mail.com',
     password: '123',

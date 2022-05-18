@@ -8,22 +8,26 @@ const plantSchema = new mongoose.Schema({
   sciName: { type: String, required: true, unique: true },
   image: { type: String, required: true },
   origin: { type: String, required: true },
-  watering: { type: String, required: true },
-  temp: { type: String, required: true },
-  tempDetail: { type: String, required: true },
-  light: { type: String, required: true },
-  fertilizer: { type: String, required: true },
-  pruning: { type: String, required: true },
-  problems:
-    { prob1: { type: String },
-      prob2: { type: String },
-      prob3: { type: String },
-    },
-  solutions: [ 
+  wateringLevel: { type: String, required: true },
+  wateringCategory: { type: String, required: true },
+  tempRange: { type: String, required: true },
+  tempCategory: { type: String, required: true },
+  lightType: { type: String, required: true },
+  brightType: { type: String, required: true },
+  problems: [
+    { brownLeaves: { type: String },
+      yellowLeaves: { type: String },
+      blackLeaves: { type: String },
+      baseRot: { type: String },
+      leafWilting: { type: String },
+      bugs: { type: String },
+      leafLoss: { type: String },
+    }
+  ],
+  otherProblems: [ 
     {
-      sol1: { type: String },
-      sol2: { type: String },
-      sol3: { type: String },
+      problem: { type: String },
+      solution: { type: String },
     }
   ],
   maxGrowth: { type: String, required: true },

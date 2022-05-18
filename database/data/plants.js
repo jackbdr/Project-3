@@ -2,7 +2,7 @@ export default [
   {
     name: 'Broadleaf Lady Palm',
     sciName: 'Rhapis Excelsa',
-    image: '',
+    image: ' ',
     origin: 'China',
     watering: 'Rhapis excelsa demands soil that is constantly moist, but never soggy. Do not permit standing water to collect, as it will rot the root system.',
     temp: '-6-37°C',
@@ -10,13 +10,13 @@ export default [
     light: 'Enjoys indirect sunlight. Full sunlight will injur the leaves.',
     fertilizer: 'This plant rarely requires fertilizer',
     pruning: 'Should be carried out as required to prevent plant from becoming overgrown.',
-    problems: [
+    problems: 
       {
         prob1: 'Lower leaves become discoloured with age.',
         prob2: 'Brown leaves are caused by extreme heat or lack of watering.',
         prob3: 'Black leaf tips are associated with over watering or over fertilizing.',
       }
-    ],
+    ,
     solutions: [
       {
         sol1: 'These should be pruned for the plants health.',
@@ -30,12 +30,12 @@ export default [
     easeRating: 4,
     description: 'The Broadleaf Lady Palm is a multi-stemmed palm plant that has become increasingly popular around the world. The plant has proven successful in removing airborne toxins within the home, including ammonia, formaldehyde, xylene, and carbon dioxide. Unlike other plants, who simply make oxygen, Rhapis excelsa will actually make the air in your home cleaner and safer to breathe. It is widely known as one of the easiest house plants to grow in the world. Distinct in nature, this palm survives in households around the world, and has been grown as a house plant for over 500 years in Japan. Indoor plants are kept in check through pruning.',
     priceRange: '£30-120',
-    buyLink: '',
+    buyLink: ' ',
   },
   {
     name: 'Cheese Plant',
     sciName: 'Monstera Deliciosa',
-    image: '',
+    image: ' ',
     origin: 'Central America',
     watering: 'Between watering times allow the soil to become dry to the touch within the top couple of inches or so of soil',
     temp: '18-27°C',
@@ -63,12 +63,12 @@ export default [
     easeRating: 5,
     description: 'Monstera deliciosa, the Swiss cheese plant or split-leaf philodendron is a species of flowering plant native to tropical forests of southern Mexico, south to Panama. It has been introduced to many tropical areas, and has become a mildly invasive species in Hawaii, Seychelles, Ascension Island and the Society Islands. It is very widely grown in temperate zones as a houseplant.',
     priceRange: '£10-100',
-    buyLink: '',
+    buyLink: ' ',
   },
   {
     name: 'Snake Plant',
     sciName: 'Dracaena trifasciata',
-    image: '',
+    image: ' ',
     origin: 'West Africa',
     watering: 'Because this plant is a succulent it stores water within its foliage, so it is not necessary to keep the soil damp. Water from spring to autumn when the soil becomes dry to the touch and during the winter only once a month. Be careful not to over water as this can cause the root and base of the plant to rot.',    
     temp: '15-24°C',
@@ -96,12 +96,12 @@ export default [
     easeRating: 4,
     description: 'Dracaena trifasciata is a species of flowering plant in the family Asparagaceae, native to tropical West Africa from Nigeria east to the Congo. It is most commonly known as the snake plant, Saint George\'s sword, mother-in-law\'s tongue, and viper\'s bowstring hemp, among other names. Until 2017, it was known under the synonym Sansevieria trifasciata.',
     priceRange: '£10-100',
-    buyLink: '',
+    buyLink: ' ',
   },
   {
     name: 'Money Tree Plant',
     sciName: 'Pachira Aquatica',
-    image: '',
+    image: ' ',
     origin: 'South & Central America',
     watering: 'Thoroughly water the plant once the soil becomes dry and remove excess water from the pot tray. During the winter the pachira will slow it\'s growth right down and will not need to be watered anywhere near as much like in spring and summer. Do not over-water or have the plant in a pot which can become waterlogged.',    
     temp: '18-24°C',
@@ -129,12 +129,12 @@ export default [
     easeRating: 4,
     description: 'The Pachira aquatica has many common names including Mexican fortune tree, braided money tree, malabar chestnut, guiana chestnut and a few others. Growing in it\'s natural habitat - this native to south and central America plant grows in swamps up to 20 metres tall, which is surprising considering how well it\'s adapted to become an easy to care for indoor tree.',
     priceRange: '£10-150',
-    buyLink: '',
+    buyLink: ' ',
   },
   {
     name: 'Madagascar Dragon Tree',
     sciName: 'Dracaena Marginata',
-    image: '',
+    image: ' ',
     origin: 'Madagascar',
     watering: 'Keeping the soil slightly moist is the best indicator of correct watering. During the winter, like most plants they need much less.',    
     temp: '18-24°C',
@@ -162,6 +162,6 @@ export default [
     easeRating: 4,
     description: 'The Madagascar Dragon Tree is most definitely one of the easiest indoor plants to grow and maintain. Dracaena Marginata trees can grow up to 6ft high indoors, and they\'re slow growing.',
     priceRange: '£10-60',
-    buyLink: '',
+    buyLink: ' ',
   }
 ] 

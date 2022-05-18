@@ -2,7 +2,9 @@ import express from 'express'
 import mongoose from 'mongoose'
 import router from './config/router.js'
 import 'dotenv/config'
+import cors from 'cors'
 
+// const cors = require('cors')
 
 const logger = (req, res, next) => {
   console.log(`🚨 - Incoming request on ${req.method} - ${req.url}`)
@@ -12,6 +14,7 @@ const logger = (req, res, next) => {
 
 const startServer = async () => {
   const app = express()
+  app.use(cors)
   app.use(logger)
   app.use(express.json())
   app.use(router)

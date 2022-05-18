@@ -31,8 +31,88 @@ const PlantDetail = () => {
 
   return (
     <>
+      {plants ?
+        <section className="overall-container">
+          <section className="top page">
+            <section className="content">
+              <div className="top-img-reel">
+
+              </div>
+              <div className="key-content">
+                <h1>{plants.name}</h1>
+                <h3>{plants.sciName}</h3>
+                <div className="description">
+                  <h4>Description</h4>
+                  <p>{plants.description}</p>
+                </div>
+              </div>
+            </section>
+            <section className="ratings">
+              <div className="seeded-rating">
+                <h4>Seeded. Ease Rating</h4>
+                <p>{plants.easeRating}</p>
+              </div>
+              <div className="care-ratings">
+                <div className="rating-logo">
+                  <img src=" " alt="water-logo" />
+                  <p>{plants.waterCategory} water requirement</p>
+                  <small>{plants.wateringLevel}</small>
+                </div>
+                <div className="rating-logo">
+                  <img src=" " alt="temp-logo" />
+                  <p>{plants.tempCategory} temperature range</p>
+                  <small>{plants.tempRange}</small>
+                </div>
+                <div className="rating-logo">
+                  <img src=" " alt="light-logo" />
+                  <p>{plants.lightType} light please</p>
+                </div>
+                <div className="rating-logo">
+                  <img src=" " alt="bright-logo" />
+                  <p>{plants.lightType} brightness for me</p>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section className="middle-section">
+            <img src=' ' alt='ivy separator' />
+          </section>
+          <section className="bottom-section">
+            <section className="bottom-content">
+              <div className="bottom-image">
+                <img src=' ' alt={plants.name} />
+              </div>
+              <div className="bottom-detail">
+                <div className="details">
+                  <div className="detail-logo">
+                    <img src=" " alt="origin-logo" />
+                    <p>{plants.origin}</p>
+                  </div>
+                  <div className="detail-logo">
+                    <img src=" " alt="max-logo" />
+                    <p>{plants.maxGrowth}</p>
+                  </div>
+                  <div className="detail-logo">
+                    <img src=" " alt="yearly-logo" />
+                    <p>{plants.annualGrowth}</p>
+                  </div>
+                  <div className="detail-logo">
+                    <img src=" " alt="price-logo" />
+                    <p>{plants.priceRange}</p>
+                  </div>
+                  <div className="detail-logo">
+                    <img src=" " alt="toxic-logo" />
+                    <p>{plants.poisonous}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+        :
+        <h2>{errors ? 'something went wrong' : ''}</h2>}
     </>
-)
+  )
 }
 
 export default PlantDetail

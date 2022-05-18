@@ -3,6 +3,7 @@ import Plant from '../models/plants.js'
 // ?GET REQUESTS
 // Get All Plants
 export const showPlants = async(req, res) => {
+  console.log('hit the showplants')
   try {
     const plants = await Plant.find()
     return res.status(200).json(plants)

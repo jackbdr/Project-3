@@ -33,7 +33,7 @@ const plantSchema = new mongoose.Schema({
   description: { type: String, required: true },
   priceRange: { type: String, required: true },
   buyLink: { type: String, required: true },
-  addedBy: { type: mongoose.Schema.objectId, ref: 'User', required: true },
+  // addedBy: { type: mongoose.Schema.objectId, ref: 'User', required: true },
   id: false,
 })
 

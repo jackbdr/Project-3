@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
 userSchema.virtual('plantsAdded', {
   ref: 'Plant',
   localField: '_id',
-  foreignField: 'owner',
+  foreignField: 'addedBy',
 })
 
 // userSchema.virtual('favourited', {

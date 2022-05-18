@@ -1,18 +1,21 @@
-import Select from 'react-select'
+import React, { useEffect } from 'react'
+import axios from 'axios'
 
-// import Camel from '../../../public/images/camel.png'
 
 const PlantOverview = () => {
 
-  const options = [
-    { value: 'petsafe', label: 'Safe for pets' },
-    { value: 'small-in', label: 'Small Indoor' },
-    { value: 'medium-in', label: 'Medium Indoor' },
-    { value: 'large-in', label: 'Large Indoor' },
-    { value: 'small-out', label: 'Small Outdoor' },
-    { value: 'medium-out', label: 'Medium Outdoor' },
-    { value: 'large-out', label: 'Large Outdoor' }
-  ]
+  useEffect(() => {
+
+    const getPlants = async () => {
+      try {
+        const response = await axios.get('/api/plants')
+        console.log(response)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getPlants()
+  }, [])
 
 
   return (
@@ -20,26 +23,16 @@ const PlantOverview = () => {
       <div className="filter">
         <input type="text" placeholder="Search..." id="search" />
         <select className="sort-by">
-          <option selected value="all">All</option>
+          <option value="all">All</option>
           <option value="price">Price: low to high</option>
           <option value="care">Ease of care</option>
           <option value="clout">Most popular</option>
         </select>
       </div>
       <div>
-        <div className='react-select'>
-        <Select
-          options={options}
-          isMulti
-          // onChange={(selected) => handleMultiChange(selected, 'findMyPlant')}
-        />
-        </div>
         <div>
-          <div>
-            <img src='../../../public/images/camel.png' alt='camel'></img>
-          </div>
           <div className="grid-wrapper">
-
+            <img src={'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652882951/plant_pngs/snake_xexssl.png'} alt='snake plant' />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import router from './config/router.js'
 import 'dotenv/config'
+import cors from 'cors'
 
 
 const logger = (req, res, next) => {
@@ -14,7 +15,8 @@ const startServer = async () => {
   const app = express()
   app.use(logger)
   app.use(express.json())
-  app.use(router)
+  app.use('/api', router)
+  app.use(cors)
 
   await mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
   

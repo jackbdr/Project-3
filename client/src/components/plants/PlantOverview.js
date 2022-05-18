@@ -27,11 +27,11 @@ const PlantOverview = () => {
           const { name, image, _id } = plant
           return (
             <div className='plant' key={_id}>
-              <div className='plant-image'>
-                <img src={image} alt={name} />
-              </div>
               <div className='plant-name'>
                 <p>{name}</p>
+              </div>
+              <div className='plant-image'>
+                <img src={image} alt={name} />
               </div>
             </div>
           )

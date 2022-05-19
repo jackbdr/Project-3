@@ -35,24 +35,34 @@ const PlantOverview = () => {
 
   return (
     <section>
-      <div className='plants-wrapper'>
-        {plants.map(plant => {
-          const { name, image, _id } = plant
-          return (
-            <div className='plant' key={_id}>
-              <div className='plant-name'>
-                <p>{name}</p>
-              </div>
-              <div className='plant-image'>
-                <img src={image} alt={name} />
-              </div>
-            </div>
-          )
-        })}
-      </div>
+      {errors ?
+        <p>Sorry, we had trouble fetching the data!</p>
+        :
+        <Container className='plants-wrapper'>
+          <Row>
+            {plants.map(plant => {
+              const { _id, name, image, sciName } = plant
+              return (
+                <Col md='4' lg='3' className='plant mb-4' key={_id}>
+                  <Link to={`/plants/${_id}`}>
+                    <Card>
+                      <Card.Img className='card-img' variant='top' src={image} />
+                      <Card.Body >
+                        <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
+                      </Card.Body>
+                    </Card>
+                  </Link>
+                </Col>
+              )
+            })}
+          </Row>
+        </Container>
+      }
     </section >
   )
 }
+
+
 
 // what's a nicer way of writing 'Price: low to high'
 

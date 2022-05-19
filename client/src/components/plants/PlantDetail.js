@@ -33,10 +33,11 @@ const PlantDetail = () => {
     <>
       {plants ?
         <section className="overall-container">
+          {/* SPLITTING UP THE PAGE INTO SECTIONS FOR SCROLLING - TOP SECTION */}
           <section className="top page">
             <section className="content">
               <div className="top-img-reel">
-
+              <img src='../public/images/cheese.png' alt = {plants.name}/>
               </div>
               <div className="key-content">
                 <h1>{plants.name}</h1>
@@ -74,36 +75,58 @@ const PlantDetail = () => {
               </div>
             </section>
           </section>
+        {/* SMALL MIDDLE SECTION FOR THE PAGE BREAK */}
           <section className="middle-section">
             <img src=' ' alt='ivy separator' />
           </section>
+
+        {/* BOTTOM SECTION CONTAINING ADDITIONAL DETAIL */}
           <section className="bottom-section">
             <section className="bottom-content">
               <div className="bottom-image">
-                <img src=' ' alt={plants.name} />
+                <img src='' alt={plants.name} />
               </div>
               <div className="bottom-detail">
-                <div className="details">
+                <div className="detail-facts">
                   <div className="detail-logo">
                     <img src=" " alt="origin-logo" />
                     <p>{plants.origin}</p>
                   </div>
+                  <hr/>
                   <div className="detail-logo">
                     <img src=" " alt="max-logo" />
                     <p>{plants.maxGrowth}</p>
                   </div>
+                  <hr/>
                   <div className="detail-logo">
                     <img src=" " alt="yearly-logo" />
                     <p>{plants.annualGrowth}</p>
                   </div>
+                  <hr/>
                   <div className="detail-logo">
                     <img src=" " alt="price-logo" />
                     <p>{plants.priceRange}</p>
                   </div>
+                  <hr/>
                   <div className="detail-logo">
                     <img src=" " alt="toxic-logo" />
                     <p>{plants.poisonous}</p>
                   </div>
+                </div>
+                <div className = "problem-section">
+                  {plants.problems.map((problem, index) => {
+                    console.log(problem)
+                    return (
+                      <div className="problem-list" key={index}>
+                     
+                      </div>
+                    )
+
+                  })}
+                </div>
+                <div className = "seeded-says">
+                  <h3>Seeded says</h3>
+                  <p>{plants.seededSays}</p>
                 </div>
               </div>
             </section>

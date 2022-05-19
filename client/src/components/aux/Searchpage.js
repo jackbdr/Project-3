@@ -41,7 +41,6 @@ const [ searchResults, setSearchResults ] = useState([])
   })}
   </div>
   : 
-  
   <h1> Loading... </h1>}
   </>
   )

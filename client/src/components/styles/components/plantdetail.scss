@@ -68,12 +68,16 @@
     height: 400px;
     h1 {
       font-size: 25px;
+      font-weight: bold;
     }
     h3 {
       font-size: 20px;
+      font-style: italic;
     }
     h4 {
-      font-size: 18px;
+      margin-top: 40px;
+      font-size: 16px;
+      font-weight: 600;
     }
     p {
       font-size: 14px;
@@ -89,6 +93,7 @@
       text-align: left;
       h4 {
         font-size: 16px;
+        font-weight: bold;
       }
     }
     .tips-details {
@@ -106,7 +111,8 @@
         width: 70px;
       }
       small {
-        font-size: 12px;
+        font-size: 13px;
+
       }
     }
   }
@@ -124,22 +130,28 @@
     margin-top: 200px;
     height: 90vh;
     align-items: center;
-    .plant-pic {
-      height: 400px;
-      width: 30%;
-    }
     .bottom-content {
       display: flex;
       flex-direction: row;
-      .right-bottom {
-        width:50%;
+        .plant-pic {
+        margin-left: 100px;
+        height: 400px;
+        width: 30%;
+        img {
+          width: 100%;
+        }
       }
-      .facts {
-        .facts-title {
+    .right-bottom {
+        width:50%;
+        margin-left: 60px;
+    }
+    .facts {
+      .facts-title {
           text-align: left;
 
           h4 {
             font-size: 16px;
+            font-weight: bold;
           }
         }
 
@@ -175,6 +187,7 @@
 .seeded-says {
   h3 {
     font-size: 16px;
+    font-weight: bold;
   }
   p {
     padding-right: 50px;
@@ -186,6 +199,7 @@
   .problem-title {
     h4 {
       font-size: 16px;
+      font-weight: bold;
     }
   }
 }

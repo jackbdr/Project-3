@@ -17,6 +17,7 @@ import PlantRandom from "./components/plants/PlantRandom"
 import OwnProfile from "./components/profile/OwnProfile"
 import Searchpage from "./components/aux/Searchpage"
 import Aboutus from "./components/profile/Aboutus"
+import Glossary from "./components/aux/Glossary"
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/aboutus' element={<Aboutus />} />
+          <Route path='/glossary' element={<Glossary />} />
           <Route path='/plants' element={<PlantOverview />} />
           <Route path='/search/:searchInput' element={<Searchpage />} />
           <Route path='/plants/:id' element={<PlantDetail />} />

@@ -26,6 +26,7 @@ const App = () => {
   return (
     <main className="site-wrapper">
       <BrowserRouter>
+      <div className='content-wrap'>
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -44,6 +45,7 @@ const App = () => {
           <Route path='/login' element={<Login />} /> 
           <Route path='*' element={<NotFound />} /> 
         </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </main>

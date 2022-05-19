@@ -31,11 +31,16 @@ const [ searchResults, setSearchResults ] = useState([])
   return(
   <>
   {searchResults ?
-  <div>
+  <div id='search-page'>
+    <h1 id='search-results'>Search Results: </h1>
   {handleSearch().map((plant, index) => {
     return(
-      <div key={index}>
-        {plant.name}
+      <div className='search-wrapper' key={index}>
+        <img src={plant.image} alt={plant.name} />
+        <div className='searchInfo'>
+          <h5>{plant.name}</h5>
+          <p>{plant.sciName}</p>
+        </div>
       </div>
     )
   })}

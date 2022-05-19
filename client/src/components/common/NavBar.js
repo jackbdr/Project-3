@@ -26,7 +26,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <div className='nav_left'>
-        <Navbar.Brand as={Link} to='/'>🌱</Navbar.Brand>
+        <Navbar.Brand as={Link} to='/'><img className='navLogo' src='/images.png/project3Logo.png' alt='Seeded logo' /></Navbar.Brand>
             <Nav.Link className='text-dark' as={Link} to='/aboutus'>About Us</Nav.Link>
             <Nav.Link className='text-dark' as={Link} to='/glossary'>Glossary</Nav.Link>
           </div>

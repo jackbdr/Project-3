@@ -21,6 +21,9 @@ const PlantDetail = () => {
         const { data } = await axios.get(`/api/plants/${id}`)
         setPlants(data)
         console.log(data)
+        console.log(data.problems)
+        console.log(data.problems[0])
+        console.log(data.problems[0][0].problem)
       } catch (err) {
         setErrors(true)
       }
@@ -96,14 +99,14 @@ const PlantDetail = () => {
                   <hr />
                   <div className="rating-logo">
                     <div className="logo-image">
-                      <img src="/images.png/light-bulb.png" alt="light-logo" />
+                      <img src="/images.png/sunny.png" alt="light-logo" />
                     </div>
                     <small>{plants.lightType} sunlight</small>
                   </div>
                   <hr />
                   <div className="rating-logo">
                     <div className="logo-image">
-                      <img src="/images.png/sunny.png" alt="bright-logo" />
+                      <img src="/images.png/light-bulb.png" alt="bright-logo" />
                     </div>
                     <small>{plants.lightType} brightness</small>
                   </div>
@@ -169,7 +172,19 @@ const PlantDetail = () => {
                     <h4>Typical problems</h4>
                   </div>
                   <div className='problem-detail'>
-
+                    <div className = 'problem-icon' id = {plants.problems[0][0].problem}></div>
+                    <h3>{plants.problems[0][0].problem}</h3>
+                    <h3>{plants.problems[0][0].solution}</h3>
+                  </div>
+                  <div className='problem-detail'>
+                    <div className = 'problem-icon' id = {plants.problems[1][0].problem}></div>
+                    <h3>{plants.problems[1][0].problem}</h3>
+                    <h3>{plants.problems[1][0].solution}</h3>
+                  </div>
+                  <div className='problem-detail'>
+                    <div className = 'problem-icon' id = {plants.problems[2][0].problem}></div>
+                    <h3>{plants.problems[2][0].problem}</h3>
+                    <h3>{plants.problems[2][0].solution}</h3>
                   </div>
                 </div>
                 <div className="seeded-says">
@@ -180,17 +195,17 @@ const PlantDetail = () => {
             </section>
             {/* <!--Carousel Wrapper--> */}
             <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <Carousel.Item class="row">
-                      <div class="col"><img src=".." alt="1 slide"/></div>
-                      <div class="col"><img src=".." alt="2 slide"/></div>
-                      <div class="col"><img src=".." alt="3 slide"/></div>
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <Carousel.Item className="row">
+                      <div className="col"><img src=".." alt="1 slide"/></div>
+                      <div className="col"><img src=".." alt="2 slide"/></div>
+                      <div className="col"><img src=".." alt="3 slide"/></div>
                     </Carousel.Item>
-                    <Carousel.Item class="row">
-                      <div class="col"><img src=".." alt="4 slide"/></div>
-                      <div class="col"><img src=".." alt="5 slide"/></div>
-                      <div class="col"><img src=".." alt="6 slide"/></div>
+                    <Carousel.Item className="row">
+                      <div className="col"><img src=".." alt="4 slide"/></div>
+                      <div className="col"><img src=".." alt="5 slide"/></div>
+                      <div className="col"><img src=".." alt="6 slide"/></div>
                     </Carousel.Item>
                   </div>
                 </div>

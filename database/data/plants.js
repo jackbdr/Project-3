@@ -2,7 +2,7 @@ export default [
   {
     name: 'Broadleaf Lady Palm',
     sciName: 'Rhapis Excelsa',
-    image: ' ',
+    image: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652892009/plant_pngs/ladypalm_xtw8bd.png',
     origin: 'China',
     wateringLevel: 'Every 7-10 days',
     wateringCategory: 'High',
@@ -39,7 +39,7 @@ export default [
   {
     name: 'Cheese Plant',
     sciName: 'Monstera Deliciosa',
-    image: ' ',
+    image: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652892143/plant_pngs/cheese_f2dgbq.png',
     origin: 'Central America',
     wateringLevel: 'Every 7-14 days',
     wateringCategory: 'Medium',
@@ -76,7 +76,7 @@ export default [
   {
     name: 'Snake Plant',
     sciName: 'Dracaena trifasciata',
-    image: ' ',
+    image: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652882951/plant_pngs/snake_xexssl.png',
     origin: 'West Africa',
     wateringLevel: 'Every 14-28 days',
     wateringCategory: 'Low',
@@ -113,7 +113,7 @@ export default [
   {
     name: 'Money Tree Plant',
     sciName: 'Pachira Aquatica',
-    image: ' ',
+    image: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652892138/plant_pngs/money_fmamc0.png',
     origin: 'South & Central America',
     wateringLevel: 'Every 7-14 days',
     wateringCategory: 'Medium',
@@ -150,7 +150,7 @@ export default [
   {
     name: 'Madagascar Dragon Tree',
     sciName: 'Dracaena Marginata',
-    image: ' ',
+    image: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652892137/plant_pngs/dragon_gfahrh.png',
     origin: 'Madagascar',
     wateringLevel: 'Every 7 days',
     wateringCategory: 'High',

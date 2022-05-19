@@ -18,7 +18,7 @@ const PlantDetail = () => {
 
     const getPlants = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:3000/api/plants/${id}`)
+        const { data } = await axios.get(`/api/plants/${id}`)
         setPlants(data)
         console.log(data)
       } catch (err) {

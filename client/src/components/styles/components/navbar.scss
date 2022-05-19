@@ -2,3 +2,14 @@
   text-align: center;
   margin-top: 0;
 }
+
+.nav_right{
+  display: flex;
+}
+.nav_left{
+  display: flex;
+}
+
+.navbar-collapse{
+  justify-content: space-between;
+}

@@ -16,7 +16,9 @@ import PlantRandom from "./components/plants/PlantRandom"
 // import OtherProfile from "./components/profile/OtherProfile"
 import OwnProfile from "./components/profile/OwnProfile"
 import Searchpage from "./components/aux/Searchpage"
-
+import Aboutus from "./components/profile/Aboutus"
+import Glossary from "./components/aux/Glossary"
+import Footer from "./components/common/Footer"
 
 const App = () => {
 
@@ -24,9 +26,12 @@ const App = () => {
   return (
     <main className="site-wrapper">
       <BrowserRouter>
+      <div className='content-wrap'>
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/aboutus' element={<Aboutus />} />
+          <Route path='/glossary' element={<Glossary />} />
           <Route path='/plants' element={<PlantOverview />} />
           <Route path='/search/:searchInput' element={<Searchpage />} />
           <Route path='/plants/:id' element={<PlantDetail />} />
@@ -40,6 +45,8 @@ const App = () => {
           <Route path='/login' element={<Login />} /> 
           <Route path='*' element={<NotFound />} /> 
         </Routes>
+        </div>
+        <Footer />
       </BrowserRouter>
     </main>
   )

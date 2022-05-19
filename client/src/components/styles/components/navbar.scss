@@ -6,6 +6,11 @@
 .nav_right{
   display: flex;
   width: 33%;
+  align-items: center;
+  input{
+    color: black;
+    border-radius: 10px;
+  }
 }
 .nav_left{
   display: flex;
@@ -24,4 +29,9 @@
 .nav-container{
   margin: 0;
   min-width: 100%;
+}
+
+.navbar{
+  padding-top: 0px;
+  background-color: rgba(236, 236, 236, 1);
 }

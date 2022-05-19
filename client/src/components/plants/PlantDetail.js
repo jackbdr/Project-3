@@ -40,7 +40,7 @@ const PlantDetail = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-75"
-                    src='https://i.guim.co.uk/img/media/e1f6298e43ed90947cf4a3c9a5f6c8244caba0c6/0_382_2786_2784/master/2786.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=a4c3db3cc45e5b4d109ead28f8333cd9'
+                    src={plants.image}
                     alt="First slide"
                   />
                 </Carousel.Item>
@@ -120,45 +120,57 @@ const PlantDetail = () => {
           <section className="bottom-section">
             <section className="bottom-content">
               <div className="plant-pic">
-                <img src='' alt={plants.name} />
+                <img src={plants.image} alt={plants.name} />
               </div>
-              <div className="bottom-detail">
-                <div className="detail-facts">
-                  <div className="detail-logo">
-                    <img src=" " alt="origin-logo" />
-                    <p>{plants.origin}</p>
+              <div className="right-bottom">
+                <div className="facts">
+                  <div className='facts-title'>
+                    <h4>Key facts</h4>
                   </div>
-                  <hr />
-                  <div className="detail-logo">
-                    <img src=" " alt="max-logo" />
-                    <p>{plants.maxGrowth}</p>
-                  </div>
-                  <hr />
-                  <div className="detail-logo">
-                    <img src=" " alt="yearly-logo" />
-                    <p>{plants.annualGrowth}</p>
-                  </div>
-                  <hr />
-                  <div className="detail-logo">
-                    <img src=" " alt="price-logo" />
-                    <p>{plants.priceRange}</p>
-                  </div>
-                  <hr />
-                  <div className="detail-logo">
-                    <img src=" " alt="toxic-logo" />
-                    <p>{plants.poisonous}</p>
+                  <div className="facts-detail">
+                    <div className="fact-logo">
+                      <div className="fact-image">
+                        <img src="/images.png/location.png" alt="origin-logo" />
+                      </div>
+                      <small>{plants.origin}</small>
+                    </div>
+                    <hr />
+                    <div className="fact-logo">
+                      <div className="fact-image">
+                        <img src="/images.png/spider-plant.png" alt="height-logo" />
+                      </div>
+                      <small>{plants.maxGrowth}</small>
+                    </div>
+                    <hr />
+                    <div className="fact-logo">
+                      <div className="fact-image">
+                        <img src="/images.png/calendar.png" alt="calendar-logo" />
+                      </div>
+                      <small>{plants.annualGrowth}</small>
+                    </div>
+                    <hr />
+                    <div className="fact-logo">
+                      <div className="fact-image">
+                        <img src="/images.png/price-tag.png" alt="price-logo" />
+                      </div>
+                      <small>{plants.priceRange}</small>
+                    </div>
+                    <hr />
+                    <div className="fact-logo">
+                      <div className="fact-image">
+                        <img src="/images.png/toxic.png" alt="price-logo" />
+                      </div>
+                      <small>{plants.poisonous}</small>
+                    </div>
                   </div>
                 </div>
                 <div className="problem-section">
-                  {plants.problems.map((problem, index) => {
-                    console.log(problem)
-                    return (
-                      <div className="problem-list" key={index}>
+                  <div className='problem-title'>
+                    <h4>Typical problems</h4>
+                  </div>
+                  <div className='problem-detail'>
 
-                      </div>
-                    )
-
-                  })}
+                  </div>
                 </div>
                 <div className="seeded-says">
                   <h3>Seeded says</h3>
@@ -166,8 +178,22 @@ const PlantDetail = () => {
                 </div>
               </div>
             </section>
-            <section className = 'multi-carousel'>
-              <h1>carousel</h1>
+            {/* <!--Carousel Wrapper--> */}
+            <section id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col"><img src=".." alt="1 slide"/></div>
+                      <div class="col"><img src=".." alt="2 slide"/></div>
+                      <div class="col"><img src=".." alt="3 slide"/></div>
+                    </div>
+                    <div class="row">
+                      <div class="col"><img src=".." alt="4 slide"/></div>
+                      <div class="col"><img src=".." alt="5 slide"/></div>
+                      <div class="col"><img src=".." alt="6 slide"/></div>
+                    </div>
+                  </div>
+                </div>
             </section>
           </section>
         </section>
@@ -178,6 +204,16 @@ const PlantDetail = () => {
 }
 
 export default PlantDetail
+
+
+
+
+
+
+
+
+
+
 
 
 // <Container id='plantShow' className='mt-4'>

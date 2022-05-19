@@ -27,8 +27,8 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <div className='nav_left'>
         <Navbar.Brand as={Link} to='/'>🌱</Navbar.Brand>
-            <Nav.Link className='text-dark' as={Link} to='/plants'>About Us</Nav.Link>
-            <Nav.Link className='text-dark' as={Link} to='/plants'>Glossary</Nav.Link>
+            <Nav.Link className='text-dark' as={Link} to='/aboutus'>About Us</Nav.Link>
+            <Nav.Link className='text-dark' as={Link} to='/glossary'>Glossary</Nav.Link>
           </div>
           <div className='nav_middle'>
             <h2>Seeded</h2>

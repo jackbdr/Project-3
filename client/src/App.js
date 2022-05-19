@@ -15,6 +15,7 @@ import PlantOverview from "./components/plants/PlantOverview"
 import PlantRandom from "./components/plants/PlantRandom"
 // import OtherProfile from "./components/profile/OtherProfile"
 import OwnProfile from "./components/profile/OwnProfile"
+import Searchpage from "./components/aux/Searchpage"
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/plants' element={<PlantOverview />} />
+          <Route path='/search/:searchInput' element={<Searchpage />} />
           <Route path='/plants/:id' element={<PlantDetail />} />
           <Route path='/plants/selector' element={<PlantRandom />} />
           <Route path='/plants/add' element={<PlantAdd />} />

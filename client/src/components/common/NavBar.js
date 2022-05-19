@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -8,6 +8,7 @@ import Nav from 'react-bootstrap/Nav'
 
 const NavBar = () => {
 
+  const navigate = useNavigate()
   const [ searchInput, setSearchInput ] = useState('')
   
   const handleSearch = (e) => {
@@ -16,6 +17,7 @@ const NavBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    navigate(`/search/${searchInput}`)
   }
 
   return (

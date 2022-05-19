@@ -2,3 +2,26 @@
   text-align: center;
   margin-top: 0;
 }
+
+.nav_right{
+  display: flex;
+  width: 33%;
+}
+.nav_left{
+  display: flex;
+  width: 33%;
+}
+
+.nav_middle{
+  width: 33%;
+  text-align: center;
+}
+
+.navbar-collapse{
+  justify-content: space-between;
+}
+
+.nav-container{
+  margin: 0;
+  min-width: 100%;
+}

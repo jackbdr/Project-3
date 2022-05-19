@@ -38,26 +38,28 @@ const PlantOverview = () => {
       {errors ?
         <p>Sorry, we had trouble growing the data!</p>
         :
-        <div className='plants-wrapper'>
-          <Container>
-            <Row>
+        <div className='plants-container'>
+          <Container className='bstrap-container'>
+            <Row className='bstrap-row'>
               {plants.map(plant => {
                 const { _id, name, image, sciName } = plant
                 return (
-                  <Col md='4' lg='4' xl='4' className='plant mb-5' key={_id}>
-                    <Link to={`/plants/${_id}`}>
-                      <Card className='card'>
-                        {/* <div className='sciname-container'>
+                  <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
+                    <div className='link-container'>
+                      <Link to={`/plants/${_id}`} >
+                        <Card className='card'>
+                          {/* <div className='sciname-container'>
                         </div> */}
-                        <Card.Img className='card-img' variant='top' src={image} />
-                        <div className='middle'>
-                          <div className='text'>{sciName}</div>
-                        </div>
-                        <Card.Body >
-                          <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
-                        </Card.Body>
-                      </Card>
-                    </Link>
+                          <Card.Img className='card-img' variant='top' src={image} />
+                          <div className='middle'>
+                            <div className='text'>{sciName}</div>
+                          </div>
+                          <Card.Body >
+                            <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
+                          </Card.Body>
+                        </Card>
+                      </Link>
+                    </div>
                   </Col>
                 )
               })}
@@ -69,8 +71,5 @@ const PlantOverview = () => {
   )
 }
 
-
-
-// what's a nicer way of writing 'Price: low to high'
 
 export default PlantOverview

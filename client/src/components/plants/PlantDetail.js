@@ -53,11 +53,19 @@ const PlantDetail = () => {
                 </Carousel.Item>
               </Carousel>
               <div className="seeded-rating">
-                <h4>Seeded. Ease Rating</h4>
-                <p>{plants.easeRating}</p>
+                <div className='seeded-title'>
+                  <h4>Seeded Ease Rating</h4>
+                </div>
+                <div className='seeded-detail'>
+                  <div className='seeded-image'>
+                    <h1>🌱</h1>
+                  </div>
+                  <small>{plants.easeRating}</small>
+                </div>
+
               </div>
-              </section>
-              <section className="right-page">
+            </section>
+            <section className="right-page">
               <div className="key-content">
                 <h1>{plants.name}</h1>
                 <h3>{plants.sciName}</h3>
@@ -68,45 +76,50 @@ const PlantDetail = () => {
                 <hr />
               </div>
               <div className="care-ratings">
-                <div className="rating-logo">
-                  <div className="logo-image">
-                    <img src="/images.png/watering-can.png" alt="water-logo" />
-                  </div>
-                  <small>{plants.wateringLevel}</small>
+                <div className="rating-title">
+                  <h4>Care tips</h4>
                 </div>
-                <hr />
-                <div className="rating-logo">
-                  <div className="logo-image">
-                    <img src="/images.png/temperature.png" alt="temp-logo" />
+                <div className="tips-details">
+                  <div className="rating-logo">
+                    <div className="logo-image">
+                      <img src="/images.png/watering-can.png" alt="water-logo" />
+                    </div>
+                    <small>{plants.wateringLevel}</small>
                   </div>
-                  <small>{plants.tempRange}</small>
-                </div>
-                <hr />
-                <div className="rating-logo">
-                  <div className="logo-image">
-                    <img src="/images.png/light-bulb.png" alt="light-logo" />
+                  <hr />
+                  <div className="rating-logo">
+                    <div className="logo-image">
+                      <img src="/images.png/temperature.png" alt="temp-logo" />
+                    </div>
+                    <small>{plants.tempRange}</small>
                   </div>
-                  <small>{plants.lightType} sunlight</small>
-                </div>
-                <hr />
-                <div className="rating-logo">
-                  <div className="logo-image">
-                    <img src="/images.png/sunny.png" alt="bright-logo" />
+                  <hr />
+                  <div className="rating-logo">
+                    <div className="logo-image">
+                      <img src="/images.png/light-bulb.png" alt="light-logo" />
+                    </div>
+                    <small>{plants.lightType} sunlight</small>
                   </div>
-                  <small>{plants.lightType} brightness</small>
+                  <hr />
+                  <div className="rating-logo">
+                    <div className="logo-image">
+                      <img src="/images.png/sunny.png" alt="bright-logo" />
+                    </div>
+                    <small>{plants.lightType} brightness</small>
+                  </div>
                 </div>
               </div>
             </section>
           </section>
           {/* SMALL MIDDLE SECTION FOR THE PAGE BREAK */}
           <section className="middle-section">
-            <img src=' ' alt='ivy separator' />
+            <img src='/images.png/ivy.png' alt='ivy separator' />
           </section>
 
           {/* BOTTOM SECTION CONTAINING ADDITIONAL DETAIL */}
           <section className="bottom-section">
             <section className="bottom-content">
-              <div className="bottom-image">
+              <div className="plant-pic">
                 <img src='' alt={plants.name} />
               </div>
               <div className="bottom-detail">
@@ -152,6 +165,9 @@ const PlantDetail = () => {
                   <p>{plants.seededSays}</p>
                 </div>
               </div>
+            </section>
+            <section className = 'multi-carousel'>
+              <h1>carousel</h1>
             </section>
           </section>
         </section>

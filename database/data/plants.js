@@ -21,20 +21,20 @@ export default [
     problems: [
       [
         {
-          problem: 'Lower leaves become discoloured with age.',
-          solution: 'These should be pruned for the plants health.',
+          problem: 'Leaf discolouring',
+          solution: 'This can happen with age. The leaves in question should be pruned for the plants health.',
         }
       ],
       [
         {
-          problem: 'Brown leaves are caused by extreme heat or lack of watering.',
-          solution: 'Fix the problem by trimming the brown leaves from the plant.',
+          problem: 'Brown leaves',
+          solution: 'Can be caused by extreme heat or lack of watering. Fix the problem by trimming the brown leaves from the plant.',
         }
       ],
       [
         {
-          problem: 'Black leaf tips are associated with over watering or over fertilizing.',
-          solution: 'Fix the problem by trimming the black leaves from the plant.',
+          problem: 'Black tips',
+          solution: 'Associated with over watering or over fertilizing. Trim the black leaves from the plant to sort this out.',
         }
       ]
     ], 
@@ -71,19 +71,19 @@ export default [
     problems: [
       [
         {
-          problem: 'Yellow leaves can be caused through over-watering.',
-          solution: 'Watering less should help, if this doesn\'t, the soil may need fertilizer.',
+          problem: 'Yellow leaves',
+          solution: 'Can be caused through over-watering. Watering less should help, if this doesn\'t, the soil may need fertilizer.',
         }
       ],
       [
         {
           problem: 'Brown leaves can be caused by low humidity and dry air.',
-          solution: 'Changing the pot could help, or adjusting the room\'s humidity.',
+          solution: 'Can be caused by low humidity and dry air. Try changing the pot, or adjusting the room\'s humidity.',
         }
       ],
       [
         {
-          problem: 'Leaves may not form slits or holes.',
+          problem: 'No slits or holes.',
           solution: 'This is usually due to lack of something which will be light, not enough water or not enough fertilizer.',
         }
       ]
@@ -121,8 +121,8 @@ export default [
     problems: [
       [
         {
-          problem: 'Base rot can be caused by over-watering in cold conditions.',
-          solution: 'Remove the most affected parts or discard the whole plant if all the base is completely affected.',
+          problem: 'Base rot',
+          solution: 'Can be caused by over-watering in cold conditions. Remove the most affected parts or discard the whole plant if all the base is completely affected.',
         }
       ],
       [
@@ -171,20 +171,20 @@ export default [
     problems: [
       [
         {
-          problem: 'Leaves yellowing and dropping can be caused by over feeding or over watering.',
-          solution: 'Stop both activities and resume watering once the soil has become dry.',
+          problem: 'Yellow leaves',
+          solution: 'Often caused by over feeding or over watering. Stop both activities and resume watering once the soil has become dry.',
         }
       ],
       [
         {
-          problem: 'Leaves turning brown could be caused by dry air, too much or too little light or water, or even cold drafts.',
-          solution: 'A process of elimination is the best solution for this.',
+          problem: 'Brown leaves',
+          solution: 'Could be caused by dry air, too much or too little light or water, or even cold drafts. A process of elimination is your best bet here.',
         }
       ],
       [
         {
-          problem: 'Leaves dropping can be caused by sudden changes in temperature and lighting conditions becoming lower.',
-          solution: 'You may need to change the location of the plant.',
+          problem: 'Wilting',
+          solution: 'Often caused by sudden changes in temperature and lighting conditions becoming lower. Moving your plant might help.',
         }
       ]
     ],																					
@@ -221,20 +221,20 @@ export default [
     problems: [
       [
         {
-          problem: 'Brown leaf tips could be caused by dry air, cold drafts or under watering.',
-          solution: 'You should check room humidity and water levels, then see if there are any drafts to identify the cause.',
+          problem: 'Brown leaves',
+          solution: 'Could be caused by dry air, cold drafts or under watering. You should check room humidity and water levels, then see if there are any drafts to identify the cause.',
         }
       ],
       [
         {
-          problem: 'Brown spots on leaves could be caused by a lack of water.',
-          solution: 'The plant should be watered more often and keep the soil slightly moist.',
-        }
-      ],
-      [
-        {
-          problem: 'Bottom leaves becoming yellow.',
+          problem: 'Leaf discolouring',
           solution: 'This is normal - the plant is shedding lower leaves to allow new growth.',
+        }
+      ],
+      [
+        {
+          problem: '',
+          solution: '',
         }
       ]
     ],																					
@@ -271,20 +271,20 @@ export default [
     problems: [
       [
         {
-          problem: 'Kalanchoe thyrsiflora plants can contract root rot through their roots being damaged due to overwatering.',
-          solution: 'It is best to remove the plant from wherever it is and remove all the wet soil from the roots. Then let the plant dry out completely for at least three days to a week.',
+          problem: 'Root rot',
+          solution: 'This can happen due to over-watering. Your best bet is to remove the plant from wherever it is and remove all the wet soil from the roots. Then let the plant dry out completely for at least three days to a week.',
         }
       ],
       [
         {
-          problem: 'Drooping leaves.',
-          solution: 'To prevent this problem, follow the guidance under the watering, lighting, and humidity headings.',
+          problem: 'Wilting',
+          solution: 'This could be a commbination of watering, lighting or humidity. Use a process of elimination to find the cause.',
         }
       ],
       [
         {
-          problem: 'Another common problem in Paddle plants is powdery mildew. It is a fungal infection that quickly spreads from one plant to another.',
-          solution: 'To treat an infected plant, use a Sulphur-containing fungicide and trim or prune the infected leaves and vines. However, if the plant is completely infected, it is better to discard it.',
+          problem: 'Powdery mildew',
+          solution: 'This is a fungal infection transferred through plants. To treat an infected plant, use a Sulphur-containing fungicide and trim or prune the infected leaves and vines. If the plant is completely infected, it is better to throw it away.',
         }
       ]
     ],																					
@@ -321,19 +321,19 @@ export default [
     problems: [
       [
         {
-          problem: 'Peace Lily Is Drooping.',
-          solution: 'Overwatering can cause drooping. If the soil is waterlogged but the plant is drooping, you need to uproot it and take action. Its roots may be rotting, causing them to be unable to take up water.',
+          problem: 'Wilting',
+          solution: 'Overwatering can cause wilting. If the soil is waterlogged but the plant is drooping, you need to uproot it and take action. Its roots may be rotting, causing them to be unable to take up water.',
         }
       ],
       [
         {
-          problem: 'Brown leaf tips.',
+          problem: 'Brown leaves',
           solution: 'If your water contains chlorine/chloramines, is on the hard side or just low-quality, this can affect some of your houseplants more than others. Regularly flush the soil with distilled water to prevent mineral build-up.',
         }
       ],
       [
         {
-          problem: 'Scale and mealybugs.',
+          problem: 'Pests',
           solution: 'A thorough wipe-down of leaves with a dish soap and water solution or insecticidal soap can be effective at stopping them, though repeated applications may be necessary.',
         }
       ]
@@ -371,20 +371,20 @@ export default [
     problems: [
       [
         {
-          problem: 'Dry brown leaf spots.',
+          problem: 'Brown leaves',
           solution: 'A possible cause can be too much sun light and maybe under-watering during summer. If the plant sits in direct sunlight then find an area that is shaded, but bright enough.',
         }
       ],
       [
         {
-          problem: 'Leaves wilting.',
+          problem: 'Wilting',
           solution: 'The most common cause here is over-watering, possibly in colder conditions. It may also be worth checking the container/pot is draining well enough.',
         }
       ],
       [
         {
-          problem: 'Leaves very soft.',
-          solution: 'If the leaves are turning very soft and kind of mushy you could be over watering the plant and if its winter it could be too cold. Check the pot is draining well and you may need to take the plant out of the pot to check if the root system has any type of rot (mush). After you have given the A.vera enough time without water and the leaves have not toughened, do check the roots for any signs of rot.',
+          problem: 'Soft leaves',
+          solution: 'If the leaves are turning very soft and kind of mushy you could be over watering the plant and if its winter it could be too cold. Check the pot is draining well and you may need to take the plant out of the pot to check if the root system has any type of rot (mush).',
         }
       ]
     ],																						
@@ -421,13 +421,13 @@ export default [
     problems: [
       [
         {
-          problem: 'Mealybugs & Spider Mites are common pests will all types of Dracaena.',
+          problem: 'Pests',
           solution: 'Check in the cubbyholes of the stems & beneath the leaf arches for possible outbreaks.',
         }
       ],
       [
         {
-          problem: 'Over-watering & root-rot.',
+          problem: 'Root rot',
           solution: 'For cases of root rot, take the plant out of its pot and check for decay below the soil line.',
         }
       ],
@@ -437,9 +437,7 @@ export default [
           solution: '',
         }
       ]
-    ],
-    potentialProblems: '\n',																						
-    problemSolutions: '\n',																						
+    ],																					
     maxGrowth: '2 metres',																						
     annualGrowth: '20-40cm',																						
     poisonous: 'Toxic to pets',																						
@@ -473,13 +471,13 @@ export default [
     problems: [
       [
         {
-          problem: 'Low Growth.',
+          problem: 'Low Growth',
           solution: 'Could potentially be caused by lack of sunlight.',
         }
       ],
       [
         {
-          problem: 'Wilting.',
+          problem: 'Wilting',
           solution: 'The most common cause here is over-watering, possibly in colder conditions. It may also be worth checking the container/pot is draining well enough.',
         }
       ],
@@ -523,19 +521,19 @@ export default [
     problems: [
       [
         {
-          problem: 'Loss of leaves.',
-          solution: 'One cause can be lack of water (although leaf discoloration and becoming dry should be noticeable first) or low humidity (dry air).',
+          problem: 'Loss of leaves',
+          solution: 'One cause can be lack of water (although leaf discoloration and becoming dry should be noticeable first) or low humidity.',
         }
       ],
       [
         {
-          problem: 'Brown edges on leaves and dry.',
+          problem: 'Brown leaves',
           solution: 'Humidity is probably too low which is causing the air to be dry, or maybe not enough water or both. This is quite easy to put right by improving the humidity or by watering the plant thoroughly. It\'s best to remove the dry and brown edged leaves.',
         }
       ],
       [
         {
-          problem: 'Leaves softening and brownish patches.',
+          problem: 'Soft leaves',
           solution: 'The problem here is more than likely over-watering - cold temperatures or both, which could eventually kill the plant. Check if the soil is too wet from the top and through the holes at the bottom of the pot. If its fairly damp or soggy it might be worth removing the old soil and replacing it. You will need to increase heat and maybe lower the humidity in the room to see if this resolves the problem.',
         }
       ]
@@ -573,20 +571,20 @@ export default [
     problems: [
       [
         {
-          problem: 'All kinds of ferns like to sit in well-hydrated soil. However, they like a happy medium, where the soil remains moist but never stays soggy. Overwatering is one of the most common causes of a Boston Fern dying.',
-          solution: 'Waterlogged soil causes the plant to develop root rot or other diseases. Once root rot sets in, it can be difficult to save the plant, so prevention is the aim of the game.',
+          problem: 'Root rot',
+          solution: 'For cases of root rot, take the plant out of its pot and check for decay below the soil line.',
         }
       ],
       [
         {
-          problem: 'Humidity levels of at least 50% are required to keep your Boston Fern looking its best.',
-          solution: 'Use a humidity tray. Place some pebbles in a large, shallow dish, before setting your plant on the pebbles. Fill the tray with a shallow layer of water, taking care that the water levels remain below the top of the pebbles. We don\'t want the plant pot sitting in water, as this can encourage root rot.',
+          problem: 'Yellow leaves',
+          solution: 'Often caused by too much direct sunlight or not enough indirect. It\'s best to place it near a window that gets ample indirect sunshine. Your plant will love it if you place it in an area that gets a bit of morning sun and then loads of diffused sunlight in the later part of the day.',
         }
       ],
       [
         {
-          problem: 'Too much direct sunlight or not enough indirect!',
-          solution: 'This is why it is advisable to place it near a window that gets ample indirect sunshine. It will be ecstatic if you place it in an area that gets a bit of morning sun and then lots of diffused sunlight in the later part of the day.',
+          problem: '',
+          solution: '',
         }
       ]
     ],																					
@@ -727,14 +725,14 @@ export default [
     problems: [
       [
         {
-          problem: 'Yellow or brown leaf edges can be caused by chemicals in the water or direct sunlight.',
-          solution: 'Either remove the plant from sunlight or use distilled water.',
+          problem: 'Yellow leaves',
+          solution: 'Can be caused by chemicals in the water or direct sunlight. Either remove the plant from sunlight or use distilled water.',
         }
       ],
       [
         {
-          problem: 'Stalks becoming soft and/or yellow is usually water related.',
-          solution: 'Remove the stalk so it doesn\'t affect healthy stalks.',
+          problem: 'Soft stalks',
+          solution: 'Usually water related. Remove the stalk so it doesn\'t affect healthy stalks.',
         }
       ],
       [
@@ -777,13 +775,13 @@ export default [
     problems: [
       [
         {
-          problem: 'Leaves turning yellow and losing them.',
+          problem: 'Yellow leaves',
           solution: 'An umbrella plant will naturally lose it\'s lower leaves to encourage new growth. If it\'s losing a lot of upper leaves it could be anyone of many conditions causing a problem. A process of elimination is required to solve this.',
         }
       ],
       [
         {
-          problem: 'Leaves, stems turning brown.',
+          problem: 'Brown leaves.',
           solution: 'Likely cause is over-watering. Remove affected leaves and repot to prevent it from dying.',
         }
       ],
@@ -827,14 +825,14 @@ export default [
     problems: [
       [
         {
-          problem: 'Yellow leaves can be cause through over-watering.',
-          solution: 'If the plant hasn\'t been over-watered, then it could suggest the soil needs fertilizer.',
+          problem: 'Yellow leaves',
+          solution: 'Often caused by over-watering. If the plant hasn\'t been over-watered, then it could suggest the soil needs fertilizer.',
         }
       ],
       [
         {
-          problem: 'Stem rot likely cause by overwatering in winter.',
-          solution: 'Must be repotted quickly to save the plant.',
+          problem: 'Root rot',
+          solution: 'Often caused by over-watering in the winter. Must be repotted quickly to save the plant.',
         }
       ],
       [
@@ -877,13 +875,13 @@ export default [
     problems: [
       [
         {
-          problem: 'Shredded leaves.',
+          problem: 'Loss of leaves',
           solution: 'Common in windy, exposed sites. This is a natural adaptation to tropical storms and does no harm to the plant. To keep the leaves intact, grow in a sheltered position.',
         }
       ],
       [
         {
-          problem: 'Limp leaves.',
+          problem: 'Wilting',
           solution: 'Usually a sign of under- or over-watering. Check the compost and increase or decrease watering as necessary.',
         }
       ],
@@ -927,19 +925,19 @@ export default [
     problems: [
       [
         {
-          problem: 'The leaves of your plant begin to curl or become crinkled.',
+          problem: 'Curling of leaves',
           solution: 'Your plant\'s getting too much light. This actually can happen! It\'s most common in situations where your zebra plant\'s experiencing direct sun. Move it to a shadier location so it can recover.',
         }
       ],
       [
         {
-          problem: 'Tip wilt can occur if your potting mix is too dry.',
+          problem: 'Wilting',
           solution: 'To avoid tip wilt, do a heavy watering at least once a month. Make sure that the growing medium is completely damp, and allow excess water to drain off.',
         }
       ],
       [
         {
-          problem: 'Whitefly infestation is a possibility. These tiny flying insects will suck on the plant sap, leaving yellow dots on the leaves.',
+          problem: 'Pests',
           solution: 'Remove and destroy badly-infested plant growth. Use yellow sticky traps to catch adults. An insecticidal soap will also help.',
         }
       ]
@@ -977,20 +975,20 @@ export default [
     problems: [
       [
         {
-          problem: 'Wasabi suffers from a plethora of fungal diseases including leaf spot, root rot, rhizome rot & petiole blight.',
+          problem: 'Fungal diseases',
           solution: 'Prevention is the best path to take as few plants survive the disease, especially given how long it is to harvest. Use a copper spray as a preventative for leaf spots.',
         }
       ],
       [
         {
-          problem: 'Pests/aphids.',
-          solution: 'Wasabi doesn\'t suffer from too many pest problems. They\'re much more susceptible to fungal problems. However, aphids are big fans of the wasabi leaf. Neem oil or insecticidal soap will handle the aphids easily.',
+          problem: 'Pests',
+          solution: 'Wasabi doesn\'t suffer from too many pest problems, but aphids are big fans of the wasabi leaf. Neem oil or insecticidal soap will handle the aphids easily.',
         }
       ],
       [
         {
           problem: 'Root rot.',
-          solution: 'In order to fight this problem, try searching for rot-resistant starters. There are several varieties that have been bred to be resistant to rots. Improve drainage in your growing area and remove wilted leaves that can harbor disease once dead and decaying.',
+          solution: 'Try to for rot-resistant starters to avoid this problem. There are several varieties that have been bred to be resistant to rots. Improve drainage in your growing area and remove wilted leaves that can harbor disease once dead and decaying.',
         }
       ]
     ],																					
@@ -1079,14 +1077,14 @@ export default [
     problems: [
       [
         {
-          problem: 'Loss of leaves is usually cause by over-watering, but can be a change of conditions',
-          solution: 'Check that the conditions are suitable.',
+          problem: 'Loss of leaves',
+          solution: 'Usually caused by over-watering, but can be driven by a change of conditions. Check that the conditions are suitable.',
         }
       ],
       [
         {
-          problem: 'Leaf edges yellowing can be caused by a range of issues.',
-          solution: 'Process of elimination required to determine the issue.',
+          problem: 'Yellow leaves',
+          solution: 'Could be caused by a range of issues relating to watering, temperature and light. You\'ll have to use a proces of elimination to determine the issue.',
         }
       ],
       [
@@ -1129,19 +1127,19 @@ export default [
     problems: [
       [
         {
-          problem: 'Root rot caused by overwatering.',
-          solution: 'Repot it in a new, sterile potting soil. Make sure that the potting medium has excellent drainage and only water when the silver splash pothos becomes partially dry.',
+          problem: 'Root rot',
+          solution: 'Often caused by over-watering. Repot it in a new, sterile potting soil. Make sure that the potting medium has excellent drainage and only water when the silver splash pothos becomes partially dry.',
         }
       ],
       [
         {
-          problem: 'Leaves curling.',
-          solution: 'Curling leaves are usually a sign that you are underwatering the plant. Check to see if the soil at the drainage holes is dry. If so, give your plant deep watering to drench the soil completely.',
+          problem: 'Curling leaves',
+          solution: 'Usually a sign that you are underwatering the plant. Check to see if the soil at the drainage holes is dry. If so, give your plant deep watering to drench the soil completely.',
         }
       ],
       [
         {
-          problem: 'Leaves turning brown.',
+          problem: 'Brown leaves',
           solution: 'Silver pothos leaves that turn brown are usually a sign of three things: low humidity, over-fertilizing, or too much sunlight.',
         }
       ]
@@ -1179,13 +1177,13 @@ export default [
     problems: [
       [
         {
-          problem: 'Collapsing antler fronds that can emit a foul odour over time.',
-          solution: 'Reduce the amount of water per week to allow oxygen to circulate its body. After a few weeks of better cultivation, remove the specimen from the soil/mount and replace the majority of the soil/sphagnum moss with a fresh batch to limit the spread of disease. Improve the air circulation and move to a slightly brighter location with no direct sunlight. As rehabilitation can take several months because of its slow-growing nature, be sure to provide a stable area with better growing conditions to speed this process.',
+          problem: 'Wilting stalks',
+          solution: 'Reduce the amount of water per week to allow oxygen to circulate its body. After a few weeks of better cultivation, remove the specimen from the soil/mount and replace the majority of the soil/sphagnum moss with a fresh batch to limit the spread of disease. Improve the air circulation and move to a slightly brighter location with no direct sunlight.',
         }
       ],
       [
         {
-          problem: 'Curled leaves or brown leaf-edges.',
+          problem: 'Curled leaves',
           solution: 'Cutting away the affected areas and presenting a fern-friendly environment that consists of indirect light, moist air and good soil moisture.',
         }
       ],
@@ -1229,8 +1227,8 @@ export default [
     problems: [
       [
         {
-          problem: 'A common problem faced by succulent plants are root rot and fungal issues due to overwatering.',
-          solution: 'To combat this, you should thoroughly check your plant\'s moisture levels at least once a week. If it appears too wet or moist, you may need to allow more time between each watering session until the soil dries out completely before adding any more water again. If your Pig\'s Ear succulent does not respond favorably to this, it may need repotting into a drier soil mix.',
+          problem: 'Root rot',
+          solution: 'Often caused by over-watering. To combat this, you should thoroughly check your plant\'s moisture levels at least once a week. If it appears too wet or moist, you may need to allow more time between each watering session until the soil dries out completely before adding any more water again. If your Pig\'s Ear succulent does not respond favorably to this, it may need repotting into a drier soil mix.',
         }
       ],
       [
@@ -1279,8 +1277,8 @@ export default [
     problems: [
       [
         {
-          problem: 'During winter the junipers must be kept in a place with enough light and they must be checked for pests regularly even in winter.',
-          solution: 'Traditional insecticide/miticide sprays will help.',
+          problem: '',
+          solution: '',
         }
       ],
       [
@@ -1381,7 +1379,7 @@ export default [
     problems: [
       [
         {
-          problem: 'Deformed traps: the leaves grow , but the traps never develop',
+          problem: 'Deformed traps',
           solution: 'To resolve this issue you can find a better outdoor spot to place your plant. A safe bet is to find a placement where your plant gets 6 hours of direct sunlight, plus some indirect sunlight, it is not the optimum scenario, but a safe place to grow your plant way above the minimums. Also, you should consider supplemental lighting. You can employ artificial plant light to give appropriate lighting to your plants.',
         }
       ],
@@ -1481,7 +1479,7 @@ export default [
     problems: [
       [
         {
-          problem: 'The most common problem for Crotons is leaves dropping.',
+          problem: 'Wilting',
           solution: 'When a croton plant drops leaves, it\'s a reaction to stress, which can be caused by sudden changes. Crotons don\'t like being moved! If you do move, make sure to take extra care. If you scratch the base of the stem and it\'s green underneath, it might just recover!',
         }
       ],
@@ -1531,13 +1529,13 @@ export default [
     problems: [
       [
         {
-          problem: 'Bud dropping.',
+          problem: 'Wilting',
           solution: 'Usually due to extreme or fluctuating temperatures, or over- or under-watering. Choose a location kept at a constant temperature. Buds are also prone to drop when watering is irregular; avoid both dry conditions and waterlogging.',
         }
       ],
       [
         {
-          problem: 'No formation of flowers.',
+          problem: 'No flowers.',
           solution: 'Can be due to hot nights of 18°C (65°F) or more, and a dry atmosphere. Provide humidity by placing plants on a gravel tray and provide ventilation to reduce temperatures.',
         }
       ],

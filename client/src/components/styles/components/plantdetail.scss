@@ -1,4 +1,5 @@
 .overall-container {
+  font-family: 'Cormorant Garamond', serif;
   margin-top: 30px;
   max-width: 100%;
   display: flex;
@@ -65,86 +66,68 @@
     margin-right: 50px;
     width: 75%;
     height: 400px;
-
     h1 {
       font-size: 25px;
     }
-
     h3 {
       font-size: 20px;
     }
-
     h4 {
       font-size: 18px;
     }
-
     p {
       font-size: 14px;
       padding-right: 20px;
     }
   }
-
   .ratings {
     display: flex;
     justify-content: space-evenly;
   }
-
   .care-ratings {
     .rating-title {
       text-align: left;
-
       h4 {
         font-size: 16px;
       }
     }
-
     .tips-details {
       display: flex;
     }
-
     .rating-logo {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px;
-
       .logo-image {
         height: 100px;
       }
-
       img {
         width: 70px;
       }
-
       small {
         font-size: 12px;
       }
     }
   }
-
   .middle-section {
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     img {
       width: 600px;
       height: 250px;
     }
   }
-
   .bottom-section {
     margin-top: 200px;
     height: 90vh;
     align-items: center;
-
     .plant-pic {
       height: 400px;
       width: 30%;
-
     }
-
     .bottom-content {
       display: flex;
       flex-direction: row;
@@ -172,11 +155,9 @@
           padding: 20px;
           width: 17%;
           text-align: center;
-
           .fact-image {
             height: 100px;
           }
-
           img {
             width: 70px;
           }
@@ -207,11 +188,6 @@
       font-size: 16px;
     }
   }
-}
-
-.carousel-multi-item {
-  display: flex;
-  flex-direction: column;
 }
 
 // #plantShow{

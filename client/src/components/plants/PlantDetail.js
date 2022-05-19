@@ -179,22 +179,22 @@ const PlantDetail = () => {
               </div>
             </section>
             {/* <!--Carousel Wrapper--> */}
-            <section id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
+            <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <div class="row">
+                    <Carousel.Item class="row">
                       <div class="col"><img src=".." alt="1 slide"/></div>
                       <div class="col"><img src=".." alt="2 slide"/></div>
                       <div class="col"><img src=".." alt="3 slide"/></div>
-                    </div>
-                    <div class="row">
+                    </Carousel.Item>
+                    <Carousel.Item class="row">
                       <div class="col"><img src=".." alt="4 slide"/></div>
                       <div class="col"><img src=".." alt="5 slide"/></div>
                       <div class="col"><img src=".." alt="6 slide"/></div>
-                    </div>
+                    </Carousel.Item>
                   </div>
                 </div>
-            </section>
+            </Carousel>
           </section>
         </section>
         :

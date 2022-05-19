@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+
+
+
 
 const Searchpage = () => {
 const { searchInput } = useParams()
@@ -32,16 +35,21 @@ const [ searchResults, setSearchResults ] = useState([])
   <>
   {searchResults ?
   <div id='search-page'>
-    <h1 id='search-results'>Search Results: </h1>
   {handleSearch().map((plant, index) => {
     return(
-      <div className='search-wrapper' key={index}>
-        <img src={plant.image} alt={plant.name} />
-        <div className='searchInfo'>
-          <h5>{plant.name}</h5>
-          <p>{plant.sciName}</p>
+      <>
+        <div className='search-wrapper' key={index}>
+          <Link to={`/plants/${plant._id}`} >
+            <img src={plant.image} alt={plant.name} />
+            <div className='searchInfo'>
+              <h5>{plant.name}</h5>
+              <p className='searchSci'>{plant.sciName}</p>
+              <p>{plant.description}</p>
+            </div>
+          </Link>
         </div>
-      </div>
+        <hr />
+      </>
     )
   })}
   </div>

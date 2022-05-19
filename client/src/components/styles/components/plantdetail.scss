@@ -202,7 +202,16 @@
       font-weight: bold;
     }
   }
-}
+  .problem-detail {
+    display: flex;
+    flex-direction: row;
+    h3{
+      font-size: 13px;
+    }
+    
+  }
+  }
+
 
 // #plantShow{
 //   img{

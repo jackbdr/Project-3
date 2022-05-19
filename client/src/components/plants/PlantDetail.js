@@ -172,7 +172,19 @@ const PlantDetail = () => {
                     <h4>Typical problems</h4>
                   </div>
                   <div className='problem-detail'>
+                    <div className = 'problem-icon' id = {plants.problems[0][0].problem}></div>
                     <h3>{plants.problems[0][0].problem}</h3>
+                    <h3>{plants.problems[0][0].solution}</h3>
+                  </div>
+                  <div className='problem-detail'>
+                    <div className = 'problem-icon' id = {plants.problems[1][0].problem}></div>
+                    <h3>{plants.problems[1][0].problem}</h3>
+                    <h3>{plants.problems[1][0].solution}</h3>
+                  </div>
+                  <div className='problem-detail'>
+                    <div className = 'problem-icon' id = {plants.problems[2][0].problem}></div>
+                    <h3>{plants.problems[2][0].problem}</h3>
+                    <h3>{plants.problems[2][0].solution}</h3>
                   </div>
                 </div>
                 <div className="seeded-says">

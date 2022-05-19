@@ -42,7 +42,7 @@ const plantSchema = new mongoose.Schema({
     ]
   ],
   maxGrowth: { type: String, required: true },
-  annualGrowth: { type: String, required: true },
+  annualGrowth: { type: String, required: false },
   poisonous: { type: String, required: true },
   linkToBuy: { type: String, required: false },
   seededEaseRating: { type: Number, required: true },

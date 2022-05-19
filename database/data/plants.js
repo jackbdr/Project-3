@@ -695,13 +695,8 @@ export default [
     potentialProblems: '',																						
     problemSolutions: '',																						
     maxGrowth: '90 centimetres',																						
-<<<<<<< HEAD
     annualGrowth: '5cm',																						
-    poisonous: 'Yes',																						
-=======
-    annualGrowth: '',																						
     poisonous: 'Toxic to pets',																						
->>>>>>> plants-database
     linkToBuy: '',																						
     seededEaseRating: 4,																						
     description: 'A succulent shrub commonly grown indoors, jade plant features thick, woody stems and glossy green, fleshy leaves up to two inches long. Happily, this low-maintenance plant lives a long time, taking on the appearance of a miniature tree as it ages.',																						
@@ -750,13 +745,8 @@ export default [
       ]
     ],																					
     maxGrowth: '90 centimetres',																						
-<<<<<<< HEAD
-    annualGrowth: '15-30cm',																						
-    poisonous: 'No',																						
-=======
     annualGrowth: '',																						
     poisonous: 'Non toxic to pets',																						
->>>>>>> plants-database
     linkToBuy: '',																						
     seededEaseRating: 3,																						
     description: 'The Lucky bamboo is an easy to grow plant which can thrive in soil or water. While this plant has the common name of bamboo, it is not an actual bamboo plant even though the stalks have a similar appearance.',																						
@@ -855,13 +845,8 @@ export default [
       ]
     ],																					
     maxGrowth: '1.5 metres',																						
-<<<<<<< HEAD
-    annualGrowth: '20-30cm',																						
-    poisonous: 'Yes',																						
-=======
     annualGrowth: '',																						
     poisonous: 'Toxic to pets',																						
->>>>>>> plants-database
     linkToBuy: '',																						
     seededEaseRating: 5,																						
     description: 'Heart leaf philodendron is simple to grow and has become a popular plant around the home. Its unique heart shaped leaves make this plant stand out whilst its adaptability to different conditions lets growers spend less time focusing on it. ',																						
@@ -910,13 +895,8 @@ export default [
       ]
     ],																				
     maxGrowth: '30 metres',																						
-<<<<<<< HEAD
-    annualGrowth: '50-100cm',																						
-    poisonous: 'No',																						
-=======
     annualGrowth: '',																						
     poisonous: 'Non toxic to pets',																						
->>>>>>> plants-database
     linkToBuy: '',																						
     seededEaseRating: 3,																						
     description: 'Banana plants, with their huge paddle-shaped leaves, add a tropical feel to sheltered gardens in summer. Although most are tender and must be brought indoors over winter, some hardier types may survive outdoors in milder parts of the UK if well protected.',																						
@@ -1668,15 +1648,9 @@ export default [
         }
       ]
     ],																					
-<<<<<<< HEAD
     maxGrowth: '30m',																						
-    annualGrowth: '50-75cm',																						
-    poisonous: 'Yes',																						
-=======
-    maxGrowth: '',																						
-    annualGrowth: '',																						
+    annualGrowth: '50-75',																						
     poisonous: 'Toxic to pets',																						
->>>>>>> plants-database
     linkToBuy: '',																						
     seededEaseRating: 3,																						
     description: 'Norfolk Island pine trees (Araucaria heterophylla) are commonly used as those cute little houseplant Christmas trees that you can buy around the holidays, but then the holidays end and you throw it in the bin. But that doesn\'t have to be the case! With the right care they can make wonderful house plants.',																						

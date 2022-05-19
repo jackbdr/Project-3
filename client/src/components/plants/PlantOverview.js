@@ -36,27 +36,34 @@ const PlantOverview = () => {
   return (
     <section>
       {errors ?
-        <p>Sorry, we had trouble fetching the data!</p>
+        <p>Sorry, we had trouble growing the data!</p>
         :
-        <Container className='plants-wrapper'>
-          <Row>
-            {plants.map(plant => {
-              const { _id, name, image, sciName } = plant
-              return (
-                <Col md='4' lg='3' className='plant mb-4' key={_id}>
-                  <Link to={`/plants/${_id}`}>
-                    <Card>
-                      <Card.Img className='card-img' variant='top' src={image} />
-                      <Card.Body >
-                        <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
-                      </Card.Body>
-                    </Card>
-                  </Link>
-                </Col>
-              )
-            })}
-          </Row>
-        </Container>
+        <div className='plants-wrapper'>
+          <Container>
+            <Row>
+              {plants.map(plant => {
+                const { _id, name, image, sciName } = plant
+                return (
+                  <Col md='4' lg='4' xl='4' className='plant mb-5' key={_id}>
+                    <Link to={`/plants/${_id}`}>
+                      <Card className='card'>
+                        {/* <div className='sciname-container'>
+                        </div> */}
+                        <Card.Img className='card-img' variant='top' src={image} />
+                        <div className='middle'>
+                          <div className='text'>{sciName}</div>
+                        </div>
+                        <Card.Body >
+                          <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
+                        </Card.Body>
+                      </Card>
+                    </Link>
+                  </Col>
+                )
+              })}
+            </Row>
+          </Container>
+        </div>
       }
     </section >
   )

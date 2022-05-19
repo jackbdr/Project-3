@@ -266,7 +266,7 @@ export default [
     sunlightFilter: 1,																						
     brightness: 'Bright',																						
     brightnessFilter: 5,																						
-    fertilizer: 'Fertilizing Kalanchoe thyrsiflora plants is recommended every few months. This will help the plant stay healthy and maintain a green coloration in its leaves. Fertilize Kalanchoes before winter and after they’ve gone dormant in fall, but not during their active vegetative period. In summer (when the plant is most actively growing), Kalanchoes need to be fertilized about every two weeks.',																						
+    fertilizer: 'Fertilizing Kalanchoe thyrsiflora plants is recommended every few months. This will help the plant stay healthy and maintain a green coloration in its leaves. Fertilize Kalanchoes before winter and after they\'ve gone dormant in fall, but not during their active vegetative period. In summer (when the plant is most actively growing), Kalanchoes need to be fertilized about every two weeks.',																						
     pruning: 'The best time for pruning Kalanchoe thyrsiflora is April or May, when they are starting to grow again and before new leaves emerge during the year. Prune Kalanchoes by cutting off any dead, diseased, damaged, or crowded leaves with a sterilized blade.',																						
     problems: [
       [
@@ -310,7 +310,7 @@ export default [
     wateringDetail: 'Keeping the soil moist (not over watered) and allowing it to dry slightly near the top',																						
     temperature: '12-24°C',																						
     tempCategory: 'Low to Average',																						
-    tempDetail: 'Average room temperature’s are fine. Avoid lower than 55°F/12°C in the winter.',																						
+    tempDetail: 'Average room temperature\'s are fine. Avoid lower than 55°F/12°C in the winter.',																						
     light: 'they like light, however, direct sunshine can damage plant leaves. A mixture of light and shade is great, if you can provide it. If you see the leaves yellowing this could be caused by too much sunlight.',																						
     lightType: 'Indirect',																						
     sunlightFilter: 1,																						
@@ -407,16 +407,16 @@ export default [
     origin: 'Africa/ Mexico',																						
     wateringLevel: 'Every 7-14 days',																						
     waterCategory: 3,																						
-    wateringDetail: 'Check your corn plant once a week and only water when the soil is completely dry. They’re used to hot, dry climates so corn plants don’t get very thirsty and prefer a break in between drinks. The bigger your plant is the more water it will need and their hydration levels can also depend on how hot and dry the season is.',																						
+    wateringDetail: 'Check your corn plant once a week and only water when the soil is completely dry. They\'re used to hot, dry climates so corn plants don\'t get very thirsty and prefer a break in between drinks. The bigger your plant is the more water it will need and their hydration levels can also depend on how hot and dry the season is.',																						
     temperature: '15-24°C',																						
     tempCategory: 'Average',																						
-    tempDetail: 'Sudden changes in temperature aren’t great for corn plants. To avoid stressing your plant, keep it away from hot radiators and cold draughts.\nCorn plants also love a bit of humidity which makes them great bathroom plants. If their home is in another room, don’t forget to mist their leaves every few days. Browning tips could be a sign that you need to mist more often. ',																						
-    light: 'Corn plants will grow faster with more light, especially if their leaves are variegated (have multiple colours). Just be careful you don’t give them too much sun as this can scorch their leaves.',																						
+    tempDetail: 'Sudden changes in temperature aren\'t great for corn plants. To avoid stressing your plant, keep it away from hot radiators and cold draughts.\nCorn plants also love a bit of humidity which makes them great bathroom plants. If their home is in another room, don\'t forget to mist their leaves every few days. Browning tips could be a sign that you need to mist more often. ',																						
+    light: 'Corn plants will grow faster with more light, especially if their leaves are variegated (have multiple colours). Just be careful you don\'t give them too much sun as this can scorch their leaves.',																						
     lightType: 'Partially indirect',																						
     sunlightFilter: 2,																						
     brightness: 'Partially bright',																						
     brightnessFilter: 4,																						
-    fertilizer: 'The corn plant’s nutritional needs can typically be met by applying a commercial fertilizer. Liquid fertilizers are the easiest to use on houseplants, so choose a 3:1:2 ratio liquid fertilizer—such as 9-3-6—that contains trace elements.',																						
+    fertilizer: 'The corn plant\'s nutritional needs can typically be met by applying a commercial fertilizer. Liquid fertilizers are the easiest to use on houseplants, so choose a 3:1:2 ratio liquid fertilizer—such as 9-3-6—that contains trace elements.',																						
     pruning: 'Prune it back in spring or early summer to control its growth. You can cut off the cane at any height. It will sprout a new cluster of leaves from where it was cut.',																						
     problems: [
       [
@@ -569,7 +569,7 @@ export default [
     brightness: 'Partially bright',																						
     brightnessFilter: 4,																						
     fertilizer: 'In the spring and summer, Boston ferns need to be fertilized once a month. The proper Boston fern fertilizer to use in summer is a water soluble fertilizer mixed at half strength. The fertilizer should have an NPK ratio of 20-10-20.\n',																						
-    pruning: 'You don’t want to crop the top of the plant when pruning Boston fern. Instead, trim off the side fronds at the base. Also remove old, discolored fronds near the soil to allow new growth to come through. Remove the unsightly stems to the base as well.\n',																						
+    pruning: 'You don\'t want to crop the top of the plant when pruning Boston fern. Instead, trim off the side fronds at the base. Also remove old, discolored fronds near the soil to allow new growth to come through. Remove the unsightly stems to the base as well.\n',																						
     problems: [
       [
         {
@@ -580,7 +580,7 @@ export default [
       [
         {
           problem: 'Humidity levels of at least 50% are required to keep your Boston Fern looking its best.',
-          solution: 'Use a humidity tray. Place some pebbles in a large, shallow dish, before setting your plant on the pebbles. Fill the tray with a shallow layer of water, taking care that the water levels remain below the top of the pebbles. We don’t want the plant pot sitting in water, as this can encourage root rot.',
+          solution: 'Use a humidity tray. Place some pebbles in a large, shallow dish, before setting your plant on the pebbles. Fill the tray with a shallow layer of water, taking care that the water levels remain below the top of the pebbles. We don\'t want the plant pot sitting in water, as this can encourage root rot.',
         }
       ],
       [
@@ -872,8 +872,8 @@ export default [
     sunlightFilter: 5,																						
     brightness: 'Bright',																						
     brightnessFilter: 5,																						
-    fertilizer: 'A banana plant’s rapid growth rate makes it a heavy feeder. Young plants may need as much as ¼ to ½ pound of fertilizer per month. A balanced fertilizer of 8-10-8 (NPK) is recommended',																						
-    pruning: 'Bananas don’t generally need pruning. But to keep them looking their best, you can cut away old leaves when they start to die or look tatty. Use a sharp knife or secateurs, and cut at the base of the leaf stalk.',																						
+    fertilizer: 'A banana plant\'s rapid growth rate makes it a heavy feeder. Young plants may need as much as ¼ to ½ pound of fertilizer per month. A balanced fertilizer of 8-10-8 (NPK) is recommended',																						
+    pruning: 'Bananas don\'t generally need pruning. But to keep them looking their best, you can cut away old leaves when they start to die or look tatty. Use a sharp knife or secateurs, and cut at the base of the leaf stalk.',																						
     problems: [
       [
         {
@@ -903,7 +903,7 @@ export default [
     priceRange: '£10-200',																						
     categorisation: '',																						
     favourited: '',																						
-    seededSays: 'Banana plants need watering every 3 - 7 days to be happy. You could even add a thin layer of mulch above the soil to trap the moisture. This is because they need around 12 hours of direct sunlight everyday to grow. The best placement is usually on a windowsil where it can get all the sun it wants. A banana plant’s rapid growth makes it a heavy feeder. Young plants may need as much as ¼ to ½ pound of fertilizer per month. A balanced fertilizer of 8-10-8 (NPK) is recommended ',																						
+    seededSays: 'Banana plants need watering every 3 - 7 days to be happy. You could even add a thin layer of mulch above the soil to trap the moisture. This is because they need around 12 hours of direct sunlight everyday to grow. The best placement is usually on a windowsil where it can get all the sun it wants. A banana plant\'s rapid growth makes it a heavy feeder. Young plants may need as much as ¼ to ½ pound of fertilizer per month. A balanced fertilizer of 8-10-8 (NPK) is recommended ',																						
   },																						
   {																						
     seed: 19,																						
@@ -928,7 +928,7 @@ export default [
       [
         {
           problem: 'The leaves of your plant begin to curl or become crinkled.',
-          solution: 'Your plant’s getting too much light. This actually can happen! It’s most common in situations where your zebra plant’s experiencing direct sun. Move it to a shadier location so it can recover.',
+          solution: 'Your plant\'s getting too much light. This actually can happen! It\'s most common in situations where your zebra plant\'s experiencing direct sun. Move it to a shadier location so it can recover.',
         }
       ],
       [
@@ -949,7 +949,7 @@ export default [
     poisonous: 'No',																						
     linkToBuy: '',																						
     seededEaseRating: 2,																						
-    description: 'The zebra plant features dramatic dark green leaves with bold white striping. It’s a higher care plant that can pay off big with its high-contrast leaves. In the proper conditions, zebra plants can sprout bright yellow, spiked flower clusters that can last up to 6 weeks!',																						
+    description: 'The zebra plant features dramatic dark green leaves with bold white striping. It\'s a higher care plant that can pay off big with its high-contrast leaves. In the proper conditions, zebra plants can sprout bright yellow, spiked flower clusters that can last up to 6 weeks!',																						
     priceRange: '£10-50',																						
     categorisation: '',																						
     favourited: '',																						
@@ -963,7 +963,7 @@ export default [
     origin: 'Japan',																						
     wateringLevel: 'Every 7 days',																						
     waterCategory: 4,																						
-    wateringDetail: 'Wasabi needs water continuously delivered to its root zone. It’s the ideal plant to grow in a water garden or in containers where the soil can be kept continuously wet – wetter than many other plants can tolerate.',																						
+    wateringDetail: 'Wasabi needs water continuously delivered to its root zone. It\'s the ideal plant to grow in a water garden or in containers where the soil can be kept continuously wet – wetter than many other plants can tolerate.',																						
     temperature: '7-21ºC',																						
     tempCategory: 'Very Low to Average',																						
     tempDetail: 'Wasabi thrives in mild temperatures. Above 21 degrees the wasabi plants can die, while under 7 degrees the wasabi plants can freeze. ',																						
@@ -972,7 +972,7 @@ export default [
     sunlightFilter: 1,																						
     brightness: 'Mixed',																						
     brightnessFilter: 3,																						
-    fertilizer: 'Wasabi doesn’t need much fertilizer. They’re slow-growing and as a result, can’t take too much fertilizer. However, it’s best to give them a balanced fertilizer (meaning the NPK numbers are all the same) like a 12-12-12 at the time of transplanting. Additionally, many farmers apply a foliar spray to the leaves about 1-3 months before harvest to improve flavor. ',																						
+    fertilizer: 'Wasabi doesn\'t need much fertilizer. They\'re slow-growing and as a result, can\'t take too much fertilizer. However, it\'s best to give them a balanced fertilizer (meaning the NPK numbers are all the same) like a 12-12-12 at the time of transplanting. Additionally, many farmers apply a foliar spray to the leaves about 1-3 months before harvest to improve flavor. ',																						
     pruning: 'The whole wasabi plant is edible.\n\nWhen your plant is ready to harvest it is recommended to hand dig the plant out of the ground or pot. You can then remove the plantlets that have formed around the crown to be potted or planted and expand your wasabi crop. Trim away the roots and stems and enjoy your fresh wasabi.',																						
     problems: [
       [
@@ -984,7 +984,7 @@ export default [
       [
         {
           problem: 'Pests/aphids.',
-          solution: 'Wasabi doesn’t suffer from too many pest problems. They’re much more susceptible to fungal problems. However, aphids are big fans of the wasabi leaf. Neem oil or insecticidal soap will handle the aphids easily.',
+          solution: 'Wasabi doesn\'t suffer from too many pest problems. They\'re much more susceptible to fungal problems. However, aphids are big fans of the wasabi leaf. Neem oil or insecticidal soap will handle the aphids easily.',
         }
       ],
       [
@@ -1003,7 +1003,7 @@ export default [
     priceRange: '£5-15',																						
     categorisation: '',																						
     favourited: '',																						
-    seededSays: 'Wasabi is one of the hardest plants to grow. It needs a contstant supply of water in its root zone. t’s the ideal plant to grow in a water garden or in containers where the soil can be kept continuously wet. Water around once a week. It also thrives in milder temperatures from 7ºC - 21ºC. Wasabi also can\'t handle direct sunlight. Keep it in a permanently shaded area. ',																						
+    seededSays: 'Wasabi is one of the hardest plants to grow. It needs a contstant supply of water in its root zone. t\'s the ideal plant to grow in a water garden or in containers where the soil can be kept continuously wet. Water around once a week. It also thrives in milder temperatures from 7ºC - 21ºC. Wasabi also can\'t handle direct sunlight. Keep it in a permanently shaded area. ',																						
   },																						
   {																						
     seed: 21,																						
@@ -1125,7 +1125,7 @@ export default [
     brightness: 'Partially low light',																						
     brightnessFilter: 2,																						
     fertilizer: 'Feed monthly spring through fall with a 20-10-10 water-soluble fertilizer diluted by half.',																						
-    pruning: 'Take each individual vine and determine where you’d like to prune it. You’ll always want to cut the vine ¼ inch (about 2/3 cm.) above each leaf. The point where the leaf meets the vine is called a node, and your pothos will send out a new vine in that area after you’ve pruned.   ',																						
+    pruning: 'Take each individual vine and determine where you\'d like to prune it. You\'ll always want to cut the vine ¼ inch (about 2/3 cm.) above each leaf. The point where the leaf meets the vine is called a node, and your pothos will send out a new vine in that area after you\'ve pruned.   ',																						
     problems: [
       [
         {
@@ -1218,19 +1218,19 @@ export default [
     wateringDetail: 'Try not to overwater Cotyledon orbiculata as the plant prefers a more arid environment and will rot if too much moisture is present in the soil.\n\nCotyledon orbiculata plants will often have better luck being watered from the top of their soil. This is because Cotyledon orbiculata succulent plants are sensitive to water droplets on their leaves and stems, which can cause rot or other problems.\n\nIf you are unsure about how much or little watering your Cotyledon orbiculata needs, then stick with giving them an inch of water per week until they show signs of struggling, at which point you can adjust accordingly.',																						
     temperature: '16-21ºC',																						
     tempCategory: 'Average',																						
-    tempDetail: 'Cotyledon Orbiculata plants thrive in warm temperatures of at least 70 degrees Fahrenheit (21 degrees Celsius) during the day. Still, they require a lower nighttime temperature of 60-65 F (16-18 C).\n\nCotyledon Orbiculata is tolerant of temperature fluctuations as long as they’re not too drastic (i.e., below freezing at night).',																						
+    tempDetail: 'Cotyledon Orbiculata plants thrive in warm temperatures of at least 70 degrees Fahrenheit (21 degrees Celsius) during the day. Still, they require a lower nighttime temperature of 60-65 F (16-18 C).\n\nCotyledon Orbiculata is tolerant of temperature fluctuations as long as they\'re not too drastic (i.e., below freezing at night).',																						
     light: 'Cotyledon orbiculata is a sun-loving succulent. It will need about six hours of full sunlight per day to thrive. Still, it can survive in partial shade if it has good air circulation and receives water regularly.',																						
     lightType: 'Mixed',																						
     sunlightFilter: 3,																						
     brightness: 'Partially bright',																						
     brightnessFilter: 4,																						
-    fertilizer: 'Pig’s ear succulents are not heavy feeders and do well with a light feeding once or twice a year. The best time to fertilize is in late spring or early summer.\n\nA balanced “slow-release” organic fertilizer is best, but a water-soluble fertilizer can also be used.\n\nIf you use a granular fertilizer, use half the normal dose because succulents don’t need much to grow and become leggy.',																						
+    fertilizer: 'Pig\'s ear succulents are not heavy feeders and do well with a light feeding once or twice a year. The best time to fertilize is in late spring or early summer.\n\nA balanced “slow-release” organic fertilizer is best, but a water-soluble fertilizer can also be used.\n\nIf you use a granular fertilizer, use half the normal dose because succulents don\'t need much to grow and become leggy.',																						
     pruning: 'Pruning Cotyledon orbiculata is unnecessary but can be done if you want to shape the plant into a bush-like form with fewer leaves.',																						
     problems: [
       [
         {
           problem: 'A common problem faced by succulent plants are root rot and fungal issues due to overwatering.',
-          solution: 'To combat this, you should thoroughly check your plant’s moisture levels at least once a week. If it appears too wet or moist, you may need to allow more time between each watering session until the soil dries out completely before adding any more water again. If your Pig’s Ear succulent does not respond favorably to this, it may need repotting into a drier soil mix.',
+          solution: 'To combat this, you should thoroughly check your plant\'s moisture levels at least once a week. If it appears too wet or moist, you may need to allow more time between each watering session until the soil dries out completely before adding any more water again. If your Pig\'s Ear succulent does not respond favorably to this, it may need repotting into a drier soil mix.',
         }
       ],
       [
@@ -1251,7 +1251,7 @@ export default [
     poisonous: 'Yes',																						
     linkToBuy: '',																						
     seededEaseRating: 4,																						
-    description: 'The Pig’s ear or Round-leafed navel-wort, is a succulent plant from South Africa. The noticebale feature is their fleshy, red-rimmed leaves that closely resemble a pig’s ear.',																						
+    description: 'The Pig\'s ear or Round-leafed navel-wort, is a succulent plant from South Africa. The noticebale feature is their fleshy, red-rimmed leaves that closely resemble a pig\'s ear.',																						
     priceRange: '£8-30',																						
     categorisation: '',																						
     favourited: '',																						
@@ -1371,12 +1371,12 @@ export default [
     temperature: '-6-36ºC',																						
     tempCategory: 'Very Low to Very High',																						
     tempDetail: 'The optimal temperature for this plant during peak summer months is between 21 and 35°C. Still, it would be best to ensure that the plant is not exposed to temperatures exceeding 37ºC. During the 3 to 5 month winter period, your trap should be kept around 7°C. However, do not let your plant freeze by exposing it to temperatures below -6ºC for long; this could have devastating effects.',																						
-    light: 'These carnivorous plants require a lot of sun. If you’re growing your plant outdoors, 4 or more hours of direct sunlight followed by 2-4 hours of bright indirect light is best. Indoors, a south-facing window that receives at least 6 hours of full sun is necessary.',																						
+    light: 'These carnivorous plants require a lot of sun. If you\'re growing your plant outdoors, 4 or more hours of direct sunlight followed by 2-4 hours of bright indirect light is best. Indoors, a south-facing window that receives at least 6 hours of full sun is necessary.',																						
     lightType: 'Partially direct',																						
     sunlightFilter: 4,																						
     brightness: 'Bright',																						
     brightnessFilter: 5,																						
-    fertilizer: 'If you grow your fly traps outdoors, they catch plenty of prey all on their own, but if you’re growing them indoors, you can get flies, beetles, spiders, crickets, or other garden insects and use a pair of terrarium tweezers to feed the bug to your plant.\n\nA few don’ts when it comes to feeding bugs to a Venus fly trap:\n\nNever feed your plant prey during winter dormancy.\nDo not feed your plants more than one or two bugs per month.',																						
+    fertilizer: 'If you grow your fly traps outdoors, they catch plenty of prey all on their own, but if you\'re growing them indoors, you can get flies, beetles, spiders, crickets, or other garden insects and use a pair of terrarium tweezers to feed the bug to your plant.\n\nA few don\'ts when it comes to feeding bugs to a Venus fly trap:\n\nNever feed your plant prey during winter dormancy.\nDo not feed your plants more than one or two bugs per month.',																						
     pruning: 'Venus flytraps can be pruned. Trimming is not essential to the plant\'s survival, but it provides health and aesthetic benefits. Use sharp and thin scissors to cut the dead leaves from the base, and be cautious with the bulb and surrounding healthy leaves.',																						
     problems: [
       [
@@ -1482,7 +1482,7 @@ export default [
       [
         {
           problem: 'The most common problem for Crotons is leaves dropping.',
-          solution: 'When a croton plant drops leaves, it’s a reaction to stress, which can be caused by sudden changes. Crotons don\'t like being moved! If you do move, make sure to take extra care. If you scratch the base of the stem and it\'s green underneath, it might just recover!',
+          solution: 'When a croton plant drops leaves, it\'s a reaction to stress, which can be caused by sudden changes. Crotons don\'t like being moved! If you do move, make sure to take extra care. If you scratch the base of the stem and it\'s green underneath, it might just recover!',
         }
       ],
       [
@@ -1503,7 +1503,7 @@ export default [
     poisonous: 'Yes',																						
     linkToBuy: '',																						
     seededEaseRating: 4,																						
-    description: 'Croton are beautiful house plants, grown for their bold and striking foliage. They’re also known as Joseph’s coat as their thick, oval, pointed leaves are splashed with many colours, including red, pink, burgundy, orange, yellow and green. In summer, small white or yellow star-shaped flowers may appear.',																						
+    description: 'Croton are beautiful house plants, grown for their bold and striking foliage. They\'re also known as Joseph\'s coat as their thick, oval, pointed leaves are splashed with many colours, including red, pink, burgundy, orange, yellow and green. In summer, small white or yellow star-shaped flowers may appear.',																						
     priceRange: '£15-200',																						
     categorisation: '',																						
     favourited: '',																						
@@ -1553,7 +1553,7 @@ export default [
     poisonous: 'Yes',																						
     linkToBuy: '',																						
     seededEaseRating: 1,																						
-    description: 'While gardenias are lovely, with their strong scent and bright-green leaves, they’re extremely picky. These are some of the hardest plants to keep alive and get to bloom.',																						
+    description: 'While gardenias are lovely, with their strong scent and bright-green leaves, they\'re extremely picky. These are some of the hardest plants to keep alive and get to bloom.',																						
     priceRange: '£10-40',																						
     categorisation: '',																						
     favourited: '',																						
@@ -1571,7 +1571,7 @@ export default [
     temperature: '10-26ºC',																						
     tempCategory: 'Low to Average',																						
     tempDetail: 'If the temperature changes suddenly, it will take a while for the plant to adapt to the transitional climate, but with proper care, it will survive the change.',																						
-    light: 'Like most leafy plants, Baby’s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage',																						
+    light: 'Like most leafy plants, Baby\'s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage',																						
     lightType: 'Indirect',																						
     sunlightFilter: 1,																						
     brightness: 'Bright',																						
@@ -1603,11 +1603,11 @@ export default [
     poisonous: 'No',																						
     linkToBuy: '',																						
     seededEaseRating: 5,																						
-    description: 'Baby’s Tears are a fun and easy plant to take care of. They make for a great groundcover in terrariums because of their low maintenance. ',																						
+    description: 'Baby\'s Tears are a fun and easy plant to take care of. They make for a great groundcover in terrariums because of their low maintenance. ',																						
     priceRange: '£5-20',																						
     categorisation: '',																						
     favourited: '',																						
-    seededSays: 'Baby\'s tears plants are thirsty plants that never like to dry out. Water it once a week and they\'ll be more than happy. If you allow your plants to dry out, you\'ll notice a dramatic wilting. Water as soon as you notice wilting, and within a day, they should recover. Like most leafy plants, Baby’s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage. As far as pruning goes, it depends on how you want the plant to look. You should always prune the dry leaves.',																						
+    seededSays: 'Baby\'s tears plants are thirsty plants that never like to dry out. Water it once a week and they\'ll be more than happy. If you allow your plants to dry out, you\'ll notice a dramatic wilting. Water as soon as you notice wilting, and within a day, they should recover. Like most leafy plants, Baby\'s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage. As far as pruning goes, it depends on how you want the plant to look. You should always prune the dry leaves.',																						
   },																						
   {																						
     seed: 33,																						

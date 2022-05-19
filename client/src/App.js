@@ -18,7 +18,7 @@ import OwnProfile from "./components/profile/OwnProfile"
 import Searchpage from "./components/aux/Searchpage"
 import Aboutus from "./components/profile/Aboutus"
 import Glossary from "./components/aux/Glossary"
-
+import Footer from "./components/common/Footer"
 
 const App = () => {
 
@@ -44,6 +44,7 @@ const App = () => {
           <Route path='/login' element={<Login />} /> 
           <Route path='*' element={<NotFound />} /> 
         </Routes>
+        <Footer />
       </BrowserRouter>
     </main>
   )

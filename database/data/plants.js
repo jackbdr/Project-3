@@ -781,7 +781,7 @@ export default [
       ],
       [
         {
-          problem: 'Brown leaves.',
+          problem: 'Brown leaves',
           solution: 'Likely cause is over-watering. Remove affected leaves and repot to prevent it from dying.',
         }
       ],

@@ -49,14 +49,11 @@
   }
 }
 
-.card:hover .card-img {
+.card:hover .card-img, .card:hover .card-title {
   opacity: 0.4;
 }
 .card:hover .middle {
   opacity: 1;
-}
-.card:hover .card-title {
-  opacity: 0.4;
 }
 
 

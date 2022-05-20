@@ -33,7 +33,7 @@ const OwnProfile = () => {
 
       </div>
       <div id='profile-right'>
-        <p>Right</p>
+        <p>Right HIII</p>
       </div>
     </div>
   )

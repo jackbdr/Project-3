@@ -43,14 +43,14 @@ const PlantDetail = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-75"
-                    src={plants.image}
+                    src={plants.imageTrans}
                     alt="First slide"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-75"
-                    src='https://pyxis.nymag.com/v1/imgs/b82/665/f7757415a07efbf46caf22548dcabf9798-etsy-african-spear-plant.2x.rdeep-vertical.w245.jpg'
+                    src={plants.imageHome}
                     alt="Second slide"
                   />
                 </Carousel.Item>
@@ -123,7 +123,7 @@ const PlantDetail = () => {
           <section className="bottom-section">
             <section className="bottom-content">
               <div className="plant-pic">
-                <img src={plants.image} alt={plants.name} />
+                <img src={plants.imageWild} alt={plants.name} />
               </div>
               <div className="right-bottom">
                 <div className="facts">

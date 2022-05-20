@@ -1,3 +1,5 @@
+// ? Plants display
+
 .plant {
   text-align: -webkit-center;
   .link-container {
@@ -49,15 +51,30 @@
   }
 }
 
-.card:hover .card-img, .card:hover .card-title {
+.card:hover .card-img,
+.card:hover .card-title {
   opacity: 0.4;
 }
 .card:hover .middle {
   opacity: 1;
 }
 
-
 // .sciname-container {
 //   position: relative;
 //   width: 100%;
 // }
+
+// ? Filters
+
+main {
+  display: flex;
+  justify-content: space-between;
+  .icon {
+    max-width: 25px;
+  }
+}
+
+.label-icon {
+  display: flex;
+  justify-content: space-between;
+}

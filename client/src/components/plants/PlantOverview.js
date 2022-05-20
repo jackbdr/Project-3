@@ -34,40 +34,86 @@ const PlantOverview = () => {
 
 
   return (
-    <section>
-      {errors ?
-        <p>Sorry, we had trouble growing the data!</p>
-        :
-        <div className='plants-container'>
-          <Container className='bstrap-container'>
-            <Row className='bstrap-row'>
-              {plants.map(plant => {
-                const { _id, name, image, sciName } = plant
-                return (
-                  <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
-                    <div className='link-container'>
-                      <Link to={`/plants/${_id}`} >
-                        <Card className='card'>
-                          {/* <div className='sciname-container'>
-                        </div> */}
-                          <Card.Img className='card-img' variant='top' src={image} />
-                          <div className='middle'>
-                            <div className='text'>{sciName}</div>
-                          </div>
-                          <Card.Body >
-                            <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
-                          </Card.Body>
-                        </Card>
-                      </Link>
-                    </div>
-                  </Col>
-                )
-              })}
-            </Row>
-          </Container>
+    <main>
+      <section className='filters'>
+        <div className='filters-container'>
+          <div className='water label-icon'>
+            <p>Water</p>
+            <div className='icons-container'>
+              <img src={'/images.png/watering-can.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/watering-can.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/watering-can.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/watering-can.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/watering-can.png'} alt='watering can' className='icon'></img>
+            </div>
+          </div>
+          <div className='light label-icon'>
+            <p>Sunlight</p>
+            <div className='icons-container'>
+              <img src={'/images.png/sunny.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/sunny.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/sunny.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/sunny.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/sunny.png'} alt='watering can' className='icon'></img>
+            </div>
+          </div>
+          <div className='brightness label-icon'>
+            <p>Brightness</p>
+            <div className='icons-container'>
+              <img src={'/images.png/light-bulb.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/light-bulb.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/light-bulb.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/light-bulb.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/light-bulb.png'} alt='watering can' className='icon'></img>
+            </div>
+          </div>
+          <div className='ease label-icon'>
+            <p>SeededEase rating</p>
+            <div className='icons-container'>
+              <img src={'/images.png/thumbs-up.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/thumbs-up.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/thumbs-up.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/thumbs-up.png'} alt='watering can' className='icon'></img>
+              <img src={'/images.png/thumbs-up.png'} alt='watering can' className='icon'></img>
+            </div>
+          </div>
         </div>
-      }
-    </section >
+      </section>
+      <section className='display-plants'>
+        {errors ?
+          <p>Sorry, we had trouble growing the data!</p>
+          :
+          <div className='plants-container'>
+            <Container className='bstrap-container'>
+              <Row className='bstrap-row'>
+                {plants.map(plant => {
+                  const { _id, name, image, sciName } = plant
+                  return (
+                    <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
+                      <div className='link-container'>
+                        <Link to={`/plants/${_id}`} >
+                          <Card className='card'>
+                            {/* <div className='sciname-container'>
+                    </div> */}
+                            <Card.Img className='card-img' variant='top' src={image} />
+                            <div className='middle'>
+                              <div className='text'>{sciName}</div>
+                            </div>
+                            <Card.Body >
+                              <Card.Title className='text-center mb-0 card-title'>{name}</Card.Title>
+                            </Card.Body>
+                          </Card>
+                        </Link>
+                      </div>
+                    </Col>
+                  )
+                })}
+              </Row>
+            </Container>
+          </div>
+        }
+      </section >
+    </main>
   )
 }
 

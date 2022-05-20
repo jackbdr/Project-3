@@ -26,7 +26,7 @@ router.route('/profile/:username')
   .get(secureRoute, viewProfile)
   .put(secureRoute, editProfile)
   
-router.route('/favorites/:id')
+router.route('/favorites/:username')
   .put(addFavorite)
 
 export default router

@@ -1,3 +1,8 @@
+.site-wrapper {
+  // background-color: rgb(236, 236, 236);
+}
+
+
 // ? Plants display
 
 .plant {
@@ -14,48 +19,90 @@
 .bstrap-container {
   display: flex;
   .bstrap-row {
-    align-items: baseline;
+    align-items: end;
   }
 }
 
 .plants-container {
   float: right;
-  // margin-right: 15%;
+  margin-top: 5%;
+  margin-right: 15%;
+  max-width: 60%;
+  background-color: white;
+  padding: 20px;
   .card {
     border: none;
-    position: relative;
+    // position: relative;
+    // background-color: rgb(236, 236, 236);
+    transition: 0.4s ease;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .card-img-container {
+      position: relative;
+    }
     .card-img {
       transition: 0.4s ease;
       opacity: 1;
     }
-    .middle {
-      transition: 0.8s ease;
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      text-align: center;
-      .text {
-        color: #464646;
-        font-size: 16px;
-        padding: 16px 32px;
-        font-style: italic;
+    // .middle {
+    //   transition: 0.8s ease;
+    //   opacity: 0;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   -ms-transform: translate(-50%, -50%);
+    //   text-align: center;
+      .ease {
+        color: #6b6b6b;
+        // font-size: 16px;
+        // padding: 16px 32px;
+        // font-style: italic;
+        font-size: 0.6rem;
+        opacity: 0;
+        transition: 0.5s ease;
       }
-    }
+    // }
     .card-title {
       color: #6b6b6b;
       transition: 0.5s ease;
+      font-size: 0.75rem;
+    }
+    .sci-name {
+      color: #6b6b6b;
+      opacity: 0;
+      transition: 0.5s ease;
+      font-style: italic;
+      width: 100%;
+      font-size: 0.6rem;
     }
   }
 }
 
+.text {
+  text-align: left;
+  margin: 0;
+}
+
+
 .card:hover .card-img,
 .card:hover .card-title {
-  opacity: 0.4;
+  // opacity: 0.4;
 }
-.card:hover .middle {
+
+
+.card:hover {
+  // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card:hover .middle{
+  opacity: 1;
+}
+
+.card:hover .sci-name {
+  opacity: 1;
+}
+
+.card:hover .text {
   opacity: 1;
 }
 
@@ -66,15 +113,70 @@
 
 // ? Filters
 
+.reset {
+  padding: 20px;
+}
+
+.filters-container {
+  background-color: rgb(236, 236, 236);
+  padding: 50px
+}
+
 main {
   display: flex;
   justify-content: space-between;
-  .icon {
-    max-width: 25px;
+  .icons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .icon {
+      max-width: 25px;
+
+    }
   }
 }
 
+button {
+  padding: 25px;
+  border: none;
+}
+
+.can {
+  background-image: url('../../../../public/images.png/watering-can.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sun {
+  background-image: url('../../../../public/images.png/sunny.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bulb {
+  background-image: url('../../../../public/images.png/light-bulb.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bulb-on {
+  background-image: url('../../../../public/images.png/light-bulb-selected3.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb {
+  background-image: url('../../../../public/images.png/ease.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .label-icon {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
 }

@@ -49,7 +49,7 @@ const plantSchema = new mongoose.Schema({
   description: { type: String, required: true },
   priceRange: { type: String, required: true },
   categorisation: { type: String, required: false },
-  favourited: { type: String, required: false },
+  favourited: [{ type: String, required: false }],
   // addedBy: { type: mongoose.Schema.objectId, ref: 'User', required: true },
   id: false,
   seededSays: { type: String, required: true },

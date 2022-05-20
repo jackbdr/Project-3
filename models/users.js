@@ -7,6 +7,9 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  favourited: [
+    { type: String, required: false }
+  ],
 })
 
 // ? reverse relationships 

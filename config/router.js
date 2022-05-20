@@ -23,7 +23,7 @@ router.route('/login')
   .post(loginUser)
 
 router.route('/profile/:username')
-  .get(secureRoute, viewProfile)
+  .get(viewProfile)
   .put(secureRoute, editProfile)
   
 router.route('/favorites/:username')

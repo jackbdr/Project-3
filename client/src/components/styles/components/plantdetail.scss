@@ -1,5 +1,4 @@
 .overall-container {
-  font-family: 'Cormorant Garamond', serif;
   margin-top: 30px;
   max-width: 100%;
   display: flex;
@@ -205,12 +204,29 @@
   .problem-detail {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    img {
+      width:30px;
+      height:30px;
+      margin-right: 10px;
+      margin-left: 10px;
+      }
+    .problem-box {
+      width: 150px;
+      padding-top: 10px;
+    }
     h3{
       font-size: 13px;
     }
-    
+    .solution-box {
+      padding-top: 10px;
+    }
   }
-  }
+}
+
 
 
 // #plantShow{
@@ -240,4 +256,3 @@
 //     text-align: center;
 //     background-color: #f0f0f0;
 //   }
-// }

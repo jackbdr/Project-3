@@ -31,3 +31,17 @@ export const editProfile = async(req, res) => {
   }
   
 }
+
+// Add a favorites
+export const addFavorite = async (req, res) => {
+  const { username } = req.params
+
+  try {
+    const profileToFavorite = await User.findOneAndUpdate({ username: username } , req.body, { new: true })
+    return res.status(200).json(profileToFavorite)
+
+  } catch (error) {
+    res.status(422).json(error)
+    console.log(error)
+  }
+}

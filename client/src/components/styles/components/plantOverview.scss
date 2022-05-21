@@ -161,6 +161,12 @@
   }
 }
 
+.icon-cross-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 
 button {
@@ -228,3 +234,15 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.cross {
+  background-image: url('../../../../public/images.png/cross.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+
+
+

@@ -156,129 +156,148 @@ const PlantOverview = () => {
         <div className='filters-container'>
           <h4>Filters</h4>
           <hr className='break' />
-          <div className='cans label-icon'>
-            <p>Watering</p>
-            <div className='icons-container'>
-              {cans === 'can1' ?
-                <Can1Colour handleCanChange={handleCanChange} />
-                :
-                <Can1 handleCanChange={handleCanChange} />
-              }
-              {cans === 'can2' ?
-                <Can2Colour handleCanChange={handleCanChange} />
-                :
-                <Can2 handleCanChange={handleCanChange} />
-              }
-              {cans === 'can3' ?
-                <Can3Colour handleCanChange={handleCanChange} />
-                :
-                <Can3 handleCanChange={handleCanChange} />
-              }
-              {cans === 'can4' ?
-                <Can4Colour handleCanChange={handleCanChange} />
-                :
-                <Can4 handleCanChange={handleCanChange} />
-              }
-              {cans === 'can5' ?
-                <Can5Colour handleCanChange={handleCanChange} />
-                :
-                <Can5 handleCanChange={handleCanChange} />
-              }
+          <div className='icon-cross-container'>
+            <div className='cans label-icon'>
+              <p>Watering</p>
+              <div className='icons-container'>
+                {cans === 'can1' ?
+                  <Can1Colour handleCanChange={handleCanChange} />
+                  :
+                  <Can1 handleCanChange={handleCanChange} />
+                }
+                {cans === 'can2' ?
+                  <Can2Colour handleCanChange={handleCanChange} />
+                  :
+                  <Can2 handleCanChange={handleCanChange} />
+                }
+                {cans === 'can3' ?
+                  <Can3Colour handleCanChange={handleCanChange} />
+                  :
+                  <Can3 handleCanChange={handleCanChange} />
+                }
+                {cans === 'can4' ?
+                  <Can4Colour handleCanChange={handleCanChange} />
+                  :
+                  <Can4 handleCanChange={handleCanChange} />
+                }
+                {cans === 'can5' ?
+                  <Can5Colour handleCanChange={handleCanChange} />
+                  :
+                  <Can5 handleCanChange={handleCanChange} />
+                }
+              </div>
+            </div>
+            <div>
+              <button className='cross'></button>
             </div>
           </div>
-          <div className='suns label-icon'>
-            <p>Sunlight</p>
-            <div className='icons-container'>
-              {suns === 'sun1' ?
-                <Sun1Colour handleSunChange={handleSunChange} />
-                :
-                <Sun1 handleSunChange={handleSunChange} />
-              }
-              {suns === 'sun2' ?
-                <Sun2Colour handleSunChange={handleSunChange} />
-                :
-                <Sun2 handleSunChange={handleSunChange} />
-              }
-              {suns === 'sun3' ?
-                <Sun3Colour handleSunChange={handleSunChange} />
-                :
-                <Sun3 handleSunChange={handleSunChange} />
-              }
-              {suns === 'sun4' ?
-                <Sun4Colour handleSunChange={handleSunChange} />
-                :
-                <Sun4 handleSunChange={handleSunChange} />
-              }
-              {suns === 'sun5' ?
-                <Sun5Colour handleSunChange={handleSunChange} />
-                :
-                <Sun5 handleSunChange={handleSunChange} />
-              }
+          <div className='icon-cross-container'>
+            <div className='suns label-icon'>
+              <p>Sunlight</p>
+              <div className='icons-container'>
+                {suns === 'sun1' ?
+                  <Sun1Colour handleSunChange={handleSunChange} />
+                  :
+                  <Sun1 handleSunChange={handleSunChange} />
+                }
+                {suns === 'sun2' ?
+                  <Sun2Colour handleSunChange={handleSunChange} />
+                  :
+                  <Sun2 handleSunChange={handleSunChange} />
+                }
+                {suns === 'sun3' ?
+                  <Sun3Colour handleSunChange={handleSunChange} />
+                  :
+                  <Sun3 handleSunChange={handleSunChange} />
+                }
+                {suns === 'sun4' ?
+                  <Sun4Colour handleSunChange={handleSunChange} />
+                  :
+                  <Sun4 handleSunChange={handleSunChange} />
+                }
+                {suns === 'sun5' ?
+                  <Sun5Colour handleSunChange={handleSunChange} />
+                  :
+                  <Sun5 handleSunChange={handleSunChange} />
+                }
+              </div>
+            </div>
+            <div>
+              <button className='cross'></button>
             </div>
           </div>
-          <div className='bulbs label-icon'>
-            <p>Brightness</p>
-            <div className='icons-container'>
-              {bulbs === 'bulb1' ?
-                <LightBulb1On handleBulbChange={handleBulbChange} />
-                :
-                <LightBulb1Off handleBulbChange={handleBulbChange} />
-              }
-              {bulbs === 'bulb2' ?
-                <LightBulb2On handleBulbChange={handleBulbChange} />
-                :
-                <LightBulb2Off handleBulbChange={handleBulbChange} />
-              }
-              {bulbs === 'bulb3' ?
-                <LightBulb3On handleBulbChange={handleBulbChange} />
-                :
-                <LightBulb3Off handleBulbChange={handleBulbChange} />
-              }
-              {bulbs === 'bulb4' ?
-                <LightBulb4On handleBulbChange={handleBulbChange} />
-                :
-                <LightBulb4Off handleBulbChange={handleBulbChange} />
-              }
-              {bulbs === 'bulb5' ?
-                <LightBulb5On handleBulbChange={handleBulbChange} />
-                :
-                <LightBulb5Off handleBulbChange={handleBulbChange} />
-              }
+          <div className='icon-cross-container'>
+            <div className='bulbs label-icon'>
+              <p>Brightness</p>
+              <div className='icons-container'>
+                {bulbs === 'bulb1' ?
+                  <LightBulb1On handleBulbChange={handleBulbChange} />
+                  :
+                  <LightBulb1Off handleBulbChange={handleBulbChange} />
+                }
+                {bulbs === 'bulb2' ?
+                  <LightBulb2On handleBulbChange={handleBulbChange} />
+                  :
+                  <LightBulb2Off handleBulbChange={handleBulbChange} />
+                }
+                {bulbs === 'bulb3' ?
+                  <LightBulb3On handleBulbChange={handleBulbChange} />
+                  :
+                  <LightBulb3Off handleBulbChange={handleBulbChange} />
+                }
+                {bulbs === 'bulb4' ?
+                  <LightBulb4On handleBulbChange={handleBulbChange} />
+                  :
+                  <LightBulb4Off handleBulbChange={handleBulbChange} />
+                }
+                {bulbs === 'bulb5' ?
+                  <LightBulb5On handleBulbChange={handleBulbChange} />
+                  :
+                  <LightBulb5Off handleBulbChange={handleBulbChange} />
+                }
+              </div>
+            </div>
+            <div>
+              <button className='cross'></button>
             </div>
           </div>
-          <div className='thumbs label-icon'>
-            <p>Ease rating</p>
-            <div className='icons-container'>
-              {thumbs === 'thumb1' ?
-                <Thumb1Colour handleThumbChange={handleThumbChange} />
-                :
-                <Thumb1 handleThumbChange={handleThumbChange} />
-              }
-              {thumbs === 'thumb2' ?
-                <Thumb2Colour handleThumbChange={handleThumbChange} />
-                :
-                <Thumb2 handleThumbChange={handleThumbChange} />
-              }
-              {thumbs === 'thumb3' ?
-                <Thumb3Colour handleThumbChange={handleThumbChange} />
-                :
-                <Thumb3 handleThumbChange={handleThumbChange} />
-              }
-              {thumbs === 'thumb4' ?
-                <Thumb4Colour handleThumbChange={handleThumbChange} />
-                :
-                <Thumb4 handleThumbChange={handleThumbChange} />
-              }
-              {thumbs === 'thumb5' ?
-                <Thumb5Colour handleThumbChange={handleThumbChange} />
-                :
-                <Thumb5 handleThumbChange={handleThumbChange} />
-              }
+          <div className='icon-cross-container'>
+            <div className='thumbs label-icon'>
+              <p>Ease rating</p>
+              <div className='icons-container'>
+                {thumbs === 'thumb1' ?
+                  <Thumb1Colour handleThumbChange={handleThumbChange} />
+                  :
+                  <Thumb1 handleThumbChange={handleThumbChange} />
+                }
+                {thumbs === 'thumb2' ?
+                  <Thumb2Colour handleThumbChange={handleThumbChange} />
+                  :
+                  <Thumb2 handleThumbChange={handleThumbChange} />
+                }
+                {thumbs === 'thumb3' ?
+                  <Thumb3Colour handleThumbChange={handleThumbChange} />
+                  :
+                  <Thumb3 handleThumbChange={handleThumbChange} />
+                }
+                {thumbs === 'thumb4' ?
+                  <Thumb4Colour handleThumbChange={handleThumbChange} />
+                  :
+                  <Thumb4 handleThumbChange={handleThumbChange} />
+                }
+                {thumbs === 'thumb5' ?
+                  <Thumb5Colour handleThumbChange={handleThumbChange} />
+                  :
+                  <Thumb5 handleThumbChange={handleThumbChange} />
+                }
+              </div>
             </div>
-            <button className='reset' onClick={reset}>Reset</button>
+            <div>
+              <button className='cross'></button>
+            </div>
           </div>
         </div>
-      </section>
+      </section >
       <section className='display-plants'>
         {!plants.length ?
           <p>Sorry, we had trouble growing the data!</p>
@@ -316,7 +335,7 @@ const PlantOverview = () => {
           </div>
         }
       </section >
-    </div>
+    </div >
   )
 }
 export default PlantOverview

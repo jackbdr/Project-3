@@ -149,6 +149,33 @@ const PlantOverview = () => {
     setThumbs(false)
   }
 
+  const resetCans = () => {
+    setWaterFilter({
+      water: '',
+    })
+    setCans(false)
+  }
+
+  const resetSuns = () => {
+    setLightFilter({
+      light: '',
+    })
+    setSuns(false)
+  }
+
+  const resetBulbs = () => {
+    setBrightnessFilter({
+      brightness: '',
+    })
+    setBulbs(false)
+  }
+
+  const resetThumbs = () => {
+    setEaseFilter({
+      ease: '',
+    })
+    setThumbs(false)
+  }
 
   return (
     <div className='index-wrapper'>
@@ -188,7 +215,7 @@ const PlantOverview = () => {
               </div>
             </div>
             <div>
-              <button className='cross'></button>
+              <button className='cross' onClick={resetCans}></button>
             </div>
           </div>
           <div className='icon-cross-container'>
@@ -223,7 +250,7 @@ const PlantOverview = () => {
               </div>
             </div>
             <div>
-              <button className='cross'></button>
+              <button className='cross' onClick={resetSuns}></button>
             </div>
           </div>
           <div className='icon-cross-container'>
@@ -258,7 +285,7 @@ const PlantOverview = () => {
               </div>
             </div>
             <div>
-              <button className='cross'></button>
+              <button className='cross' onClick={resetBulbs}></button>
             </div>
           </div>
           <div className='icon-cross-container'>
@@ -293,7 +320,7 @@ const PlantOverview = () => {
               </div>
             </div>
             <div>
-              <button className='cross'></button>
+              <button className='cross' onClick={resetThumbs}></button>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@
 .plant {
   text-align: -webkit-center;
   .link-container {
-    max-width: 200px;
+    max-width: 100%;
     > a {
       text-decoration: none;
       color: white;
@@ -16,18 +16,20 @@
   }
 }
 
+.display-plants
 .bstrap-container {
   display: flex;
+  max-width: 100%;
   .bstrap-row {
     align-items: end;
   }
 }
 
 .plants-container {
-  float: right;
+  // float: right;
   margin-top: 5%;
   margin-right: 15%;
-  max-width: 60%;
+  max-width: 80%;
   background-color: white;
   padding: 20px;
   .card {
@@ -122,16 +124,15 @@
   padding: 50px
 }
 
-main {
+.index-wrapper {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   .icons-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     .icon {
       max-width: 25px;
-
     }
   }
 }
@@ -148,8 +149,22 @@ button {
   background-repeat: no-repeat;
 }
 
+.can-colour {
+  background-image: url('../../../../public/images.png/water-selected.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .sun {
   background-image: url('../../../../public/images.png/sunny.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sun-colour {
+  background-image: url('../../../../public/images.png/sunny-selected.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -171,6 +186,13 @@ button {
 
 .thumb {
   background-image: url('../../../../public/images.png/ease.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-colour {
+  background-image: url('../../../../public/images.png/ease-selected.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

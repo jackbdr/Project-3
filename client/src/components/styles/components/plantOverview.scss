@@ -140,6 +140,7 @@
 button {
   padding: 25px;
   border: none;
+  background-color: rgb(236, 236, 236);
 }
 
 .can {
@@ -188,7 +189,7 @@ button {
   background-image: url('../../../../public/images.png/ease.png');
   background-position: center;
   background-size: contain;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
 }
 
 .thumb-colour {

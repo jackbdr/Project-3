@@ -16,33 +16,38 @@
   }
 }
 
-.display-plants
+.display-plants,
 .bstrap-container {
   display: flex;
-  max-width: 100%;
+  width: 100%;
   .bstrap-row {
     align-items: end;
   }
 }
 
+.break {
+  background-color: #228b22;
+  border: none;
+}
+
 .plants-container {
   // float: right;
   margin-top: 5%;
-  margin-right: 15%;
-  max-width: 80%;
+  margin-right: 10%;
+  width: 70%;
   background-color: white;
   padding: 20px;
   .card {
     border: none;
     // position: relative;
     // background-color: rgb(236, 236, 236);
-    transition: 0.4s ease;
+    transition: 0.5s ease;
     // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     .card-img-container {
       position: relative;
     }
     .card-img {
-      transition: 0.4s ease;
+      transition: 0.5s ease;
       opacity: 1;
     }
     // .middle {
@@ -59,7 +64,7 @@
         // font-size: 16px;
         // padding: 16px 32px;
         // font-style: italic;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         opacity: 0;
         transition: 0.5s ease;
       }
@@ -67,7 +72,7 @@
     .card-title {
       color: #6b6b6b;
       transition: 0.5s ease;
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
     .sci-name {
       color: #6b6b6b;
@@ -75,7 +80,7 @@
       transition: 0.5s ease;
       font-style: italic;
       width: 100%;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
     }
   }
 }
@@ -94,6 +99,7 @@
 
 .card:hover {
   // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(1.05);
 }
 
 .card:hover .middle{
@@ -115,32 +121,56 @@
 
 // ? Filters
 
+
+
 .reset {
   padding: 20px;
 }
 
-.filters-container {
-  background-color: rgb(236, 236, 236);
-  padding: 50px
-}
+
 
 .index-wrapper {
   display: flex;
   // justify-content: space-between;
-  .icons-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    .icon {
-      max-width: 25px;
+  .filters {
+    margin-top: 5%;
+    margin-right: 8%;
+    margin-left: 8%;
+    width: 20%;
+    height: fit-content;
+  }
+}
+
+.filters-container {
+  // background-color: rgb(157, 151, 151);
+  // padding: 50px;
+  width:fit-content;
+  .label-icon {
+    // display: flex;
+    justify-content: space-between;
+    // width: fit-content;
+    p {
+      margin-bottom: 3%;
+    }
+    .icons-container {
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 8%;
     }
   }
 }
 
+
+
 button {
-  padding: 25px;
+  // width: 100%;
+  padding: 20px;
   border: none;
-  background-color: rgb(236, 236, 236);
+  // background-color: rgb(236, 236, 236);
+  background-color: white;
+  margin-left: 2%; // ! not currently working
+  margin-right: 2%; // ! not currently working
 }
 
 .can {
@@ -197,9 +227,4 @@ button {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.label-icon {
-  // display: flex;
-  justify-content: space-between;
 }

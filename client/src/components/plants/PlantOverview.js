@@ -105,7 +105,7 @@ const PlantOverview = () => {
 
   const handleThumbChange = (e) => {
     if (thumbs === e.target.id) {
-      setThumbs(false) 
+      setThumbs(false)
       setEaseFilter({ ease: '' })
     } else {
       const newObj = {
@@ -154,8 +154,10 @@ const PlantOverview = () => {
     <div className='index-wrapper'>
       <section className='filters'>
         <div className='filters-container'>
+          <h4>Filters</h4>
+          <hr className='break' />
           <div className='cans label-icon'>
-            <p>Water</p>
+            <p>Watering</p>
             <div className='icons-container'>
               {cans === 'can1' ?
                 <Can1Colour handleCanChange={handleCanChange} />
@@ -282,8 +284,8 @@ const PlantOverview = () => {
           <p>Sorry, we had trouble growing the data!</p>
           :
           <div className='plants-container'>
-            <h3>All plants</h3>
-            <hr style={{color: "green"}}/>
+            <h4>All plants</h4>
+            <hr className='break' />
             <Container className='bstrap-container'>
               <Row className='bstrap-row'>
                 {handleFilter().map(plant => {
@@ -317,6 +319,4 @@ const PlantOverview = () => {
     </div>
   )
 }
-
-
 export default PlantOverview

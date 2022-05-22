@@ -122,7 +122,9 @@ const PlantDetail = () => {
           <section className="bottom-section">
             <section className="bottom-content">
               <div className="left-page">
-                <img src={plants.imageWild} alt={plants.name} />
+                <div className='plant-pic'>
+                  <img src={plants.imageWild} alt={plants.name} />
+                </div>
               </div>
               <div className="right-page">
                 <div className="facts">
@@ -165,6 +167,7 @@ const PlantDetail = () => {
                       <small>{plants.poisonous}</small>
                     </div>
                   </div>
+                  <hr/>
                 </div>
                 <div className="problem-section">
                   <div className='problem-title'>
@@ -189,7 +192,7 @@ const PlantDetail = () => {
                     </div>
                   </div>
                   <div className='problem-detail'>
-                    
+
                     <img src="/images.png/maple-leaf.png" alt="leaf" />
                     <div className="problem-box">
                       <h3>{plants.problems[2][0].problem}</h3>

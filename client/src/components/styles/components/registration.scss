@@ -1,21 +1,68 @@
+.form-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
 .form-detail {
-  width: 50%;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 60%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  padding-bottom: 15%;
+
+  button {
+    background-color:rgba(0, 126, 50, 0.797);
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 30px;
+  }
+}
+h1 {
+  text-align: center;
+}
+label {
+  font-size: 0.9em;
+}
+.input {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color:rgba(0, 126, 50, 0.1);
   border: 1px solid grey;
-  margin-top: 30px;
-  box-shadow: 0 0 10px grey;
-  label {
-    font-size: 0.9em;
-  }
-  .input {
-    margin-bottom: 15px;
-  }
+  padding: 5px 0px 5px 10px;
 }
 p.text-danger {
   color: red;
   text-align: center;
+}
+
+
+.new-user {
+  width: 40%;
+  text-align: center;
+  background-image: linear-gradient(rgba(103, 100, 100, 0.207), rgba(0, 126, 50, 0.797));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 15%;
+  h1 {
+    padding-bottom: 3%;
+  }
+  h4 {
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+  }
+  button {
+    width: 50%;
+    border-radius: 35px;
+  }
 }

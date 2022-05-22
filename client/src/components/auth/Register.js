@@ -40,26 +40,35 @@ const Register = () => {
   
   return (
     <section className='form-page'>
+      <section className='new-user'>
+        <h1>Welcome back!</h1>
+        <h4>To access our extra features, please sign in with your personal info.</h4>
+        <button>Sign in</button>
+
+      </section>
       <form className='form-detail' onSubmit={handleSubmit}>
-        <h1>Register</h1>
+        <h1>Create Account</h1>
+        <h4>Use your email address to register with us</h4>
+        <hr/>
         {/* Username */}
-        <label htmlFor='username'>Username</label>
+        <label htmlFor='username'></label>
         <input type='text' name='username' className='input' placeholder='Username' value = {formData.username} onChange={handleChange}/>
         {/* {errors && <p className = 'denied-text'>Please input username</p>} */}
         {/* Email */}
-        <label htmlFor='email'>Email</label>
+        <label htmlFor='email'></label>
         <input type='email' name='email' className='input' placeholder='Email' value = {formData.email} onChange={handleChange}/>
         {/* {errors && <p className = 'denied-text'>Please input email</p>} */}
         {/* Password */}
-        <label htmlFor='password'>Password</label>
+        <label htmlFor='password'></label>
         <input type='password' name='password' className='input' placeholder='Password' value = {formData.password} onChange={handleChange}/>
         {/* {errors && <p className = 'denied-text'>Please input password</p>} */}
         {/* Password Confirmation */}
-        <label htmlFor='passwordConfirmation'>Password Confirmation</label>
+        <label htmlFor='passwordConfirmation'></label>
         <input type='password' name='passwordConfirmation' className='input' placeholder='Password Confirmation' value = {formData.passwordConfirmation} onChange={handleChange}/>
         {/* Submit */}
         <button type = 'submit'>Register</button>
       </form>
+      
     </section>
   )
 }

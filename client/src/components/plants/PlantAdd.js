@@ -1,7 +1,45 @@
+import React, { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
+import { getToken } from '../helpers/Auth.js'
 
 
 const PlantAdd = () => {
+  
+  const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    name: '',
+    sciname: '',
+    origin: '',
+    image: '',
+    description: '',
+  })
+
+  const [errors, setErrors] = useState({})
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setErrors({ ...errors, [e.target.name]: '' })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const { data } = await axios.post('/api/plants', formData, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        },
+      })
+      navigate(`/plants/${data._id}`)
+    } catch (err) {
+      setErrors(err.response.data)
+    }
+  }
+
+
+
   return (
     <section className='form-page'>
     <form className='form-detail'>
@@ -12,7 +50,7 @@ const PlantAdd = () => {
       {/* {errors && <p className = 'denied-text'>Please input username</p>} */}
       {/* Scientific name */}
       <label htmlFor='name'>Scientific name</label>
-      <input type='text' name='sci-name' className='input' placeholder='Scientific name' />
+      <input type='text' name='sciname' className='input' placeholder='Scientific name' />
 
       {/* Origin */}
       <label htmlFor='origin'>Origin</label>

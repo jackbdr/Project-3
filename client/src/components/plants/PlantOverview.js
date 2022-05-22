@@ -130,24 +130,26 @@ const PlantOverview = () => {
     }
   }
 
-  const reset = () => {
-    setWaterFilter({
-      water: '',
-    })
-    setLightFilter({
-      light: '',
-    })
-    setBrightnessFilter({
-      brightness: '',
-    })
-    setEaseFilter({
-      ease: '',
-    })
-    setCans(false)
-    setSuns(false)
-    setBulbs(false)
-    setThumbs(false)
-  }
+  const filtersEmpty = waterFilter.water === '' && lightFilter.light === '' && brightnessFilter.brightness === '' && easeFilter.ease === ''
+
+  // const reset = () => {
+  //   setWaterFilter({
+  //     water: '',
+  //   })
+  //   setLightFilter({
+  //     light: '',
+  //   })
+  //   setBrightnessFilter({
+  //     brightness: '',
+  //   })
+  //   setEaseFilter({
+  //     ease: '',
+  //   })
+  //   setCans(false)
+  //   setSuns(false)
+  //   setBulbs(false)
+  //   setThumbs(false)
+  // }
 
   const resetCans = () => {
     setWaterFilter({
@@ -330,7 +332,11 @@ const PlantOverview = () => {
           <p>Sorry, we had trouble growing the data!</p>
           :
           <div className='plants-container'>
-            <h4>All plants</h4>
+            {filtersEmpty ?
+              <h4>All plants</h4>
+              :
+              <h4>{waterFilter.water && `Watering category ${waterFilter.water}`} {lightFilter.light && (waterFilter.water ? `, Light category ${lightFilter.light}` : `Light category ${lightFilter.light}`)} {brightnessFilter.brightness && (waterFilter.water || lightFilter.light ? `, Brightness category ${brightnessFilter.brightness}` : `Brightness category ${brightnessFilter.brightness}`)} {easeFilter.ease && (waterFilter.water || lightFilter.light || brightnessFilter.brightness ? `, Ease rating ${easeFilter.ease}` : `Ease rating ${easeFilter.ease}`)}</h4>
+              }
             <hr className='break' />
             <Container className='bstrap-container'>
               <Row className='bstrap-row'>

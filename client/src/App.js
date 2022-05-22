@@ -38,7 +38,7 @@ const App = () => {
           <Route path='/plants/selector' element={<PlantRandom />} />
           <Route path='/plants/add' element={<PlantAdd />} />
           <Route path='/plants/:id/edit' element={<PlantEdit />} />
-          <Route path='/profile/:userId' element={<OwnProfile />} /> 
+          <Route path='/profile/:username' element={<OwnProfile />} /> 
           <Route path='/accessories' element={<Accessories />} /> 
           <Route path='/comparison' element={<Websites />} /> 
           <Route path='/register' element={<Register />} /> 

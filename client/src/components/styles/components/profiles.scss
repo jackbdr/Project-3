@@ -1,64 +1,20 @@
-
-.site-wrapper{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+#profileImg{
+  width: 100px;
 }
 
-#profilePage{
-  h1{
-    text-align: center;
-  }
-  
-  #profileinfo{
-    text-align: center;
-      width: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      span{
-        margin-left: 20px;
-      }
-  }
+#profile-wrapper{
+  width: 100%;
+  display: flex;
 
-  #profileimg{
-    width: 30%;
-    text-align: center;
-    img{
-      width: 100%;
-      max-width: 250px;
-      border: 1px solid #f0f0f0;
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-    }
-  }
-  
-  ul{
-    padding: 0;
-    li{
-      list-style: none;
-    }
-  }
-
-  #following{
-    text-align: center;
-    width: 30%;
-    margin-top: 50px;
-    div{
-      background-color: #f0f0f0;
-      width: 100%;
-      padding: 10px 50px 20px 50px;
-      border-radius: 25px;
-      li{
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-      }
-    }
-  }
-  h2 {
-    text-align: center;
-  }
-  #added_plants{
+  #profile-left{
     width: 50%;
-    margin: 0 auto;
+
+    #img-wrapper{
+      
+    }
+  }
+
+  #profile-right{
+    width: 50%;
   }
 }

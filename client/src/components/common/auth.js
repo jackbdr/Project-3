@@ -1,7 +1,13 @@
+export const getTokenFromLocalStorage = () => {
+  return window.localStorage.getItem('project-3-plants')
+}
+
+
 export const getPayload = () => {
-  const token = window.localStorage.getItem('project-3-plants')
+  const token = getTokenFromLocalStorage()
   if (!token) return
   const payload = token.split('.')[1]
+  console.log(JSON.parse(atob(payload)))
   return JSON.parse(atob(payload))
 }
 
@@ -13,12 +19,8 @@ export const userIsAuthenticated = () => {
   return currentTime < payload.exp
 }
 
-export const getTokenFromLocalStorage = () => {
-  return window.localStorage.getItem('project-3-plants')
-}
-
 export const userIsOwner = (singlePlant) => {
   const payload = getPayload()
   if (!payload) return
-  return singlePlant.addedBy._id === payload.sub
+  return singlePlant.user._id === payload.sub
 }

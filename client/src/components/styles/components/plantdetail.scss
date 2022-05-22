@@ -103,8 +103,12 @@
   justify-content: space-evenly;
   width: 70%;
 
+
   .rating-title {
     text-align: left;
+    h4 {
+      margin:0px;
+    }
   }
 
   .tips-details {
@@ -116,6 +120,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    text-align: center;
   }
 
   .logo-image {

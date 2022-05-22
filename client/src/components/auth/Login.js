@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <section className='form-page'>
       <form className='form-detail' onSubmit={handleSubmit}>
-        <h1>Login to your account</h1>
+        <h1>Sign in to your account</h1>
         <hr />
         {/* Email */}
         <label htmlFor='email'></label>

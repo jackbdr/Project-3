@@ -44,7 +44,6 @@ const Register = () => {
         <h1>Welcome back!</h1>
         <h4>To access our extra features, please sign in with your personal info.</h4>
         <button>Sign in</button>
-
       </section>
       <form className='form-detail' onSubmit={handleSubmit}>
         <h1>Create Account</h1>

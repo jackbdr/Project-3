@@ -10,6 +10,7 @@
   input{
     color: black;
     border-radius: 10px;
+    border: 1px solid lightgray;
   }
 }
 .nav_left{
@@ -35,7 +36,8 @@
 
 .navbar{
   padding-top: 0px;
-  background-color: rgb(157, 151, 151);
+  background-color: #fbfbfb;
+  border-bottom: 1px solid lightgray;
 }
 
 .navLogo{

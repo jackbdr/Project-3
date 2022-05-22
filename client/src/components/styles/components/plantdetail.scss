@@ -1,258 +1,258 @@
+// Plant detail page is split into three sections:
+// 1 - Top section: shows main plant info and care tips
+// 2 - Middle section: purely a break between top and bottom
+// 3 - Bottom section: additional detail about the plant
+
+
+// Styling for all three sections
 .overall-container {
-  margin-top: 30px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
 
-  .top-page {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-  }
 
-  .left-page {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 100%;
-    align-items: center;
-  }
+// * Styling for the top section of the page
+.top-page {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin-top: 5%;
+}
 
+// Styling for the left hand side of the page
+.left-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: calc(100%/2.5);
+  align-items: center;
   .plant-pic {
-    height: 400px;
-    width: 75%;
-    align-items: center;
-
+    margin: 0 auto;
+    width: 50%;
+    max-width: 60%;
+    height: 45%;
+    padding: 10px;
     img {
-      margin-right: 0;
-    }
-  }
-
-  .seeded-rating {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .seeded-title {
-      text-align: center;
-
-      h4 {
-        font-size: 16px;
-      }
-    }
-
-    .seeded-detail {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .seeded-image {
-      height: 100px;
-
-      h1 {
-        font-size: 60px;
-      }
-    }
-  }
-
-  .right-page {
-    width: 150%;
-  }
-
-  .key-content {
-    margin-left: 10px;
-    margin-right: 50px;
-    width: 75%;
-    height: 400px;
-    h1 {
-      font-size: 25px;
-      font-weight: bold;
-    }
-    h3 {
-      font-size: 20px;
-      font-style: italic;
-    }
-    h4 {
-      margin-top: 40px;
-      font-size: 16px;
-      font-weight: 600;
-    }
-    p {
-      font-size: 14px;
-      padding-right: 20px;
-    }
-  }
-  .ratings {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .care-ratings {
-    .rating-title {
-      text-align: left;
-      h4 {
-        font-size: 16px;
-        font-weight: bold;
-      }
-    }
-    .tips-details {
-      display: flex;
-    }
-    .rating-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      .logo-image {
-        height: 100px;
-      }
-      img {
-        width: 70px;
-      }
-      small {
-        font-size: 13px;
-
-      }
-    }
-  }
-  .middle-section {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 600px;
-      height: 250px;
-    }
-  }
-  .bottom-section {
-    margin-top: 200px;
-    height: 90vh;
-    align-items: center;
-    .bottom-content {
-      display: flex;
-      flex-direction: row;
-        .plant-pic {
-        margin-left: 100px;
-        height: 400px;
-        width: 30%;
-        img {
-          width: 100%;
-        }
-      }
-    .right-bottom {
-        width:50%;
-        margin-left: 60px;
-    }
-    .facts {
-      .facts-title {
-          text-align: left;
-
-          h4 {
-            font-size: 16px;
-            font-weight: bold;
-          }
-        }
-
-        .facts-detail {
-          display: flex;
-          flex-direction: row;
-        }
-
-        .fact-logo {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 20px;
-          width: 17%;
-          text-align: center;
-          .fact-image {
-            height: 100px;
-          }
-          img {
-            width: 70px;
-          }
-
-          small {
-            font-size: 12px;
-          }
-        }
-      }
+      height: 100%;
+      margin-left: 15%;
     }
   }
 }
 
+.seeded-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .seeded-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .seeded-detail {
+    text-align: center;
+    font-size: 20px;
+  }
+  .seeded-image {
+    height: 70px;
+    margin-top:20px;
+  }
+}
 
-.seeded-says {
-  h3 {
-    font-size: 16px;
+// Styling for the right side of the page
+.right-page {
+  width: 50%;
+  h1 {
+    font-size: 40px;
+    text-align: left;
     font-weight: bold;
   }
+  h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  h4 {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: 600;
+  }
   p {
-    padding-right: 50px;
-    font-size: 13px;
+    font-size: 15px;
+    padding-right: 20px;
   }
 }
 
-.problem-section {
-  .problem-title {
-    h4 {
-      font-size: 16px;
-      font-weight: bold;
-    }
+.key-content {
+  margin-left: 10px;
+  margin-right: 50px;
+  width: 70%;
+}
+
+.care-ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 50px;
+  width:70%;
+}
+
+
+.rating-title {
+  text-align: left;
+}
+
+
+.tips-details {
+  display: flex;
+}
+
+.rating-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-image {
+  height: 75px;
+  img {
+    width: 90%;
+    height: 72%;
   }
-  .problem-detail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 40px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    img {
-      width:30px;
-      height:30px;
-      margin-right: 10px;
-      margin-left: 10px;
-      }
-    .problem-box {
-      width: 150px;
-      padding-top: 10px;
-    }
-    h3{
-      font-size: 13px;
-    }
-    .solution-box {
-      padding-top: 10px;
-    }
+}
+
+// Styling of the image in the middle paghe
+.middle-section {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 600px;
+    height: 250px;
   }
 }
 
 
 
-// #plantShow{
-//   img{
-//     width: 100%;
-//   }
 
-//   #plant-info{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
+.bottom-section {
+  margin-top: 200px;
+  height: 90vh;
+  align-items: center;
+}
 
-//   #buttons{
-//     display: flex;
-//     justify-content: space-evenly;
-//   }
+.bottom-content {
+  display: flex;
+  flex-direction: row;
+}
 
-//   #plant-pic{
-//     width: 350px;
-//     height: 650px;
-//   }
+.plant-pic {
+  margin-left: 100px;
+  height: 400px;
+  width: 30%;
+}
 
-//   #reviews {
-//     width: 50%;
-//     margin: 50px auto;
-//     text-align: center;
-//     background-color: #f0f0f0;
-//   }
+img {
+  width: 100%;
+}
+
+.right-bottom {
+  width: 50%;
+  margin-left: 60px;
+}
+
+.facts {}
+
+.facts-title {
+  text-align: left;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.facts-detail {
+  display: flex;
+  flex-direction: row;
+}
+
+.fact-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 17%;
+  text-align: center;
+}
+
+.fact-image {
+  height: 100px;
+}
+
+img {
+  width: 70px;
+}
+
+small {
+  font-size: 12px;
+}
+
+
+
+.seeded-says {}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p {
+  padding-right: 50px;
+  font-size: 13px;
+}
+
+.problem-section {}
+
+.problem-title {}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.problem-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.problem-box {
+  width: 150px;
+  padding-top: 10px;
+}
+
+h3 {
+  font-size: 13px;
+}
+
+.solution-box {
+  padding-top: 10px;
+}
+
+

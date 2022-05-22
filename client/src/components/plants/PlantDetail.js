@@ -63,9 +63,8 @@ const PlantDetail = () => {
                   <div className='seeded-image'>
                     <h1>🌱</h1>
                   </div>
-                  <small>{plants.easeRating}</small>
+                  <small>{plants.seededEaseRating}</small>
                 </div>
-
               </div>
             </section>
             <section className="right-page">
@@ -122,10 +121,10 @@ const PlantDetail = () => {
           {/* BOTTOM SECTION CONTAINING ADDITIONAL DETAIL */}
           <section className="bottom-section">
             <section className="bottom-content">
-              <div className="plant-pic">
+              <div className="left-page">
                 <img src={plants.imageWild} alt={plants.name} />
               </div>
-              <div className="right-bottom">
+              <div className="right-page">
                 <div className="facts">
                   <div className='facts-title'>
                     <h4>Key facts</h4>
@@ -207,7 +206,7 @@ const PlantDetail = () => {
               </div>
             </section>
             {/* <!--Carousel Wrapper--> */}
-            <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
+            {/* <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <Carousel.Item className="row">
@@ -222,7 +221,7 @@ const PlantDetail = () => {
                   </Carousel.Item>
                 </div>
               </div>
-            </Carousel>
+            </Carousel> */}
           </section>
         </section>
         :

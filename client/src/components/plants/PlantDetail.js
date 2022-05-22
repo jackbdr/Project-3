@@ -125,6 +125,9 @@ const PlantDetail = () => {
                 <div className='plant-pic'>
                   <img src={plants.imageWild} alt={plants.name} />
                 </div>
+                <div className = "plant-text">
+                  <h4>{plants.name} can grown up to {plants.maxGrowth} tall in the wild</h4>
+                </div>
               </div>
               <div className="right-page">
                 <div className="facts">
@@ -174,7 +177,7 @@ const PlantDetail = () => {
                     <h4>Typical problems</h4>
                   </div>
                   <div className='problem-detail'>
-                    <img src="/images.png/maple-leaf.png" alt="leaf" />
+                    <img src="/images.png/prob-icon1.png" alt="leaf" />
                     <div className="problem-box">
                       <h3>{plants.problems[0][0].problem}</h3>
                     </div>
@@ -183,7 +186,7 @@ const PlantDetail = () => {
                     </div>
                   </div>
                   <div className='problem-detail'>
-                    <img src="/images.png/maple-leaf.png" alt="leaf" />
+                    <img src="/images.png/prob-icon2.png" alt="leaf" />
                     <div className="problem-box">
                       <h3>{plants.problems[1][0].problem}</h3>
                     </div>
@@ -192,8 +195,7 @@ const PlantDetail = () => {
                     </div>
                   </div>
                   <div className='problem-detail'>
-
-                    <img src="/images.png/maple-leaf.png" alt="leaf" />
+                    <img src="/images.png/prob-icon3.png" alt="leaf" />
                     <div className="problem-box">
                       <h3>{plants.problems[2][0].problem}</h3>
                     </div>
@@ -201,6 +203,7 @@ const PlantDetail = () => {
                       <h3>{plants.problems[2][0].solution}</h3>
                     </div>
                   </div>
+                  <hr/>
                   <div className="seeded-says">
                     <h3>Seeded says</h3>
                     <p>{plants.seededSays}</p>

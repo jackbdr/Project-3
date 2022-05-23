@@ -50,12 +50,13 @@ const plantSchema = new mongoose.Schema({
   priceRange: { type: String, required: true },
   categorisation: { type: String, required: false },
   favourited: [{ type: String, required: false }],
-  // addedBy: { type: mongoose.Schema.objectId, ref: 'User', required: true },
+  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   id: false,
   seededSays: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
 })
 
-
+plantSchema.plugin(mongooseUniqueValidator)
 
 
 export default mongoose.model('Plant', plantSchema)

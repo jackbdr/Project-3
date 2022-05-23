@@ -161,7 +161,7 @@ export default [
     sciName: 'Pachira Aquatica',
     imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652892138/plant_pngs/money_fmamc0.png',
     imageHome: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653038315/plant_pngs/money-tree-home_g0hhf4.webp',
-    imageWild: ' ',
+    imageWild: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653314167/plant_pngs/money-tree-wild_gpo6rs.jpg',
     origin: 'South & Central America',																						
     wateringLevel: 'Every 7-14 days',																						
     waterCategory: 3,																						

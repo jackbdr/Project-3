@@ -348,7 +348,7 @@ const PlantOverview = () => {
             <Container className='bstrap-container'>
               <Row className='bstrap-row'>
                 {handleFilter().map(plant => {
-                  const { _id, name, image, sciName, seededEaseRating } = plant
+                  const { _id, name, imageTrans, sciName, seededEaseRating } = plant
                   return (
                     <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
                       <div className='link-container'>
@@ -357,7 +357,7 @@ const PlantOverview = () => {
                             {/* <div className='sciname-container'>
                     </div> */}
                             <div className='card-img-container'>
-                              <Card.Img className='card-img' variant='top' src={image} />
+                              <Card.Img className='card-img' variant='top' src={imageTrans} />
                             </div>
                             <Card.Body >
                               <Card.Title className='text mb-0 card-title'>{name}</Card.Title>

@@ -26,10 +26,12 @@ const App = () => {
   return (
     <main className="site-wrapper">
       <BrowserRouter>
+      <Routes>
+          <Route path='/' element={<Home />} />
+      </Routes>
       <div className='content-wrap'>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path='/aboutus' element={<Aboutus />} />
           <Route path='/glossary' element={<Glossary />} />
           <Route path='/plants' element={<PlantOverview />} />

@@ -122,8 +122,11 @@ const PlantOverview = () => {
   const handleFilter = () => {
     if (plants.length) {
       const filtered = plants.filter(plant => {
-        // return plant.waterCategory === filters.water && plant.sunlightFilter === filters.light && plant.brightnessFilter === filters.brightness && plant.seededEaseRating === filters.ease 
-        return (plant.waterCategory.toString().includes(waterFilter.water) && plant.sunlightFilter.toString().includes(lightFilter.light) && plant.brightnessFilter.toString().includes(brightnessFilter.brightness) && plant.seededEaseRating.toString().includes(easeFilter.ease))
+        if (plant.waterCategory && plant.sunlightFilter && plant.brightnessFilter && plant.seededEaseRating) {
+          return (plant.waterCategory.toString().includes(waterFilter.water) && plant.sunlightFilter.toString().includes(lightFilter.light) && plant.brightnessFilter.toString().includes(brightnessFilter.brightness) && plant.seededEaseRating.toString().includes(easeFilter.ease))
+        } else {
+          return plant.name
+        }
       })
       // console.log(filtered)
       // setFilteredPLants(filtered)
@@ -345,7 +348,7 @@ const PlantOverview = () => {
             <Container className='bstrap-container'>
               <Row className='bstrap-row'>
                 {handleFilter().map(plant => {
-                  const { _id, name, image, sciName, seededEaseRating } = plant
+                  const { _id, name, imageTrans, sciName, seededEaseRating } = plant
                   return (
                     <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
                       <div className='link-container'>
@@ -354,12 +357,12 @@ const PlantOverview = () => {
                             {/* <div className='sciname-container'>
                     </div> */}
                             <div className='card-img-container'>
-                              <Card.Img className='card-img' variant='top' src={image} />
+                              <Card.Img className='card-img' variant='top' src={imageTrans} />
                             </div>
                             <Card.Body >
                               <Card.Title className='text mb-0 card-title'>{name}</Card.Title>
                               <p className='sci-name text'>{sciName}</p>
-                              <p className='ease text'>Ease rating {seededEaseRating}</p>
+                              <p className='ease text'>Ease rating {seededEaseRating && seededEaseRating}</p>
                             </Card.Body>
                           </Card>
                         </Link>

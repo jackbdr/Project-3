@@ -29,7 +29,7 @@ router.route('/profile/:username')
   .put(secureRoute, editProfile)
   
 router.route('/favorites/:username')
-  .put(addFavorite)
+  .put(secureRoute, addFavorite)
 
 router.route('/comparison')
   .get(viewWebsites)

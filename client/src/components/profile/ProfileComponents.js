@@ -1,27 +1,36 @@
 import axios from "axios"
-import react, { useEffect, useState } from 'react'
+import react, { useEffect } from 'react'
 import { Link } from "react-router-dom"
 
 export const PlantCollection = ({ userInfo }) => {
-  const [ plantInfo, setPlantInfo ] = useState(null)
-
+  const plants = []
   useEffect(() => {
   const getFav = async () => {
     try {
-      const { data } = await axios.get(`/api/plants/${userInfo.favorite[0]}`)
-      setPlantInfo(data)
-      console.log(data)
+      userInfo.favorites.forEach(fav => {
+        console.log(fav)
+        if (plants.includes(fav)){
+          return
+        } else {
+          plants.push(fav)
+          console.log({ plants })
+        }
+      })
     } catch (error) {
       console.log(error)
     }
   }
 
   getFav()
+
   }, [userInfo])
 
+  // useEffect(() => {
+  //   console.log(plantInfo)
+  // }, [plantInfo])
   return (
     <>
-      {!plantInfo ? 
+      {/* {!plantInfo ? 
       <p>Loading</p>
       :
       <ul id='profileFav'>
@@ -42,7 +51,8 @@ export const PlantCollection = ({ userInfo }) => {
           < hr/>
         </li>
       </ul>
-      }
+      } */}
+      <p>Hi</p>
     </>
   )
 }

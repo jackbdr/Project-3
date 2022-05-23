@@ -153,21 +153,21 @@ const PlantDetail = () => {
                       <div className="fact-image">
                         <img src="/images.png/calendar.png" alt="calendar-logo" />
                       </div>
-                      <small>{plants.annualGrowth}</small>
+                      <small>{plants.annualGrowth && plants.annualGrowth}</small>
                     </div>
                     <hr />
                     <div className="fact-logo">
                       <div className="fact-image">
                         <img src="/images.png/price-tag.png" alt="price-logo" />
                       </div>
-                      <small>{plants.priceRange}</small>
+                      <small>{plants.priceRange && plants.priceRange}</small>
                     </div>
                     <hr />
                     <div className="fact-logo">
                       <div className="fact-image">
                         <img src="/images.png/toxic.png" alt="price-logo" />
                       </div>
-                      <small>{plants.poisonous}</small>
+                      <small>{plants.poisonous && plants.poisonous}</small>
                     </div>
                   </div>
                   <hr />

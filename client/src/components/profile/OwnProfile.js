@@ -15,9 +15,9 @@ const OwnProfile = () => {
         const { data } = await axios.get(`/api/profile/${username}`)
         console.log(data)
         setUserInfo(data)
-        const plantData = await axios.get(`/api/plants/${data.favorite[0]}`)
-        console.log(plantData)
-        setPlantInfo(plantData)
+        // const plantData = await axios.get(`/api/plants/${data.favorites}`)
+        // console.log(plantData)
+        // setPlantInfo(plantData)
       } catch (error) {
         
       }
@@ -60,7 +60,7 @@ const OwnProfile = () => {
           <div>
             <ul>
               <li>
-                <button value={'Your Favorites'} onClick={handleButtons}>Number of plants in collection: {userInfo.favorite.length}</button>
+                <button value={'Your Favorites'} onClick={handleButtons}>Number of plants in collection: {userInfo.favorites.length}</button>
               </li>
               <li>
                 <button value={'Your Comments'} onClick={handleButtons}>Comments Made</button>

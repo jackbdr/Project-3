@@ -1,6 +1,12 @@
 import mongoose from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
+// Favorite Schema
+
+// const favoriteSchema = new mongoose.Schema({
+//   plantId: { type: mongoose.Schema.ObjectId, ref: 'Plant', required: true },
+//   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+// })
 
 const plantSchema = new mongoose.Schema({
   seed: { type: Number, required: false },
@@ -51,12 +57,19 @@ const plantSchema = new mongoose.Schema({
   description: { type: String, required: true },
   priceRange: { type: String, required: false },
   categorisation: { type: String, required: false },
-  favourited: [{ type: String, required: false }],
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   id: false,
   seededSays: { type: String, required: false },
   createdAt: { type: Date, default: Date.now },
+  // favoritedBy: [favoriteSchema],
 })
+
+
+
+
+
+
+
 
 plantSchema.plugin(mongooseUniqueValidator)
 

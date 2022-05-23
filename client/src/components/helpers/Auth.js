@@ -26,3 +26,7 @@ export const isUserOwner = (plant) => {
   // console.log(bread.addedBy._id)
   return plant.addedBy._id === payLoad.sub
 }
+
+export const getUserToken = () => {
+  return window.localStorage.getItem(`seeded-username`)
+}

@@ -24,7 +24,8 @@ const Login = () => {
       console.log(formData)
       setTokenToLocalStorage(data.token)
       //console.log(data.token)
-      console.log(data)
+      console.log({ data })
+      window.localStorage.setItem('seeded-username', data.username)
       navigate('/')
     } catch (error) {
       setErrors(true)

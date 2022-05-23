@@ -126,7 +126,7 @@ const PlantDetail = () => {
                   <img src={plants.imageWild} alt={plants.name} />
                 </div>
                 <div className="plant-text">
-                  <h4>{plants.name} can grow up to {plants.maxGrowth} tall in the wild</h4>
+                  <h4>{plants.name} can grow up to {plants.maxGrowth && plants.maxGrowth} tall in the wild</h4>
                 </div>
               </div>
               <div className="right-page">
@@ -146,7 +146,7 @@ const PlantDetail = () => {
                       <div className="fact-image">
                         <img src="/images.png/spider-plant.png" alt="height-logo" />
                       </div>
-                      <small>{plants.maxGrowth}</small>
+                      <small>{plants.maxGrowth && plants.maxGrowth}</small>
                     </div>
                     <hr />
                     <div className="fact-logo">

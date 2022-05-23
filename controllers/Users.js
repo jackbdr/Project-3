@@ -5,7 +5,7 @@ import User from '../models/users.js'
 // View Profile
 export const viewProfile = async(req, res) => {
   const { username } = req.params
-  const profileToView = await User.findOne({ username: username })
+  const profileToView = await User.findOne({ username: username }).populate('favorites')
   return res.status(200).json(profileToView)
 }
 
@@ -15,7 +15,7 @@ export const editProfile = async(req, res) => {
   const { username } = req.params
   const { body: editUser } = req
   try {
-    const profileToEdit = await User.findOne({ username: username })
+    const profileToEdit = await User.findOne({ username: username }).populate('favorites')
     if (req.verifiedUser.username !== profileToEdit.username){
       console.log('not the same')
       throw new Error('Unauthorised')
@@ -35,20 +35,30 @@ export const editProfile = async(req, res) => {
 // Add a favorites
 export const addFavorite = async (req, res) => {
   const { username } = req.params
-
+  console.log(req.body)
+  console.log(req.verifiedUser._id)
   try {
 
+    // Adding favorite to user
     const profileToFavorite = await User.findOne({ username: username })
 
-    if (profileToFavorite.favorites.includes(req.body.favorite)){
-      console.log('duplicate')
-      const favIndex = profileToFavorite.favorites.indexOf(req.body.favorite)
-      profileToFavorite.favorites.splice(favIndex, 1)
+    if (profileToFavorite.favorites.filter(plant => {
+      return plant.plantId.toString() === req.body.plantId
+    }).length === 0) {
+      profileToFavorite.favorites.push(req.body)
+      await profileToFavorite.save()
+      return res.status(200).json(profileToFavorite)
 
-    } else profileToFavorite.favorites.push(req.body.favorite)
-    
-    await profileToFavorite.save()
-    return res.status(200).json(profileToFavorite)
+    } else {
+      
+      const removeFav = profileToFavorite.favorites.filter(plant => {
+        return plant.plantId.toString() === req.body.plantId
+      })
+      await removeFav[0].remove()
+      console.log(removeFav)
+      await profileToFavorite.save()
+      return res.status(200).json(profileToFavorite)
+    }
 
   } catch (error) {
     res.status(422).json(error)

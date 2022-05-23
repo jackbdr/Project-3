@@ -2,22 +2,28 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
+const favoriteSchema = new mongoose.Schema({
+  plantId: { type: mongoose.Schema.ObjectId, ref: 'Plant', required: true },
+})
+
+
 
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  favorites: [
-    { type: mongoose.Schema.ObjectId }
-  ],
+  // favorites: [
+  //   { type: mongoose.Schema.ObjectId }
+  // ],
   id: false,
+  favorites: [favoriteSchema],
 })
 
-// ? reverse relationships 
-// userSchema.virtual('plantsAdded', {
+// // ? reverse relationships 
+// userSchema.virtual('favorites', {
 //   ref: 'Plant',
 //   localField: '_id',
-//   foreignField: 'addedBy',
+//   foreignField: 'favoritedBy',
 // })
 
 // Anytime userSchema is passed back to JSON, password is deleted

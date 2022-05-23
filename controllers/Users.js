@@ -37,7 +37,17 @@ export const addFavorite = async (req, res) => {
   const { username } = req.params
 
   try {
-    const profileToFavorite = await User.findOneAndUpdate({ username: username } , req.body, { new: true })
+
+    const profileToFavorite = await User.findOne({ username: username })
+
+    if (profileToFavorite.favorites.includes(req.body.favorite)){
+      console.log('duplicate')
+      const favIndex = profileToFavorite.favorites.indexOf(req.body.favorite)
+      profileToFavorite.favorites.splice(favIndex, 1)
+
+    } else profileToFavorite.favorites.push(req.body.favorite)
+    
+    await profileToFavorite.save()
     return res.status(200).json(profileToFavorite)
 
   } catch (error) {

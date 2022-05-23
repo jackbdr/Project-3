@@ -4,6 +4,7 @@ import { showPlants, showSinglePlant, addPlant, changePlant, deletePlant } from 
 import { secureRoute } from './secureRoute.js'
 import { registerUser, loginUser } from '../controllers/Auth.js'
 import { editProfile, viewProfile, addFavorite } from '../controllers/Users.js'
+import { viewWebsites } from '../controllers/Websites.js'
 
 const router = express.Router()
 
@@ -29,5 +30,8 @@ router.route('/profile/:username')
   
 router.route('/favorites/:username')
   .put(addFavorite)
+
+router.route('/comparison')
+  .get(viewWebsites)
 
 export default router

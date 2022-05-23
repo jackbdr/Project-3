@@ -8,7 +8,7 @@ const Websites = () => {
         <section className="overview">
           <h3>Finding plants</h3>
           <hr />
-          <p>Finding the right plant at the right price can be difficult. To help, we've listed 10 providers and rated them based on price, range, information and quality</p>
+          <p>Finding the right plant at the right price can be difficult. To help, we've listed 6 providers and rated them based on price, range, information and quality</p>
         </section>
         <section className="recommendations">
           <h3>Where we buy from</h3>

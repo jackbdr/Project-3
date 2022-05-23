@@ -40,7 +40,7 @@ const [ searchResults, setSearchResults ] = useState([])
       <>
         <div className='search-wrapper' key={index}>
           <Link to={`/plants/${plant._id}`} >
-            <img src={plant.image} alt={plant.name} />
+            <img src={plant.imageTrans} alt={plant.name} />
             <div className='searchInfo'>
               <h5>{plant.name}</h5>
               <p className='searchSci'>{plant.sciName}</p>

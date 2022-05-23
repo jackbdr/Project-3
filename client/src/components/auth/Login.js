@@ -14,7 +14,7 @@ const Login = () => {
   const [errors, setErrors] = useState(false)
 
   const setTokenToLocalStorage = (token) => {
-    window.localStorage.setItem('project-3-plants', token)
+    window.localStorage.setItem('Seeded-user-token', token)
   }
 
   const handleSubmit = async (e) => {

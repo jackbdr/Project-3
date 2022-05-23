@@ -19,7 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongo": "^0.1.0",
     "mongoose": "^6.3.3",
-    "mongoose-unique-validator": "^3.0.0",
+    "mongoose-unique-validator": "2.0.3",
     "node": "^17.7.2",
     "react-router-dom": "^6.3.0"
   },

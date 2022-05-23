@@ -20,7 +20,7 @@ export const loginUser = async(req, res) => {
   try {
     const userLogin = await User.findOne({ email: email })
     if (!userLogin || !userLogin.validatePassword(password)) throw new Error
-    console.log('password doesn\'t match')
+    // console.log('password doesn\'t match') 
 
     const token = jwt.sign({ sub: userLogin._id }, process.env.SECRET, { expiresIn: '1h' })
     return res.status(200).json({ message: `Welcome back ${userLogin.username}`, token: token })

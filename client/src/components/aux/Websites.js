@@ -43,7 +43,7 @@ const Websites = () => {
                     </div>
                     <div className='company-info'>
                       <h4>{website.name}</h4>
-                      <h5>Overall rating: {website.overallRating}/20</h5>
+                      <h5>Overall rating: <span>{website.overallRating}/20</span></h5>
                       <a href={website.websiteLink} target="_blank"rel="noopener noreferrer"><button>Visit site</button></a>
                     </div>
                     <div className='rating-section'>
@@ -80,7 +80,7 @@ const Websites = () => {
                   </div>
                   <hr/>
                 </>
-              ))}
+              )).sort()}
             </div>
           </section>
         </section>

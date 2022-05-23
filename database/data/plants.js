@@ -419,7 +419,7 @@ export default [
     seed: 9,																						
     name: 'Corn Plant',																						
     sciName: 'Dracaena fragrans',
-    imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652892122/plant_pngs/corn_gn46cf.png',
+    imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653311664/plant_pngs/corn_kxruo0.png',
     imageHome: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653038297/plant_pngs/corn-home_gavzgv.jpg',
     imageWild: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653038312/plant_pngs/corn-wild_ase3bk.jpg',
     origin: 'Africa/ Mexico',																						

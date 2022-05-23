@@ -5,6 +5,7 @@ import { secureRoute } from './secureRoute.js'
 import { registerUser, loginUser } from '../controllers/Auth.js'
 import { editProfile, viewProfile, addFavorite } from '../controllers/Users.js'
 import { viewWebsites } from '../controllers/Websites.js'
+import { addCommentToPlant } from '../controllers/plantComments.js'
 
 const router = express.Router()
 
@@ -31,7 +32,11 @@ router.route('/profile/:username')
 router.route('/favorites/:username')
   .put(secureRoute, addFavorite)
 
+router.route('/plants/:id/comments')
+  .post(addCommentToPlant)
+
 router.route('/comparison')
   .get(viewWebsites)
+
 
 export default router

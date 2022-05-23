@@ -11,9 +11,9 @@ const PlantAdd = () => {
 
   const [formData, setFormData] = useState({
     name: '',
-    sciname: '',
+    sciName: '',
     origin: '',
-    image: '',
+    imageHome: '',
     description: '',
   })
 
@@ -42,27 +42,27 @@ const PlantAdd = () => {
 
   return (
     <section className='form-page'>
-    <form className='form-detail'>
+    <form className='form-detail' onSubmit={handleSubmit} >
       <h1>Add Plant</h1>
       {/* Name */}
       <label htmlFor='name'>Name</label>
-      <input type='text' name='name' className='input' placeholder='Name' />
+      <input type='text' name='name' className='input' placeholder='Name' value={formData.name} onChange={handleChange} />
       {/* {errors && <p className = 'denied-text'>Please input username</p>} */}
       {/* Scientific name */}
-      <label htmlFor='name'>Scientific name</label>
-      <input type='text' name='sciname' className='input' placeholder='Scientific name' />
+      <label htmlFor='sciName'>Scientific name</label>
+      <input type='text' name='sciName' className='input' placeholder='Scientific name' value={formData.sciName} onChange={handleChange} />
 
       {/* Origin */}
       <label htmlFor='origin'>Origin</label>
-      <input type='text' name='origin' className='input' placeholder='Origin' />
+      <input type='text' name='origin' className='input' placeholder='Origin' value={formData.origin} onChange={handleChange} />
       {/* {errors && <p className = 'denied-text'>Please input email</p>} */}
       {/* Image */}
-      <label htmlFor='image'>Image</label>
-      <input type='text' name='image' className='input' placeholder='Image'/>
+      <label htmlFor='imageHome'>Image</label>
+      <input type='text' name='imageHome' className='input' placeholder='Image' value={formData.imageHome} onChange={handleChange} />
       {/* {errors && <p className = 'denied-text'>Please input password</p>} */}
       {/* Password Confirmation */}
       <label htmlFor='description'>Description</label>
-      <textarea name='description' className='input' placeholder='Description' />
+      <textarea name='description' className='input' placeholder='Description' value={formData.description} onChange={handleChange} />
       {/* Submit */}
       <button type='submit'>Add</button>
     </form>

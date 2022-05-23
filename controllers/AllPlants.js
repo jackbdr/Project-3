@@ -24,6 +24,19 @@ export const showSinglePlant = async(req, res) => {
   }
 }
 
+// ? POST
+// Add a plant 
+export const addPlant = async (req, res) => {
+  const { body: newPlant, verifiedUser } = req
+  try {
+    const addedPlant = await Plant.create({ ...newPlant, owner: verifiedUser._id })
+    return res.status(201).json(addedPlant)
+  } catch (err) {
+    console.log('Couldn\'t add this plant, sorry!', err)
+    return res.status(400).json(err)
+  }
+}
+
 
 // ? PUT REQUESTS
 // Edit a Plant

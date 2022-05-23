@@ -1,3 +1,4 @@
+
 *{
   box-sizing: border-box;
 }
@@ -9,8 +10,14 @@ body{
 .site-wrapper{
   position: relative;
   min-height: 100vh;
+  width: 100%;
 }
 
 .content-wrap{
   padding-bottom: 2.5rem;
+}
+
+.gif-wrapper {
+  text-align: center;
+  margin: 30px;
 }

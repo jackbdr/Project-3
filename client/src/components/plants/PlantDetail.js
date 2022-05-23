@@ -43,14 +43,14 @@ const PlantDetail = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-75"
-                    src={plants.image}
+                    src={plants.imageTrans}
                     alt="First slide"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-75"
-                    src='https://pyxis.nymag.com/v1/imgs/b82/665/f7757415a07efbf46caf22548dcabf9798-etsy-african-spear-plant.2x.rdeep-vertical.w245.jpg'
+                    src={plants.imageHome}
                     alt="Second slide"
                   />
                 </Carousel.Item>
@@ -63,9 +63,8 @@ const PlantDetail = () => {
                   <div className='seeded-image'>
                     <h1>🌱</h1>
                   </div>
-                  <small>{plants.easeRating}</small>
+                  <small>{plants.seededEaseRating}</small>
                 </div>
-
               </div>
             </section>
             <section className="right-page">
@@ -122,10 +121,15 @@ const PlantDetail = () => {
           {/* BOTTOM SECTION CONTAINING ADDITIONAL DETAIL */}
           <section className="bottom-section">
             <section className="bottom-content">
-              <div className="plant-pic">
-                <img src={plants.image} alt={plants.name} />
+              <div className="left-page">
+                <div className='plant-pic'>
+                  <img src={plants.imageWild} alt={plants.name} />
+                </div>
+                <div className="plant-text">
+                  <h4>{plants.name} can grow up to {plants.maxGrowth} tall in the wild</h4>
+                </div>
               </div>
-              <div className="right-bottom">
+              <div className="right-page">
                 <div className="facts">
                   <div className='facts-title'>
                     <h4>Key facts</h4>
@@ -166,50 +170,77 @@ const PlantDetail = () => {
                       <small>{plants.poisonous}</small>
                     </div>
                   </div>
+                  <hr />
                 </div>
                 <div className="problem-section">
                   <div className='problem-title'>
                     <h4>Typical problems</h4>
                   </div>
-                  <div className='problem-detail'>
-                    <div className = 'problem-icon' id = {plants.problems[0][0].problem}></div>
-                    <h3>{plants.problems[0][0].problem}</h3>
-                    <h3>{plants.problems[0][0].solution}</h3>
+                  {plants.problems[0][0].problem.length < 2 ? "" :
+                    <>
+                      <div className='problem-detail'>
+                        <img src="/images.png/prob-icon1.png" alt="leaf" />
+                        <div className="problem-box">
+                          <h3>{plants.problems[0][0].problem}</h3>
+                        </div>
+                        <div className="solution-box">
+                          <h3>{plants.problems[0][0].solution}</h3>
+                        </div>
+                      </div>
+                    </>
+                  }
+                  {plants.problems[1][0].problem.length < 2 ? "" :
+                    <>
+                      <div className='problem-detail'>
+
+                        <img src="/images.png/prob-icon2.png" alt="leaf" />
+                        <div className="problem-box">
+                          <h3>{plants.problems[1][0].problem}</h3>
+                        </div>
+                        <div className="solution-box">
+                          <h3>{plants.problems[1][0].solution}</h3>
+                        </div>
+                      </div>
+                    </>
+                  }
+                  {plants.problems[2][0].problem.length < 2 ? "" :
+                    <>
+                      <div className='problem-detail'>
+                        <img src="/images.png/prob-icon3.png" alt="leaf" />
+                        <div className="problem-box">
+                          <h3>{plants.problems[2][0].problem}</h3>
+                        </div>
+                        <div className="solution-box">
+                          <h3>{plants.problems[2][0].solution}</h3>
+                        </div>
+                      </div>
+                    </>
+                  }
+                  <hr />
+                  <div className="seeded-says">
+                    <h3>Seeded says</h3>
+                    <p>{plants.seededSays}</p>
                   </div>
-                  <div className='problem-detail'>
-                    <div className = 'problem-icon' id = {plants.problems[1][0].problem}></div>
-                    <h3>{plants.problems[1][0].problem}</h3>
-                    <h3>{plants.problems[1][0].solution}</h3>
-                  </div>
-                  <div className='problem-detail'>
-                    <div className = 'problem-icon' id = {plants.problems[2][0].problem}></div>
-                    <h3>{plants.problems[2][0].problem}</h3>
-                    <h3>{plants.problems[2][0].solution}</h3>
-                  </div>
-                </div>
-                <div className="seeded-says">
-                  <h3>Seeded says</h3>
-                  <p>{plants.seededSays}</p>
                 </div>
               </div>
             </section>
             {/* <!--Carousel Wrapper--> */}
-            <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <Carousel.Item className="row">
-                      <div className="col"><img src=".." alt="1 slide"/></div>
-                      <div className="col"><img src=".." alt="2 slide"/></div>
-                      <div className="col"><img src=".." alt="3 slide"/></div>
-                    </Carousel.Item>
-                    <Carousel.Item className="row">
-                      <div className="col"><img src=".." alt="4 slide"/></div>
-                      <div className="col"><img src=".." alt="5 slide"/></div>
-                      <div className="col"><img src=".." alt="6 slide"/></div>
-                    </Carousel.Item>
-                  </div>
+            {/* <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <Carousel.Item className="row">
+                    <div className="col"><img src=".." alt="1 slide" /></div>
+                    <div className="col"><img src=".." alt="2 slide" /></div>
+                    <div className="col"><img src=".." alt="3 slide" /></div>
+                  </Carousel.Item>
+                  <Carousel.Item className="row">
+                    <div className="col"><img src=".." alt="4 slide" /></div>
+                    <div className="col"><img src=".." alt="5 slide" /></div>
+                    <div className="col"><img src=".." alt="6 slide" /></div>
+                  </Carousel.Item>
                 </div>
-            </Carousel>
+              </div>
+            </Carousel> */}
           </section>
         </section>
         :

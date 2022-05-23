@@ -6,12 +6,12 @@ const Websites = () => {
     <>
       <section className="recommendation-wrapper">
         <section className="overview">
-          <h3>Where to shop</h3>
+          <h3>Finding plants</h3>
           <hr />
           <p>Finding the right plant at the right price can be difficult. To help, we've listed 10 providers and rated them based on price, range, information and quality</p>
         </section>
         <section className="recommendations">
-          <h3>Our recommendations</h3>
+          <h3>Where we buy from</h3>
           <hr />
           <div className="card-detail">
             <div className='comp-container'>

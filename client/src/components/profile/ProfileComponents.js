@@ -1,64 +1,57 @@
-import axios from "axios"
-import react, { useEffect } from 'react'
 import { Link } from "react-router-dom"
 
-export const PlantCollection = ({ userInfo }) => {
-  const plants = []
-  useEffect(() => {
-  const getFav = async () => {
-    try {
-      userInfo.favorites.forEach(fav => {
-        console.log(fav)
-        if (plants.includes(fav)){
-          return
-        } else {
-          plants.push(fav)
-          console.log({ plants })
-        }
-      })
-    } catch (error) {
-      console.log(error)
-    }
-  }
+export const PlantsCollection = ({ userInfo }) => {
+  console.log(userInfo)
 
-  getFav()
-
-  }, [userInfo])
-
-  // useEffect(() => {
-  //   console.log(plantInfo)
-  // }, [plantInfo])
-  return (
+  return(
     <>
-      {/* {!plantInfo ? 
+    {!userInfo ?
       <p>Loading</p>
       :
       <ul id='profileFav'>
-        <li className='profileFav-item'>
-          <Link to={`/plants/${plantInfo._id}`}>
-          <div className="profileFav-img">
-            <img src={plantInfo.imageHome} alt={plantInfo.name} />
-          </div>
-          <div className='profileFav-title'>
-            <p>
-            {plantInfo.name}
-            </p>
-            <p className="profileFav-sciName">
-            {plantInfo.sciName}
-            </p>
-          </div>
-          </Link>
-          < hr/>
-        </li>
+      {userInfo.favorites.map((plant, index) => {
+        const { plantId } = plant
+        return(
+          <li className='profileFav-item' key={index}>
+            <Link to={`/plants/${plantId._id}`} >
+              <div className="profileFav-img">
+                <img src={plantId.imageTrans} alt={plantId.name} />
+              </div>
+              <div className='profileFav-title'>
+                <p>
+                {plantId.name}
+                </p>
+                <p className="profileFav-sciName">
+                {plantId.sciName}
+                </p>
+              </div>
+            </Link>
+            < hr/>
+          </li>
+        )
+      })}
       </ul>
-      } */}
-      <p>Hi</p>
+    }
     </>
   )
 }
 
-export const CommentCollection = () => {
+
+
+
+
+
+
+
+
+export const CommentsCollection = () => {
   return(
     <p>Comments:</p>
+    )
+  }
+
+export const RatingsCollection = () => {
+  return(
+    <p>Under Construction</p>
   )
 }

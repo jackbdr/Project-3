@@ -1,23 +1,18 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { PlantCollection, CommentCollection } from './ProfileComponents'
+import { PlantsCollection, CommentsCollection, RatingsCollection } from './ProfileComponents'
 
 const OwnProfile = () => {
   const { username } = useParams()
   const [ userInfo, setUserInfo ] = useState(null)
-  const [ plantInfo, setPlantInfo ] = useState(null)
   const [ buttonActive, setButtonActive ] = useState('Your Favorites')
 
   useEffect(() => {
     const getUser = async () => {
       try {
         const { data } = await axios.get(`/api/profile/${username}`)
-        console.log(data)
         setUserInfo(data)
-        // const plantData = await axios.get(`/api/plants/${data.favorites}`)
-        // console.log(plantData)
-        // setPlantInfo(plantData)
       } catch (error) {
         
       }
@@ -33,9 +28,11 @@ const OwnProfile = () => {
 
   const asideChange = () => {
       if (buttonActive === 'Your Favorites'){
-        return <PlantCollection userInfo={userInfo} />
+        return <PlantsCollection userInfo={userInfo} />
       } else if (buttonActive === 'Your Comments'){
-        return <CommentCollection />
+        return <CommentsCollection />
+      } else if (buttonActive === 'Your Ratings'){
+        return <RatingsCollection />
       }
   }
 
@@ -43,10 +40,10 @@ const OwnProfile = () => {
     <div id='profile-wrapper'>
       <div id='profile-left'>
         <div id='img-wrapper'>
-          {!plantInfo ?
+          {!userInfo ?
           <p>Loading</p>
           :
-          <img id='profileImg' src={plantInfo.data.imageHome} alt='pic' />
+          <img id='profileImg' src={userInfo.favorites[0].plantId.imageHome} alt='pic' />
           }
         </div>
       {!userInfo ? 
@@ -56,20 +53,17 @@ const OwnProfile = () => {
           <div>
             <h1>{userInfo.username}</h1>
           </div>
-          <p>Click To View</p>
+          <p>Date Joined</p>
           <div>
             <ul>
-              <li>
+              <li className='profileSelector'>
                 <button value={'Your Favorites'} onClick={handleButtons}>Number of plants in collection: {userInfo.favorites.length}</button>
               </li>
-              <li>
+              <li className='profileSelector'>
                 <button value={'Your Comments'} onClick={handleButtons}>Comments Made</button>
               </li>
-              <li>
-                <button>Ratings Given</button>
-              </li>
-              <li>
-                Date Joined
+              <li className='profileSelector'>
+              <button value={'Your Ratings'} onClick={handleButtons}>Ratings Given</button>
               </li>
             </ul>
           </div>

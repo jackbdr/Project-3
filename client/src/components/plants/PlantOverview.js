@@ -121,8 +121,11 @@ const PlantOverview = () => {
   const handleFilter = () => {
     if (plants.length) {
       const filtered = plants.filter(plant => {
-        // return plant.waterCategory === filters.water && plant.sunlightFilter === filters.light && plant.brightnessFilter === filters.brightness && plant.seededEaseRating === filters.ease 
-        return (plant.waterCategory.toString().includes(waterFilter.water) && plant.sunlightFilter.toString().includes(lightFilter.light) && plant.brightnessFilter.toString().includes(brightnessFilter.brightness) && plant.seededEaseRating.toString().includes(easeFilter.ease))
+        if (plant.waterCategory && plant.sunlightFilter && plant.brightnessFilter && plant.seededEaseRating) {
+          return (plant.waterCategory.toString().includes(waterFilter.water) && plant.sunlightFilter.toString().includes(lightFilter.light) && plant.brightnessFilter.toString().includes(brightnessFilter.brightness) && plant.seededEaseRating.toString().includes(easeFilter.ease))
+        } else {
+          return plant.name
+        }
       })
       // console.log(filtered)
       // setFilteredPLants(filtered)
@@ -355,7 +358,7 @@ const PlantOverview = () => {
                             <Card.Body >
                               <Card.Title className='text mb-0 card-title'>{name}</Card.Title>
                               <p className='sci-name text'>{sciName}</p>
-                              <p className='ease text'>Ease rating {seededEaseRating}</p>
+                              <p className='ease text'>Ease rating {seededEaseRating && seededEaseRating}</p>
                             </Card.Body>
                           </Card>
                         </Link>

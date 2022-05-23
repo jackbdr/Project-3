@@ -16,7 +16,7 @@ const Websites = () => {
         setWebsites(data)
         console.log(data)
       } catch (err) {
-        setErrors(true) 
+        setErrors(true)
       }
     }
     getWebsites()
@@ -24,58 +24,67 @@ const Websites = () => {
 
   return (
     <>
-      <section className="recommendation-wrapper">
-        <section className="overview">
-          <h3>Finding plants</h3>
-          <hr />
-          <p>Finding the right plant at the right price can be difficult. To help, we've listed 6 providers and rated them based on price, range, information and quality</p>
+      {comparison ?
+        <section className="recommendation-wrapper">
+          <section className="overview">
+            <h3>Finding plants</h3>
+            <hr />
+            <p>We know how hard it is to find the right plants at the right price. To help, we've rated 6 providers based on price, range, information and quality</p>
+          </section>
+          <section className="recommendations">
+            <h3>Where we buy from</h3>
+            <hr />
+            <div className="card-detail">
+              {comparison.map(website => (
+                <>
+                  <div className='company-row'>
+                    <div className='comp-container'>
+                      <img src={website.logo} alt='company-logo' />
+                    </div>
+                    <div className='company-info'>
+                      <h4>{website.name}</h4>
+                      <h5>Overall rating: {website.overallRating}/20</h5>
+                      <a href={website.websiteLink} target="_blank"rel="noopener noreferrer"><button>Visit site</button></a>
+                    </div>
+                    <div className='rating-section'>
+                      <div className='rating-card'>
+                        <h6>Price</h6>
+                        <div className='icon-container'>
+                          <img src="/images.png/price-tag.png" alt='icon' />
+                        </div>
+                        <h6>{website.price}/5</h6>
+                      </div>
+                      <div className='rating-card'>
+                        <h6>Range</h6>
+                        <div className='icon-container'>
+                          <img src="/images.png/range.png" alt='icon' />
+                        </div>
+                        <h6>{website.range}/5</h6>
+                      </div>
+                      <div className='rating-card'>
+                        <h6>Info</h6>
+                        <div className='icon-container'>
+                          <img src="/images.png/info.png" alt='icon' />
+                        </div>
+                        <h6>{website.info}/5</h6>
+                      </div>
+                      <div className='rating-card'>
+                        <h6>Quality</h6>
+                        <div className='icon-container'>
+                          <img src="/images.png/quality.png" alt='icon' />
+                        </div>
+                        <h6>{website.quality}/5</h6>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <hr/>
+                </>
+              ))}
+            </div>
+          </section>
         </section>
-        <section className="recommendations">
-          <h3>Where we buy from</h3>
-          <hr />
-          <div className="card-detail">
-            <div className='comp-container'>
-              <img src='' alt='company-logo' />
-            </div>
-            <div className='company-info'>
-              <h4>Patch</h4>
-              <h5>Overall rating: 4</h5>
-              <button>Website link</button>
-            </div>
-            <div className='rating-section'>
-              <div className='rating-card'>
-                <h6>Price</h6>
-                <div className='icon-container'>
-                  <img src="" alt='icon' />
-                </div>
-                <h6>Rating</h6>
-              </div>
-              <div className='rating-card'>
-                <h6>Range</h6>
-                <div className='icon-container'>
-                  <img src="" alt='icon' />
-                </div>
-                <h6>Rating</h6>
-              </div>
-              <div className='rating-card'>
-                <h6>Info</h6>
-                <div className='icon-container'>
-                  <img src="" alt='icon' />
-                </div>
-                <h6>Rating</h6>
-              </div>
-              <div className='rating-card'>
-                <h6>Quality</h6>
-                <div className='icon-container'>
-                  <img src="" alt='icon' />
-                </div>
-                <h6>Rating</h6>
-              </div>
-            </div>
-          </div>
-
-        </section>
-      </section>
+        : <h2>{errors ? 'something went wrong' : ''}</h2>}
     </>
   )
 }

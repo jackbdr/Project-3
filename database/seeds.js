@@ -1,12 +1,13 @@
 import mongoose from 'mongoose'
 import Plant from '../models/plants.js'
 import User from '../models/users.js'
+import Sites from '../models/websites.js'
 
 import plantData from './data/plants.js'
 import userData from './data/users.js'
+import websiteData from './data/sites.js'
 
 import 'dotenv/config'
-
 
 const seedDatabase = async () => {
   try {
@@ -25,6 +26,10 @@ const seedDatabase = async () => {
     const plantsWithOwners = plantData.map(plant => {
       return { ...plant, addedBy: usersAdded[0]._id }
     })
+
+    // Adding websites
+    await Sites.create(websiteData)
+    console.log(websiteData)
 
     // Add seeds data back in
     const plantsAdded = await Plant.create(plantsWithOwners)

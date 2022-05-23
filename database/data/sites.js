@@ -1,6 +1,7 @@
 export default [
   {
     name: 'B&Q',
+    logo: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653304041/website_logos/B_Q_ulonsn.png',
     overallRating: 16,
     websiteLink: 'https://www.diy.com/departments/outdoor-garden/plants-seeds-bulbs/houseplants/DIY581222.cat',
     price: 5,
@@ -10,6 +11,7 @@ export default [
   },
   {
     name: 'Patch Plants',
+    logo: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653304041/website_logos/patch_tkr7ak.png',
     overallRating: 17,
     websiteLink: 'https://www.patchplants.com/gb/en/w/product-type/plants/environment/indoor/',
     price: 3,
@@ -19,6 +21,7 @@ export default [
   },
   {
     name: 'Homebase',
+    logo: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653304041/website_logos/homebase_oyvc26.png',
     overallRating: 15,
     websiteLink: 'https://www.homebase.co.uk/garden-outdoor/plants-seeds-bulbs/house-plants.list',
     price: 5,
@@ -28,6 +31,7 @@ export default [
   },
   {
     name: 'Bakker',
+    logo: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653304041/website_logos/bakker_ykylzn.png',
     overallRating: 16,
     websiteLink: 'https://en-gb.bakker.com/collections/indoor-plants?filter:tn_cid=700159900434507&tn_ps=24&tn_sort=Aanbevolen%20sorting%20all',
     price: 4,
@@ -37,6 +41,7 @@ export default [
   },
   {
     name: 'Foil8',
+    logo: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653304041/website_logos/foil8_tcxsmw.png',
     overallRating: 17,
     websiteLink: 'https://foli8.co.uk/',
     price: 4,
@@ -46,6 +51,7 @@ export default [
   },
   {
     name: 'Happy Houseplants',
+    logo: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1653304041/website_logos/happy-house_xqd48l.jpg',
     overallRating: 17,
     websiteLink: 'https://www.happyhouseplants.co.uk/collections/all-plants-collection',
     price: 5,

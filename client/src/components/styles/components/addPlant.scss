@@ -1,0 +1,25 @@
+
+.form-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  Form {
+    height: 60vh;
+    overflow-y: auto;
+    width: 35%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    button {
+      background-color:rgba(48, 115, 81, 1);
+      color: white;
+      font-weight: bold;
+      width: 50%;
+      margin: 15px auto;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}

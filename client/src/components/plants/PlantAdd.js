@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Form'
 
 import { getToken } from '../helpers/Auth.js'
 
@@ -21,7 +20,6 @@ const PlantAdd = () => {
     tempRange: '',
     lightType: '',
     brightType: '',
-    seededEaseRating: null,
     maxGrowth: '',
     annualGrowth: '',
     priceRange: '',
@@ -39,6 +37,7 @@ const PlantAdd = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
     setErrors({ ...errors, [e.target.name]: '' })
+    console.log(e.target.name)
   }
 
   const handleSubmit = async (e) => {
@@ -62,23 +61,23 @@ const PlantAdd = () => {
       <Form>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='name'>Plant name</Form.Label>
-          <Form.Control name='name' placeholder='Plant name...' />
+          <Form.Control name='name' placeholder='Plant name...' onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='sciName'>Scientific name</Form.Label>
-          <Form.Control name='sciName' placeholder='Scientific name...' />
+          <Form.Control name='sciName' placeholder='Scientific name...' onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='description'>Description</Form.Label>
-          <Form.Control name='description' placeholder='Description...' />
+          <Form.Control name='description' placeholder='Description...' onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='origin'>Origin</Form.Label>
-          <Form.Control name='origin' placeholder='Origin...' />
+          <Form.Control name='origin' placeholder='Origin...' onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='wateringLevel'>Watering need</Form.Label>
-          <Form.Select name='wateringLevel'>
+          <Form.Select name='wateringLevel' onChange={handleChange}>
             <option defaultValue>Watering need...</option>
             <option>Every day</option>
             <option>At least once a week</option>
@@ -89,14 +88,14 @@ const PlantAdd = () => {
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='tempRange'>Temperature range</Form.Label>
-          <Form.Control name='tempRange' placeholder='Temperature range...' />
+          <Form.Control name='tempRange' placeholder='Temperature range...' onChange={handleChange}/>
           <Form.Text className='text-muted'>
             e.g. 18-27°C
           </Form.Text>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='lightType'>Sunlight need</Form.Label>
-          <Form.Select name='lightType'>
+          <Form.Select name='lightType' onChange={handleChange}>
             <option defaultValue>Sunlight need...</option>
             <option>Direct</option>
             <option>Mainly direct</option>
@@ -107,7 +106,7 @@ const PlantAdd = () => {
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='brightType'>Brightness</Form.Label>
-          <Form.Select name='lightType'>
+          <Form.Select name='lightType' onChange={handleChange}>
             <option defaultValue>Brightness...</option>
             <option>Bright</option>
             <option>Mainly bright</option>
@@ -118,25 +117,25 @@ const PlantAdd = () => {
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='maxGrowth'>Max growth</Form.Label>
-          <Form.Control name='maxGrowth' placeholder='Max growth...' />
+          <Form.Control name='maxGrowth' placeholder='Max growth...' onChange={handleChange}/>
           <Form.Text className='text-muted'>
             What about in the wild!?
           </Form.Text>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='annualGrowth'>Annual growth</Form.Label>
-          <Form.Control name='annualGrowth' placeholder='Annual growth...' />
+          <Form.Control name='annualGrowth' placeholder='Annual growth...' onChange={handleChange}/>
           <Form.Text className='text-muted'>
             e.g. 50-70cm
           </Form.Text>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='priceRange'>Price range</Form.Label>
-          <Form.Control name='priceRange' placeholder='Price range...' />
+          <Form.Control name='priceRange' placeholder='Price range...' onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='poisonous'>Toxicity</Form.Label>
-          <Form.Select name='poisonous'>
+          <Form.Select name='poisonous' onChange={handleChange}>
             <option>Toxicity...</option>
             <option>Non toxic to pets</option>
             <option>Toxic to pets</option>
@@ -148,21 +147,21 @@ const PlantAdd = () => {
           </Form.Text>
           <br />
           <Form.Label htmlFor='problem1'>*Problem 1</Form.Label>
-          <Form.Control name='problem1' placeholder='Problem 1...' />
+          <Form.Control name='problem1' placeholder='Problem 1...' onChange={handleChange}/>
           <Form.Label htmlFor='solution1'>*Solution 1</Form.Label>
-          <Form.Control name='solution1' placeholder='Solution 1...' />
+          <Form.Control name='solution1' placeholder='Solution 1...' onChange={handleChange}/>
           <Form.Label htmlFor='problem2'>Problem 2</Form.Label>
-          <Form.Control name='problem2' placeholder='Problem 2...' />
+          <Form.Control name='problem2' placeholder='Problem 2...' onChange={handleChange}/>
           <Form.Label htmlFor='solution2'>Solution 2</Form.Label>
-          <Form.Control name='solution2' placeholder='Solution 2...' />
+          <Form.Control name='solution2' placeholder='Solution 2...' onChange={handleChange}/>
           <Form.Label htmlFor='problem3'>Problem 3</Form.Label>
-          <Form.Control name='problem3' placeholder='Problem 3...' />
+          <Form.Control name='problem3' placeholder='Problem 3...' onChange={handleChange}/>
           <Form.Label htmlFor='solution3'>Solution 3</Form.Label>
-          <Form.Control name='solution3' placeholder='Solution 3...' />
+          <Form.Control name='solution3' placeholder='Solution 3...' onChange={handleChange}/>
         </Form.Group>
-        <Button type='submit'>
+        <button type='submit' onClick={handleSubmit}>
           Add plant
-        </Button>
+        </button>
       </Form>
     </section>
   )

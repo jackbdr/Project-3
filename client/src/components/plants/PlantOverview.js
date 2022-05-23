@@ -13,6 +13,7 @@ import { Sun1, Sun1Colour, Sun2, Sun2Colour, Sun3, Sun3Colour, Sun4, Sun4Colour,
 import { LightBulb1Off, LightBulb1On, LightBulb2Off, LightBulb2On, LightBulb3Off, LightBulb3On, LightBulb4Off, LightBulb4On, LightBulb5Off, LightBulb5On } from '../helpers/Buttons'
 import { Thumb1, Thumb1Colour, Thumb2, Thumb2Colour, Thumb3, Thumb3Colour, Thumb4, Thumb4Colour, Thumb5, Thumb5Colour } from '../helpers/Buttons'
 
+import LoadGif from '../helpers/LoadGif'
 
 const PlantOverview = () => {
 
@@ -331,8 +332,11 @@ const PlantOverview = () => {
         </div>
       </section >
       <section className='display-plants'>
-        {!plants.length ?
-          <p>Sorry, we had trouble growing the data!</p>
+        {loading ?
+          <LoadGif />
+          :
+          errors ?
+          <p>Sorry, we had trouble fetching the data!</p>
           :
           <div className='plants-container'>
             {filtersEmpty ?

@@ -24,15 +24,29 @@ export const showSinglePlant = async(req, res) => {
   }
 }
 
+// ? POST
+// Add a plant 
+export const addPlant = async (req, res) => {
+  const { body: newPlant, verifiedUser } = req
+  try {
+    const addedPlant = await Plant.create({ ...newPlant, addedBy: verifiedUser._id })
+    return res.status(201).json(addedPlant)
+  } catch (err) {
+    console.log('Couldn\'t add this plant, sorry!', err)
+    return res.status(400).json(err)
+  }
+}
+
 
 // ? PUT REQUESTS
 // Edit a Plant
 export const changePlant = async(req, res) => {
   const { id } = req.params
-  const { body: editPlant } = req
+  const { body: editPlant, verifiedUser } = req
   try {
-    const plantToChange = await Plant.findById(id)
+    const plantToChange = await Plant.findById(id) 
     if (!plantToChange) throw new Error('Plant not found')
+    if (!plantToChange.addedBy.equals(verifiedUser._id)) throw new Error('Unauthorised')
     Object.assign(plantToChange, editPlant)
     
     await plantToChange.save()
@@ -49,9 +63,10 @@ export const deletePlant = async(req, res) => {
   const { id } = req.params
   try {
     const plantToDelete = await Plant.findById(id)
-    console.log(plantToDelete)
+    // console.log(plantToDelete)
 
     if (!plantToDelete) throw new Error('Plant not found')
+    if (!plantToDelete.addedBy.equals(req.verifiedUser._id)) throw new Error('Unauthorised')
 
     await plantToDelete.remove()
     return res.sendStatus(204)

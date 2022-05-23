@@ -1,14 +1,16 @@
 import express from 'express'
 
-import { showPlants, showSinglePlant, changePlant, deletePlant } from '../controllers/AllPlants.js'
+import { showPlants, showSinglePlant, addPlant, changePlant, deletePlant } from '../controllers/AllPlants.js'
 import { secureRoute } from './secureRoute.js'
 import { registerUser, loginUser } from '../controllers/Auth.js'
 import { editProfile, viewProfile, addFavorite } from '../controllers/Users.js'
+import { viewWebsites } from '../controllers/Websites.js'
 
 const router = express.Router()
 
 router.route('/plants')
   .get(showPlants)
+  .post(secureRoute, addPlant)
 
 router.route('/plants/:id')
   .get(showSinglePlant)
@@ -28,5 +30,8 @@ router.route('/profile/:username')
   
 router.route('/favorites/:username')
   .put(addFavorite)
+
+router.route('/comparison')
+  .get(viewWebsites)
 
 export default router

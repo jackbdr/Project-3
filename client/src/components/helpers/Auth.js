@@ -1,10 +1,10 @@
 
 export const getToken = () => {
-  return window.localStorage.getItem('user-token')
+  return window.localStorage.getItem('Seeded-user-token')
 }
 
 export const getPayLoad = () => {
-  const token = window.localStorage.getItem('user-token')
+  const token = getToken()
   if (!token) return
   const payLoad = token.split('.')[1]
   // console.log(payLoad)

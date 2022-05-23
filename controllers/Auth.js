@@ -15,10 +15,10 @@ export const registerUser = async(req, res) => {
 }
 
 export const loginUser = async(req, res) => {
-  const { username, password } = req.body
+  const { email, password } = req.body
   console.log('🔒 - hit the login route')
   try {
-    const userLogin = await User.findOne({ username: username })
+    const userLogin = await User.findOne({ email: email })
     if (!userLogin || !userLogin.validatePassword(password)) throw new Error
     console.log('password doesn\'t match')
 

@@ -1,4 +1,43 @@
-.title {
-  display: flex;
-  justify-content: center;
+.home-page {
+  background-image: url('../../../../public/images.png/home-3.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
+
+.home-content {
+  margin-left: 15%;
+  padding-top: 10%;
+  width: 35%;
+  h1 {
+    text-align: left;
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .navigation{
+    padding-top: 5%;
+    width: 40%;
+  }
+  a {
+    text-decoration: none!important;
+  }
+  h4 {
+    padding-top: 0.5%;
+    color: #307351;
+    font-weight: bold;
+  }
+  .zoom {
+    transition: transform 1s;
+  }
+  .zoom:hover {
+    transform: scale(1.3);
+  }
+}
+
+
+
+
+

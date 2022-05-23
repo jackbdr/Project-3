@@ -36,14 +36,28 @@ const OwnProfile = () => {
       }
   }
 
+  const displayPicture = () => {
+    if (userInfo.favorites.length === 0){
+      return <img id='profileImg' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png' alt='Smiley Face' />
+    } else {
+      return <img id='profileImg' src={userInfo.favorites[0].plantId.imageHome} alt='pic' />
+    }
+  }
+
+  const changeDate = () => {
+    const newDate = new Date(userInfo.dateJoined)
+    return newDate.toISOString().substring(0, 10)
+  }
+
   return (
     <div id='profile-wrapper'>
       <div id='profile-left'>
         <div id='img-wrapper'>
           {!userInfo ?
           <p>Loading</p>
-          :
-          <img id='profileImg' src={userInfo.favorites[0].plantId.imageHome} alt='pic' />
+          : 
+          // <img id='profileImg' src={userInfo.favorites[0].plantId.imageHome} alt='pic' />
+          displayPicture()
           }
         </div>
       {!userInfo ? 
@@ -53,7 +67,7 @@ const OwnProfile = () => {
           <div>
             <h1>{userInfo.username}</h1>
           </div>
-          <p>Date Joined</p>
+          <p>Date Joined: {changeDate()}</p>
           <div>
             <ul>
               <li className='profileSelector'>

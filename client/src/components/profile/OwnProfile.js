@@ -38,7 +38,7 @@ const OwnProfile = () => {
 
   const displayPicture = () => {
     if (userInfo.favorites.length === 0){
-      return <img id='profileImg' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png' alt='Smiley Face' />
+      return <p>Add a favorite to display a picture!</p>
     } else {
       return <img id='profileImg' src={userInfo.favorites[0].plantId.imageHome} alt='pic' />
     }
@@ -71,7 +71,7 @@ const OwnProfile = () => {
           <div>
             <ul>
               <li className='profileSelector'>
-                <button value={'Your Favorites'} onClick={handleButtons}>Number of plants in collection: {userInfo.favorites.length}</button>
+                <button value={'Your Favorites'} onClick={handleButtons}>Favorite Plants: {userInfo.favorites.length}</button>
               </li>
               <li className='profileSelector'>
                 <button value={'Your Comments'} onClick={handleButtons}>Comments Made</button>

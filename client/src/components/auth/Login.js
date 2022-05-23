@@ -25,7 +25,7 @@ const Login = () => {
       setTokenToLocalStorage(data.token)
       //console.log(data.token)
       console.log(data)
-      navigate('/api/')
+      navigate('/')
     } catch (error) {
       setErrors(true)
     }

@@ -1,7 +1,27 @@
+import axios from "axios"
+import React, { useState, useEffect } from 'react'
 
 
 
 const Websites = () => {
+
+  const [comparison, setWebsites] = useState()
+  const [errors, setErrors] = useState(false)
+
+  useEffect(() => {
+
+    const getWebsites = async () => {
+      try {
+        const { data } = await axios.get('/api/comparison')
+        setWebsites(data)
+        console.log(data)
+      } catch (err) {
+        setErrors(true) 
+      }
+    }
+    getWebsites()
+  }, [])
+
   return (
     <>
       <section className="recommendation-wrapper">

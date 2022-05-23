@@ -1,258 +1,285 @@
+// Plant detail page is split into three sections:
+// 1 - Top section: shows main plant info and care tips
+// 2 - Middle section: purely a break between top and bottom
+// 3 - Bottom section: additional detail about the plant
+
+
+// Styling for all three sections
 .overall-container {
-  margin-top: 30px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
 
-  .top-page {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-  }
 
-  .left-page {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 100%;
-    align-items: center;
-  }
+// * Styling for the top section of the page
+.top-page {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+// Styling for the left hand side of the page
+.left-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: calc(100%/2.5);
+  align-items: center;
 
   .plant-pic {
-    height: 400px;
-    width: 75%;
-    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 60%;
+    height: 45%;
+    padding: 10px;
 
     img {
-      margin-right: 0;
+      height: 100%;
+      margin-left: 15%;
+    }
+  }
+}
+
+.seeded-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .seeded-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .seeded-detail {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .seeded-image {
+    height: 70px;
+    margin-top: 20px;
+  }
+}
+
+// Styling for the right side of the page
+.right-page {
+  width: 50%;
+
+  h1 {
+    font-size: 40px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 15px;
+    padding-right: 20px;
+  }
+}
+
+.key-content {
+  width: 70%;
+}
+
+.care-ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70%;
+
+
+  .rating-title {
+    text-align: left;
+    h4 {
+      margin:0px;
     }
   }
 
-  .seeded-rating {
+  .tips-details {
+    display: flex;
+  }
+
+  .rating-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .seeded-title {
-      text-align: center;
-
-      h4 {
-        font-size: 16px;
-      }
-    }
-
-    .seeded-detail {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .seeded-image {
-      height: 100px;
-
-      h1 {
-        font-size: 60px;
-      }
-    }
+    padding: 20px;
+    text-align: center;
   }
 
-  .right-page {
-    width: 150%;
-  }
+  .logo-image {
+    height: 75px;
 
-  .key-content {
-    margin-left: 10px;
-    margin-right: 50px;
-    width: 75%;
-    height: 400px;
-    h1 {
-      font-size: 25px;
-      font-weight: bold;
-    }
-    h3 {
-      font-size: 20px;
-      font-style: italic;
-    }
-    h4 {
-      margin-top: 40px;
-      font-size: 16px;
-      font-weight: 600;
-    }
-    p {
-      font-size: 14px;
-      padding-right: 20px;
-    }
-  }
-  .ratings {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .care-ratings {
-    .rating-title {
-      text-align: left;
-      h4 {
-        font-size: 16px;
-        font-weight: bold;
-      }
-    }
-    .tips-details {
-      display: flex;
-    }
-    .rating-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      .logo-image {
-        height: 100px;
-      }
-      img {
-        width: 70px;
-      }
-      small {
-        font-size: 13px;
-
-      }
-    }
-  }
-  .middle-section {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     img {
-      width: 600px;
-      height: 250px;
-    }
-  }
-  .bottom-section {
-    margin-top: 200px;
-    height: 90vh;
-    align-items: center;
-    .bottom-content {
-      display: flex;
-      flex-direction: row;
-        .plant-pic {
-        margin-left: 100px;
-        height: 400px;
-        width: 30%;
-        img {
-          width: 100%;
-        }
-      }
-    .right-bottom {
-        width:50%;
-        margin-left: 60px;
-    }
-    .facts {
-      .facts-title {
-          text-align: left;
-
-          h4 {
-            font-size: 16px;
-            font-weight: bold;
-          }
-        }
-
-        .facts-detail {
-          display: flex;
-          flex-direction: row;
-        }
-
-        .fact-logo {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 20px;
-          width: 17%;
-          text-align: center;
-          .fact-image {
-            height: 100px;
-          }
-          img {
-            width: 70px;
-          }
-
-          small {
-            font-size: 12px;
-          }
-        }
-      }
+      width: 90%;
+      height: 72%;
     }
   }
 }
 
 
-.seeded-says {
-  h3 {
-    font-size: 16px;
-    font-weight: bold;
+
+// Styling of the image in the middle paghe
+.middle-section {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 600px;
+    height: 250px;
   }
-  p {
-    padding-right: 50px;
-    font-size: 13px;
+}
+
+
+
+// * Styling for the bottom section
+.bottom-section {
+  margin-top: 100px;
+  height: 90vh;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px;
+  .plant-text {
+    h4 {
+      font-size: 14px;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+  .plant-pic {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 60%;
+    height: 55%;
+    padding: 10px;
+    img {
+      height: 90%;
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+}
+
+
+
+.facts {
+  width: 85%;
+  margin-bottom: 0px;
+  h4 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .facts-title {
+    text-align: left;
+  }
+}
+
+.facts-detail {
+  display: flex;
+  flex-direction: row;
+  .fact-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+    width: 17%;
+    text-align: center;
+
+    .fact-image {
+      height: 75px;
+
+      img {
+        width: 90%;
+        height: 72%;
+      }
+    }
   }
 }
 
 .problem-section {
-  .problem-title {
-    h4 {
-      font-size: 16px;
-      font-weight: bold;
-    }
+  width: 85%;
+  margin-top:0px;
+}
+
+.problem-title {
+  h4 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
   }
-  .problem-detail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 40px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    img {
-      width:30px;
-      height:30px;
-      margin-right: 10px;
-      margin-left: 10px;
-      }
-    .problem-box {
-      width: 150px;
-      padding-top: 10px;
-    }
-    h3{
-      font-size: 13px;
-    }
-    .solution-box {
-      padding-top: 10px;
-    }
+}
+
+.problem-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  max-width: 100%;
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .problem-box {
+    width: 20%;
+    //margin-right:0px;
+    padding:0px;
+  }
+  h3 {
+    font-size: 13px;
+    margin:0;
+    font-style: normal;
+  }
+  .solution-box{
+    margin:0px;
+    padding:0px;
+  }
+  }
+
+
+.seeded-says {
+  h3 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 12px;
   }
 }
 
 
 
-// #plantShow{
-//   img{
-//     width: 100%;
-//   }
 
-//   #plant-info{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-
-//   #buttons{
-//     display: flex;
-//     justify-content: space-evenly;
-//   }
-
-//   #plant-pic{
-//     width: 350px;
-//     height: 650px;
-//   }
-
-//   #reviews {
-//     width: 50%;
-//     margin: 50px auto;
-//     text-align: center;
-//     background-color: #f0f0f0;
-//   }
+  

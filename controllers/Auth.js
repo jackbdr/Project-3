@@ -16,13 +16,16 @@ export const registerUser = async(req, res) => {
 
 export const loginUser = async(req, res) => {
   const { username, password } = req.body
+  console.log('🔒 - hit the login route')
   try {
     const userLogin = await User.findOne({ username: username })
     if (!userLogin || !userLogin.validatePassword(password)) throw new Error
+    console.log('password doesn\'t match')
 
     const token = jwt.sign({ sub: userLogin._id }, process.env.SECRET, { expiresIn: '1h' })
     return res.status(200).json({ message: `Welcome back ${userLogin.username}`, token: token })
   } catch (error) {
+    console.log('⛔️ - login not working')
     return res.status(422).json({ message: 'Unauthorised' })
   }
 

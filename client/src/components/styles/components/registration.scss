@@ -1,21 +1,80 @@
+.form-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// * Formatting of the register/ login forms
 .form-detail {
-  width: 50%;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  padding-bottom: 15%;
+  h4 {
+    text-align: center;
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  button {
+    background-color:rgba(48, 115, 81, 1);
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+h1 {
+  text-align: center;
+}
+label {
+  font-size: 0.9em;
+}
+.input {
+  margin-bottom: 15px;
+  margin-top: 15px;;
+  border-radius: 10px;
+  background-color:rgba(0, 126, 50, 0.2);
   border: 1px solid grey;
-  margin-top: 30px;
-  box-shadow: 0 0 10px grey;
-  label {
-    font-size: 0.9em;
-  }
-  .input {
-    margin-bottom: 15px;
-  }
+  padding: 5px 0px 5px 10px;
+  color:black;
 }
 p.text-danger {
   color: red;
   text-align: center;
+}
+
+// * Formatting of the messaging for new/ existing users
+.new-user {
+  width: 40%;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0,0), rgba(48, 115, 81, 1)); 
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 15%;
+  
+  h1 {
+    padding-bottom: 3%;
+  }
+  h4 {
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+  }
+  button {
+    width: 50%;
+    border-radius: 35px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    letter-spacing: 2px;
+  }
 }

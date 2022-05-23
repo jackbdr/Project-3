@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { getUserToken } from '../helpers/Auth'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -38,7 +39,7 @@ const NavBar = () => {
             <input type='text' placeholder='Search...' value={searchInput} onChange={handleSearch} />
           </form>
             <Nav.Link className='text-dark' as={Link} to='/plants'>Plants</Nav.Link>
-            <Nav.Link className='text-dark' as={Link} to='/profile/:id'>Profile</Nav.Link>
+            <Nav.Link className='text-dark' as={Link} to={`/profile/${getUserToken()}`}>Profile</Nav.Link>
             <Nav.Link className='text-dark' as={Link} to='/register'>Register</Nav.Link>
             <Nav.Link className='text-dark' as={Link} to='/login'>Log in</Nav.Link>
           </div>

@@ -23,7 +23,7 @@ export const loginUser = async(req, res) => {
     // console.log('password doesn\'t match') 
 
     const token = jwt.sign({ sub: userLogin._id }, process.env.SECRET, { expiresIn: '1h' })
-    return res.status(200).json({ message: `Welcome back ${userLogin.username}`, token: token })
+    return res.status(200).json({ message: `Welcome back ${userLogin.username}`, token: token, username: userLogin.username })
   } catch (error) {
     console.log('⛔️ - login not working')
     return res.status(422).json({ message: 'Unauthorised' })

@@ -26,9 +26,9 @@ const App = () => {
   return (
     <main className="site-wrapper">
       <BrowserRouter>
-      <Routes>
+        <Routes>
           <Route path='/' element={<Home />} />
-      </Routes>
+        </Routes>
       <div className='content-wrap'>
         <NavBar />
         <Routes>

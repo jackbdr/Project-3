@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema({
   // ],
   id: false,
   favorites: [favoriteSchema],
+  dateJoined: { type: Date, default: Date.now },
 })
 
 // // ? reverse relationships 

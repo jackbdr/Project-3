@@ -1,7 +1,14 @@
 import mongoose from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
-// Favorite Schema
+// Comment Schema
+const commentSchema = new mongoose.Schema({
+  text: { type: String, required: true, maxLength: 350 },
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+}, {
+  timestamps: true,
+})
 
 // const favoriteSchema = new mongoose.Schema({
 //   plantId: { type: mongoose.Schema.ObjectId, ref: 'Plant', required: true },
@@ -62,13 +69,23 @@ const plantSchema = new mongoose.Schema({
   seededSays: { type: String, required: false },
   createdAt: { type: Date, default: Date.now },
   // favoritedBy: [favoriteSchema],
+  comments: [commentSchema],
 })
 
+// Set up value for an average rating
+plantSchema
+  .virtual('avgRating')
+  .get(function () {
+    if (!this.comments.length) return 'Not rated yet'
+    const sum = this.comments.reduce((acc, comment) => {
+      return acc + comment.rating
+    }, 0)
+    return (sum / this.comments.length).toFixed(2)
+  })
 
-
-
-
-
+plantSchema.set('toJSON', {
+  virtuals: true,
+})
 
 
 plantSchema.plugin(mongooseUniqueValidator)

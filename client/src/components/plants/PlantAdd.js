@@ -125,15 +125,44 @@ const PlantAdd = () => {
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='annualGrowth'>Annual growth</Form.Label>
-          <Form.Control name='name' placeholder='Annual growth...' />
+          <Form.Control name='annualGrowth' placeholder='Annual growth...' />
           <Form.Text className='text-muted'>
             e.g. 50-70cm
           </Form.Text>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='priceRange'>Price range</Form.Label>
-          <Form.Control name='name' placeholder='Price range...' />
+          <Form.Control name='priceRange' placeholder='Price range...' />
         </Form.Group>
+        <Form.Group className='mb-1'>
+          <Form.Label htmlFor='poisonous'>Toxicity</Form.Label>
+          <Form.Select name='poisonous'>
+            <option>Toxicity...</option>
+            <option>Non toxic to pets</option>
+            <option>Toxic to pets</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className='mb-1'>
+          <Form.Text>
+            Potential Problems * required
+          </Form.Text>
+          <br />
+          <Form.Label htmlFor='problem1'>*Problem 1</Form.Label>
+          <Form.Control name='problem1' placeholder='Problem 1...' />
+          <Form.Label htmlFor='solution1'>*Solution 1</Form.Label>
+          <Form.Control name='solution1' placeholder='Solution 1...' />
+          <Form.Label htmlFor='problem2'>Problem 2</Form.Label>
+          <Form.Control name='problem2' placeholder='Problem 2...' />
+          <Form.Label htmlFor='solution2'>Solution 2</Form.Label>
+          <Form.Control name='solution2' placeholder='Solution 2...' />
+          <Form.Label htmlFor='problem3'>Problem 3</Form.Label>
+          <Form.Control name='problem3' placeholder='Problem 3...' />
+          <Form.Label htmlFor='solution3'>Solution 3</Form.Label>
+          <Form.Control name='solution3' placeholder='Solution 3...' />
+        </Form.Group>
+        <Button type='submit'>
+          Add plant
+        </Button>
       </Form>
     </section>
   )

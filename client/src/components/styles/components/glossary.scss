@@ -1,4 +1,13 @@
-.glossary-wrapper {
+.glossary-container {
   width: 50%;
   margin: 2% auto;
+  .entries-container {
+    // height: 40vh;
+    .entry {
+      height: 2%;
+    }
+    hr {
+      color: #307351;
+    }
+  }
 }

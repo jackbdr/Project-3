@@ -195,6 +195,32 @@
           letter-spacing: 2px;
         }
       }
+      .login-to-add {
+        background-color: #f2f2f2;
+        padding: 10px;
+        // position: fixed;
+        width: 260px;
+        // border: 1px solid #36454f;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin-top: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+        .login-button {
+          background-color:rgba(48, 115, 81, 1);
+          color: white;
+          font-weight: bold;
+          width: 50%;
+          margin: 15px auto;
+          border-radius: 30px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
     }
   }
 }

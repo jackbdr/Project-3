@@ -338,11 +338,17 @@ const PlantOverview = () => {
               </div>
             </div>
           </div>
-          {isUserAuth() &&
+          {isUserAuth() ?
             <div className='addplant'>
               <p>Do <span className='italic'>you</span> know your plants?</p>
               <p>Why not add to the collection!</p>
               <Link className='btn add-button' to='/plants/add'>Add a plant</Link>
+            </div>
+            :
+            <div className='login-to-add'>
+              <p>Do <span className='italic'>you</span> know your plants?</p>
+              <p>Log in to add to the collection!</p>
+              <Link className='btn login-button' to='/login'>Log in</Link>
             </div>
           }
         </div>

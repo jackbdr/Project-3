@@ -14,7 +14,8 @@ export const addCommentToPlant = async (req, res) => {
     if (!plantToUpdate) throw new Error('Plant not found')
 
     // Creating a comment with owner
-    const commentWithOwner = { ...req.body, addedBy: req._id }
+    const commentWithOwner = { ...req.body, addedBy: req.verifiedUser._id }
+    console.log(req.body)
 
     // Adding commentWithOwner to the array
     plantToUpdate.comments.push(commentWithOwner)

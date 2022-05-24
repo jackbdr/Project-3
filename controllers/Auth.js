@@ -26,7 +26,9 @@ export const loginUser = async(req, res) => {
     return res.status(200).json({ message: `Welcome back ${userLogin.username}`, token: token, username: userLogin.username })
   } catch (error) {
     console.log('⛔️ - login not working')
+    console.log(error)
     return res.status(422).json({ message: 'Unauthorised' })
+
   }
 
 }

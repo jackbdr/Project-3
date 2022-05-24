@@ -33,7 +33,7 @@ router.route('/favorites/:username')
   .put(secureRoute, addFavorite)
 
 router.route('/plants/:id/comments')
-  .post(addCommentToPlant)
+  .post(secureRoute, addCommentToPlant)
 
 router.route('/comparison')
   .get(viewWebsites)

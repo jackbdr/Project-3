@@ -6,6 +6,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import FormGroup from 'react-bootstrap/esm/FormGroup'
+import { getToken } from '../helpers/Auth'
 
 const PlantDetail = () => {
 
@@ -33,6 +34,43 @@ const PlantDetail = () => {
     getPlants()
   }, [id])
 
+  // * Uploading comments
+  // Setting form information for submitting comments
+  const [formData, setFormData] = useState ({
+    title: '',
+    text: '',
+    rating: '',
+  })
+
+  // Updating form data
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    console.log(e.target.value, e.target.name)
+    setErrors({ ...errors, [e.target.name]: '' })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const { data } = await axios.post(`/api/plants/${id}/comments`, formData, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        }
+      })
+      console.log(data)
+      // navigate(`/api/plants/${id}/comments/${data._id}`)
+    } catch (err) {
+      setErrors(err.response.data)
+    }
+    // handleClose()
+  }
+
+  // const submission = () => {
+  //   handleSubmit()
+  //   handleClose()
+  // }
+
+  // Setting state and handles for modals
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -95,11 +133,13 @@ const PlantDetail = () => {
                         <Form.Control
                           type="text"
                           placeholder=""
-                          autoFocus />
+                          autoFocus 
+                          onChange={handleChange}
+                          name='title'/>
                       </Form.Group>
                       <div className="form-group">
                         <label for="rating">Rating</label>
-                        <select className="form-control" id="rating" placeholder='---'>
+                        <select className="form-control" id="rating" placeholder='---' onChange={handleChange} name = 'rating'>
                           <option>---</option>
                           <option>1</option>
                           <option>2</option>
@@ -112,7 +152,7 @@ const PlantDetail = () => {
                         className="mb-3"
                         controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Comment</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
+                        <Form.Control as="textarea" rows={3} onChange={handleChange} name='text'/>
                       </Form.Group>
                     </Form>
                   </Modal.Body>
@@ -120,7 +160,7 @@ const PlantDetail = () => {
                     <button onClick={handleClose}>
                       Close
                     </button>
-                    <button onClick={handleClose}>
+                    <button onClick={handleSubmit}>
                       Save Changes
                     </button>
                   </Modal.Footer>

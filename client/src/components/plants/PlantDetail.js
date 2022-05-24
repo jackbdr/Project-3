@@ -3,7 +3,10 @@ import Carousel from 'react-bootstrap/Carousel'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-
+import Modal from 'react-bootstrap/Modal'
+import Form from 'react-bootstrap/Form'
+import FormGroup from 'react-bootstrap/esm/FormGroup'
+import { getToken } from '../helpers/Auth'
 
 const PlantDetail = () => {
 
@@ -31,7 +34,46 @@ const PlantDetail = () => {
     getPlants()
   }, [id])
 
+    // Setting state and handles for modals
+    const [show, setShow] = useState(false)
 
+    const handleClose = () => setShow(false)
+    const handleShow = () => setShow(true)
+
+  // * Uploading comments
+  // Setting form information for submitting comments
+  const [formData, setFormData] = useState ({
+    title: '',
+    text: '',
+    rating: '',
+  })
+
+  // Updating form data
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    console.log(e.target.value, e.target.name)
+    setErrors({ ...errors, [e.target.name]: '' })
+  }
+
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const { data } = await axios.post(`/api/plants/${id}/comments`, formData, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        }
+      })
+      console.log(data)
+      // navigate(`/api/plants/${id}/comments/${data._id}`)
+    } catch (err) {
+      setErrors(err.response.data)
+    }
+    handleClose()
+  }
+
+  
   return (
     <>
       {plants ?
@@ -70,7 +112,59 @@ const PlantDetail = () => {
             <section className="right-page">
               <div className="key-content">
                 <h1>{plants.name}</h1>
-                <h3>{plants.sciName}</h3>
+                <div className='comment-section'>
+                  <h3>{plants.sciName}</h3>
+                  <button className="modal-launch" onClick={handleShow}>
+                    <img src='/images.png/comment.png' alt='comment' />
+                    <span className='hover-message'>Add a comment</span>
+                  </button>
+                </div>
+
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>How have you found the {plants.name} </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Comment title</Form.Label>
+                        <Form.Control
+                          type="text"
+                          placeholder=""
+                          autoFocus 
+                          onChange={handleChange}
+                          name='title'/>
+                      </Form.Group>
+                      <div className="form-group">
+                        <label for="rating">Rating</label>
+                        <select className="form-control" id="rating" placeholder='---' onChange={handleChange} name = 'rating'>
+                          <option>---</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Comment</Form.Label>
+                        <Form.Control as="textarea" rows={3} onChange={handleChange} name='text'/>
+                      </Form.Group>
+                    </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <button onClick={handleClose}>
+                      Close
+                    </button>
+                    <button onClick={handleSubmit}>
+                      Save Changes
+                    </button>
+                  </Modal.Footer>
+                </Modal>
+
+
                 <div className="description">
                   <h4>About Me</h4>
                   <p>{plants.description}</p>
@@ -224,23 +318,6 @@ const PlantDetail = () => {
                 </div>
               </div>
             </section>
-            {/* <!--Carousel Wrapper--> */}
-            {/* <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <Carousel.Item className="row">
-                    <div className="col"><img src=".." alt="1 slide" /></div>
-                    <div className="col"><img src=".." alt="2 slide" /></div>
-                    <div className="col"><img src=".." alt="3 slide" /></div>
-                  </Carousel.Item>
-                  <Carousel.Item className="row">
-                    <div className="col"><img src=".." alt="4 slide" /></div>
-                    <div className="col"><img src=".." alt="5 slide" /></div>
-                    <div className="col"><img src=".." alt="6 slide" /></div>
-                  </Carousel.Item>
-                </div>
-              </div>
-            </Carousel> */}
           </section>
         </section>
         :

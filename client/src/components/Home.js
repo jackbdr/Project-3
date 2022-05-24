@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { isUserAuth, getUserToken } from "./helpers/Auth"
 
 
 const Home = () => {
@@ -15,7 +16,11 @@ const Home = () => {
           <div className='navigation'>
             <Link to={'/plants'}><h4 className="zoom">Plants</h4></Link>
             <Link to={'/glossary'}><h4 className="zoom">Glossary</h4></Link>
-            <Link to={'/login'}><h4 className="zoom">Login/ register</h4></Link>
+            {isUserAuth() ?
+              <Link to={`/profile/${getUserToken()}`}><h4 className='zoom'>Profile</h4></Link>
+              :
+              <Link to={'/login'}><h4 className="zoom">Login/ register</h4></Link>
+            }
             <Link to={'/aboutus'}><h4 className="zoom">About Us</h4></Link>
           </div>
 

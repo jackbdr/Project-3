@@ -69,6 +69,35 @@
 .right-page {
   width: 50%;
 
+  .modal-launch {
+    margin-left: 15px;
+    width: 40px;
+    padding: 0;
+    img{
+      width: 100%;
+    }
+    .hover-message{
+      visibility: hidden;
+      width: 150px;
+      position: absolute;
+      z-index: 1;
+      color: #307351;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  .modal-launch:hover{
+    .hover-message{
+    visibility: visible;
+    }
+  }
+
+  .comment-section {
+    display: flex;
+    align-content: center;
+  }
+
   h1 {
     font-size: 40px;
     text-align: left;
@@ -78,7 +107,8 @@
   h3 {
     font-style: italic;
     font-size: 30px;
-    margin-bottom: 25px;
+    padding:0;
+    margin-bottom: 0;
   }
 
   h4 {

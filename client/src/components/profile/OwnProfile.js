@@ -31,7 +31,7 @@ const OwnProfile = () => {
         return <PlantsCollection userInfo={userInfo} />
       } else if (buttonActive === 'Your Comments'){
         return <CommentsCollection />
-      } else if (buttonActive === 'Your Ratings'){
+      } else if (buttonActive === 'Your Added Plants'){
         return <RatingsCollection />
       }
   }
@@ -77,7 +77,7 @@ const OwnProfile = () => {
                 <button value={'Your Comments'} onClick={handleButtons}>Comments Made</button>
               </li>
               <li className='profileSelector'>
-              <button value={'Your Ratings'} onClick={handleButtons}>Ratings Given</button>
+              <button value={'Your Added Plants'} onClick={handleButtons}>Plants Added</button>
               </li>
             </ul>
           </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 
 const Register = () => {
 
@@ -43,7 +43,9 @@ const Register = () => {
       <section className='new-user'>
         <h1>Welcome back!</h1>
         <h4>To access our extra features, please sign in with your personal info.</h4>
+        <Link to={'/login'}>
         <button>Sign in</button>
+        </Link>
       </section>
       <form className='form-detail' onSubmit={handleSubmit}>
         <h1>Create Account</h1>

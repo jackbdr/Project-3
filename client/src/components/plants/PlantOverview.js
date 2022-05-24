@@ -131,7 +131,7 @@ const PlantOverview = () => {
       })
       // console.log(filtered)
       // setFilteredPLants(filtered)
-      return filtered
+      return filtered.sort()
     }
   }
 
@@ -189,6 +189,10 @@ const PlantOverview = () => {
       <section className='filters'>
         <div className='filters-container'>
           <h4>Filters</h4>
+          <div className='scale'>
+            <p>Low</p>
+            <p>High</p>
+          </div>
           <hr className='break' />
           <div className='icon-cross-container'>
             <div className='cans label-icon'>
@@ -337,43 +341,49 @@ const PlantOverview = () => {
           <LoadGif />
           :
           errors ?
-          <p>Sorry, we had trouble fetching the data!</p>
-          :
-          <div className='plants-container'>
-            {filtersEmpty ?
-              <h4>All plants</h4>
-              :
-              <h4>{waterFilter.water && `Watering category ${waterFilter.water}`} {lightFilter.light && (waterFilter.water ? `, Light category ${lightFilter.light}` : `Light category ${lightFilter.light}`)} {brightnessFilter.brightness && (waterFilter.water || lightFilter.light ? `, Brightness category ${brightnessFilter.brightness}` : `Brightness category ${brightnessFilter.brightness}`)} {easeFilter.ease && (waterFilter.water || lightFilter.light || brightnessFilter.brightness ? `, Ease rating ${easeFilter.ease}` : `Ease rating ${easeFilter.ease}`)}</h4>
+            <p>Sorry, we had trouble fetching the data!</p>
+            :
+            <div className='plants-container'>
+              {filtersEmpty ?
+                <div className='display-filters'>
+                  <h4>All plants</h4>
+                  <p>({handleFilter().length})</p>
+                </div>
+                :
+                <div className='display-filters'>
+                  <h4>{waterFilter.water && `Watering category ${waterFilter.water}`} {lightFilter.light && (waterFilter.water ? `, Light category ${lightFilter.light}` : `Light category ${lightFilter.light}`)} {brightnessFilter.brightness && (waterFilter.water || lightFilter.light ? `, Brightness category ${brightnessFilter.brightness}` : `Brightness category ${brightnessFilter.brightness}`)} {easeFilter.ease && (waterFilter.water || lightFilter.light || brightnessFilter.brightness ? `, Ease rating ${easeFilter.ease}` : `Ease rating ${easeFilter.ease}`)}</h4>
+                  <p>({handleFilter().length})</p>
+                </div>
               }
-            <hr className='break' />
-            <Container className='bstrap-container'>
-              <Row className='bstrap-row'>
-                {handleFilter().map(plant => {
-                  const { _id, name, imageTrans, sciName, seededEaseRating } = plant
-                  return (
-                    <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
-                      <div className='link-container'>
-                        <Link to={`/plants/${_id}`} >
-                          <Card className='card'>
-                            {/* <div className='sciname-container'>
+              <hr className='break' />
+              <Container className='bstrap-container'>
+                <Row className='bstrap-row'>
+                  {handleFilter().map(plant => {
+                    const { _id, name, imageTrans, sciName, seededEaseRating } = plant
+                    return (
+                      <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
+                        <div className='link-container'>
+                          <Link to={`/plants/${_id}`} >
+                            <Card className='card'>
+                              {/* <div className='sciname-container'>
                     </div> */}
-                            <div className='card-img-container'>
-                              <Card.Img className='card-img' variant='top' src={imageTrans} />
-                            </div>
-                            <Card.Body >
-                              <Card.Title className='text mb-0 card-title'>{name}</Card.Title>
-                              <p className='sci-name text'>{sciName}</p>
-                              <p className='ease text'>Ease rating {seededEaseRating && seededEaseRating}</p>
-                            </Card.Body>
-                          </Card>
-                        </Link>
-                      </div>
-                    </Col>
-                  )
-                })}
-              </Row>
-            </Container>
-          </div>
+                              <div className='card-img-container'>
+                                <Card.Img className='card-img' variant='top' src={imageTrans} />
+                              </div>
+                              <Card.Body >
+                                <Card.Title className='text mb-0 card-title'>{name}</Card.Title>
+                                <p className='sci-name text'>{sciName}</p>
+                                <p className='ease text'>Ease rating {seededEaseRating && seededEaseRating}</p>
+                              </Card.Body>
+                            </Card>
+                          </Link>
+                        </div>
+                      </Col>
+                    )
+                  })}
+                </Row>
+              </Container>
+            </div>
         }
       </section >
     </div >

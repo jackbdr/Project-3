@@ -6,7 +6,6 @@
   // background-repeat: no-repeat;
 }
 
-
 // ? Plants display
 
 .plant {
@@ -41,6 +40,10 @@
   width: 80%;
   // background-color: white;
   padding: 25px;
+  .display-filters {
+    display: flex;
+    justify-content: space-between;
+  }
   .card {
     border: none;
     // position: relative;
@@ -65,15 +68,15 @@
     //   transform: translate(-50%, -50%);
     //   -ms-transform: translate(-50%, -50%);
     //   text-align: center;
-      .ease {
-        color: #6b6b6b;
-        // font-size: 16px;
-        // padding: 16px 32px;
-        // font-style: italic;
-        font-size: 0.9rem;
-        opacity: 0;
-        transition: 0.5s ease;
-      }
+    .ease {
+      color: #6b6b6b;
+      // font-size: 16px;
+      // padding: 16px 32px;
+      // font-style: italic;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: 0.5s ease;
+    }
     // }
     .card-title {
       color: #6b6b6b;
@@ -97,19 +100,17 @@
   // white-space: nowrap;
 }
 
-
 .card:hover .card-img,
 .card:hover .card-title {
   // opacity: 0.4;
 }
-
 
 .card:hover {
   // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transform: scale(1.05);
 }
 
-.card:hover .middle{
+.card:hover .middle {
   opacity: 1;
 }
 
@@ -126,26 +127,31 @@
 //   width: 100%;
 // }
 
-
-
-
-
 // ? Filters
 
 .reset {
   padding: 20px;
 }
 
+.scale {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .index-wrapper {
   display: flex;
   // justify-content: space-between;
-  background-image: url('../../../../public/images.png/home-1.png');
+  background-image: url("../../../../public/images.png/home-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 85vh;
   .filters {
-    margin-top: 5%;
+    margin-top: 4%;
     margin-right: 8%;
     margin-left: 8%;
     width: 20%;
@@ -157,10 +163,13 @@
   background-color: #f2f2f2;
   padding: 10px;
   position: fixed;
-  width: fit-content;
-  border: 1px solid #36454F;
+  width: 16%;
+  border: 1px solid #36454f;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  .break {
+    margin: 0;
+  }
   .label-icon {
     // display: flex;
     justify-content: space-between;
@@ -175,6 +184,9 @@
       margin-bottom: 8%;
     }
   }
+  .cans {
+    margin-top: 6%;
+  }
 }
 
 .icon-cross-container {
@@ -183,76 +195,74 @@
   justify-content: space-between;
 }
 
-
-
 button {
   // width: 100%;
   padding: 18px;
   border: none;
-  
+
   background-color: #f2f2f2;
   margin-left: 10%; // ! not currently working
   margin-right: 2%; // ! not currently working
 }
 
 .can {
-  background-image: url('../../../../public/images.png/watering-can.png');
+  background-image: url("../../../../public/images.png/watering-can.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .can-colour {
-  background-image: url('../../../../public/images.png/water-selected.png');
+  background-image: url("../../../../public/images.png/water-selected.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .sun {
-  background-image: url('../../../../public/images.png/sunny.png');
+  background-image: url("../../../../public/images.png/sunny.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .sun-colour {
-  background-image: url('../../../../public/images.png/sunny-selected.png');
+  background-image: url("../../../../public/images.png/sunny-selected.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .bulb {
-  background-image: url('../../../../public/images.png/light-bulb.png');
+  background-image: url("../../../../public/images.png/light-bulb.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .bulb-on {
-  background-image: url('../../../../public/images.png/light-bulb-selected3.png');
+  background-image: url("../../../../public/images.png/light-bulb-selected3.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .thumb {
-  background-image: url('../../../../public/images.png/ease.png');
+  background-image: url("../../../../public/images.png/ease.png");
   background-position: center;
   background-size: contain;
   // background-repeat: no-repeat;
 }
 
 .thumb-colour {
-  background-image: url('../../../../public/images.png/ease-selected.png');
+  background-image: url("../../../../public/images.png/ease-selected.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .cross {
-  background-image: url('../../../../public/images.png/cross.png');
+  background-image: url("../../../../public/images.png/cross.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -262,6 +272,7 @@ button {
 .cross-container {
   margin-left: 3%;
 }
+
 
 
 

@@ -14,7 +14,7 @@ router.route('/plants')
   .post(secureRoute, addPlant)
 
 router.route('/plants/:id')
-  .get(showSinglePlant)
+  .get(secureRoute, showSinglePlant)
   .put(secureRoute, changePlant)
   .delete(secureRoute, deletePlant)
 

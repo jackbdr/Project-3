@@ -142,7 +142,7 @@ const PlantDetail = () => {
 
   return (
     <>
-      {plants ?
+      {isUserAuth() ? plants ?
         <section className="overall-container">
           {/* SPLITTING UP THE PAGE INTO SECTIONS FOR SCROLLING - TOP SECTION */}
           <section className="top-page">
@@ -185,7 +185,7 @@ const PlantDetail = () => {
                     <span className='hover-message'>Add a comment</span>
                   </button>
                   <Modal show={show} onHide={handleClose}>
-                    
+
                     <Modal.Header className="comments-header" closeButton>
                       <Modal.Title className="comments-title" >Tell us what you think about the {plants.name} </Modal.Title>
                     </Modal.Header>
@@ -235,13 +235,13 @@ const PlantDetail = () => {
                   <Modal show={allComments} onHide={closeComments} className="comments-detail">
                     <Modal.Header className="comments-header" closeButton>
                       <Modal.Title className="comments-title">{plants.name}: Community reviews </Modal.Title>
-                      {plants.comments[0].length < 2 ? "" :
+                      {plants.comments.length < 2 ? "" :
                         <h2>Our users give this plant an average ease rating of {plants.avgRating}/5</h2>
                       }
                     </Modal.Header>
                     <Modal.Body>
 
-                      {plants.comments[0].length < 2 ?
+                      {plants.comments.length < 2 ?
                         <div className='comment-card'>
                           <h4>No one has reviewed this plant yet</h4>
                         </div>
@@ -447,7 +447,17 @@ const PlantDetail = () => {
           </section>
         </section>
         :
-        <h2>{errors ? 'something went wrong' : ''}</h2>}
+        <h2>{errors ? 'Sorry, something went wrong with the connection, try reloading' : ''}</h2>
+        :
+        <div className="no-auth-page">
+          <div ClassName="access-denied">
+            <h1>Sorry! This content is for our members only. If you want to see more, then join the community. Follow the link below to sign up.</h1>
+            <Link to={`/register`}>
+              <button>Join Seeded</button>
+            </Link>
+          </div>
+        </div>
+      }
     </>
   )
 }

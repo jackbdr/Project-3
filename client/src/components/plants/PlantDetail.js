@@ -6,7 +6,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import FormGroup from 'react-bootstrap/esm/FormGroup'
-import { getToken } from '../helpers/Auth'
+import { getToken, getUserToken, isUserAuth } from '../helpers/Auth'
+
 
 const PlantDetail = () => {
 
@@ -17,6 +18,9 @@ const PlantDetail = () => {
   const [plants, setPlants] = useState()
   const [errors, setErrors] = useState(false)
 
+  const [ profileInfo, setProfileInfo ] = useState(false)
+  const [ isFavorited, setIsFavorited ] = useState(false)
+
   useEffect(() => {
 
     const getPlants = async () => {
@@ -24,15 +28,73 @@ const PlantDetail = () => {
         const { data } = await axios.get(`/api/plants/${id}`)
         setPlants(data)
         console.log(data)
-        console.log(data.problems)
-        console.log(data.problems[0])
-        console.log(data.problems[0][0].problem)
+        // console.log(data.problems)
+        // console.log(data.problems[0])
+        // console.log(data.problems[0][0].problem)
       } catch (err) {
         setErrors(true)
       }
     }
     getPlants()
   }, [id])
+
+
+  // Setting up profile data to check favorites
+  
+  useEffect(() => {
+    const checkFavorite = () => {
+      if (profileInfo){
+        const checkExists = profileInfo.favorites.filter(fav => {
+          return fav.plantId._id === id
+        })
+        if (checkExists.length > 0){
+          setIsFavorited(true)
+        }
+      } else {
+        setIsFavorited(false)
+    }
+  }
+  checkFavorite()
+
+  }, [profileInfo])
+
+
+  // Getting User Data
+  useEffect(() => {
+    if(isUserAuth()){
+      try {
+        const getUserData = async () => {
+          const { data } = await axios.get(`/api/profile/${getUserToken()}`)
+          console.log(data)
+          setProfileInfo(data)
+        }
+        getUserData()
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }, [])
+
+  // Favorite button handler
+  const postFavorite = async () => {
+    try {
+      const formData = 
+      {
+        "plantId": id
+      }
+      const { data } = await axios.put(`/api/favorites/${getUserToken()}`, formData, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        }
+      })
+      console.log(data)
+      if(isFavorited === true){
+        setIsFavorited(false)
+      } else setIsFavorited(true)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
     // Setting state and handles for add comment modal
     const [show, setShow] = useState(false)
@@ -55,7 +117,7 @@ const PlantDetail = () => {
   // Updating form data
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value, "plantName": plants.name, "plantImg": plants.imageTrans, "plantId": plants._id })
-    console.log(e.target.value, e.target.name)
+    // console.log(e.target.value, e.target.name)
     setErrors({ ...errors, [e.target.name]: '' })
   }
 
@@ -69,7 +131,7 @@ const PlantDetail = () => {
           Authorization: `Bearer ${getToken()}`,
         }
       })
-      console.log(data)
+      // console.log(data)
       // navigate(`/api/plants/${id}/comments/${data._id}`)
     } catch (err) {
       setErrors(err.response.data)
@@ -197,10 +259,19 @@ const PlantDetail = () => {
                     </button>
                   </Modal.Footer>
                 </Modal>
+                    <>
+                    {isFavorited ?
+                    <button id='btn-favorited' onClick={postFavorite}>
+                      <img src='/images.png/heart-filled.png' alt='Heart with color' />
+                    </button>
+                    :
+                    <button id='btn-notfavorited' onClick={postFavorite}>
+                      <img src='/images.png/heart.png' alt='Heart' />
+                    </button>
+                  }
+                  </>
                 </div>
                 
-
-
                 <div className="description">
                   <h4>About Me</h4>
                   <p>{plants.description}</p>

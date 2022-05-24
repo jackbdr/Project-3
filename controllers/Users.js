@@ -5,7 +5,7 @@ import User from '../models/users.js'
 // View Profile
 export const viewProfile = async(req, res) => {
   const { username } = req.params
-  const profileToView = await User.findOne({ username: username }).populate('favorites').populate('favorites.plantId')
+  const profileToView = await User.findOne({ username: username }).populate('favorites').populate('favorites.plantId').populate('comments')
   return res.status(200).json(profileToView)
 }
 

@@ -1221,7 +1221,7 @@ export default [
     brightType: 'Bright',																						
     brightnessFilter: 5,																						
     fertilizer: 'Feed your staghorn fern monthly during periods of active grown (spring and summer). Use a balanced, water-soluble fertilizer (ratio of 1:1:1). During periods of dormancy (fall and winter), reduce fertilizing to every other month. Mature staghorn ferns can survive with a twice-yearly feeding.',																						
-    pruning: '\nYou can trim dead and damaged foliage from the staghorn fern at any time of year. The plant doesn\'t require regular pruning, so there is no optimum time for a trim.',																						
+    pruning: 'You can trim dead and damaged foliage from the staghorn fern at any time of year. The plant doesn\'t require regular pruning, so there is no optimum time for a trim.',																						
     problems: [
       [
         {

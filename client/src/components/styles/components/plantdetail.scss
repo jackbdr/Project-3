@@ -69,35 +69,6 @@
 .right-page {
   width: 50%;
 
-  .modal-launch {
-    margin-left: 15px;
-    width: 40px;
-    padding: 0;
-    img{
-      width: 100%;
-    }
-    .hover-message{
-      visibility: hidden;
-      width: 150px;
-      position: absolute;
-      z-index: 1;
-      color: #307351;
-      font-weight: bold;
-      text-align: left;
-    }
-  }
-
-  .modal-launch:hover{
-    .hover-message{
-    visibility: visible;
-    }
-  }
-
-  .comment-section {
-    display: flex;
-    align-content: center;
-  }
-
   h1 {
     font-size: 40px;
     text-align: left;
@@ -107,7 +78,7 @@
   h3 {
     font-style: italic;
     font-size: 30px;
-    padding:0;
+    padding: 0;
     margin-bottom: 0;
   }
 
@@ -136,8 +107,9 @@
 
   .rating-title {
     text-align: left;
+
     h4 {
-      margin:0px;
+      margin: 0px;
     }
   }
 
@@ -162,6 +134,76 @@
     }
   }
 }
+
+.modal-launch {
+  margin-left: 15px;
+  width: 40px;
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
+
+  .hover-message {
+    visibility: hidden;
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+    color: #307351;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.modal-launch:hover {
+  .hover-message {
+    visibility: visible;
+  }
+}
+
+.comment-section {
+  display: flex;
+  align-content: center;
+}
+
+.comments-detail {
+  .comment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+    h5 {
+      font-size: 16px;
+      font-style: italic;
+      margin:0;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 5px;
+      margin-bottom: 0;
+      }
+    .comment-right{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      h1{
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+    }
+  }
 
 
 
@@ -194,6 +236,7 @@
   flex-direction: row;
   justify-content: center;
   margin: 0px;
+
   .plant-text {
     h4 {
       font-size: 14px;
@@ -201,12 +244,14 @@
       font-style: italic;
     }
   }
+
   .plant-pic {
     margin: 0 auto;
     width: 60%;
     max-width: 60%;
     height: 55%;
     padding: 10px;
+
     img {
       height: 90%;
       margin-left: 0%;
@@ -220,6 +265,7 @@
 .facts {
   width: 85%;
   margin-bottom: 0px;
+
   h4 {
     font-size: 25px;
     font-weight: bold;
@@ -234,6 +280,7 @@
 .facts-detail {
   display: flex;
   flex-direction: row;
+
   .fact-logo {
     display: flex;
     flex-direction: column;
@@ -255,7 +302,7 @@
 
 .problem-section {
   width: 85%;
-  margin-top:0px;
+  margin-top: 0px;
 }
 
 .problem-title {
@@ -274,27 +321,31 @@
   margin-bottom: 10px;
   margin-top: 10px;
   max-width: 100%;
+
   img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     margin-left: 10px;
   }
+
   .problem-box {
     width: 20%;
     //margin-right:0px;
-    padding:0px;
+    padding: 0px;
   }
+
   h3 {
     font-size: 13px;
-    margin:0;
+    margin: 0;
     font-style: normal;
   }
-  .solution-box{
-    margin:0px;
-    padding:0px;
+
+  .solution-box {
+    margin: 0px;
+    padding: 0px;
   }
-  }
+}
 
 
 .seeded-says {
@@ -304,12 +355,8 @@
     font-weight: 600;
     margin-bottom: 0px;
   }
+
   p {
     font-size: 12px;
   }
 }
-
-
-
-
-  

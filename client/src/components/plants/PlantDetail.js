@@ -34,11 +34,15 @@ const PlantDetail = () => {
     getPlants()
   }, [id])
 
-    // Setting state and handles for modals
+    // Setting state and handles for add comment modal
     const [show, setShow] = useState(false)
-
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
+
+    // setting state and handles for all comments modal
+    const [allComments, setAllComments] = useState(false)
+    const closeComments = () => setAllComments(false)
+    const showComments = () => setAllComments(true)
 
   // * Uploading comments
   // Setting form information for submitting comments
@@ -118,9 +122,7 @@ const PlantDetail = () => {
                     <img src='/images.png/comment.png' alt='comment' />
                     <span className='hover-message'>Add a comment</span>
                   </button>
-                </div>
-
-                <Modal show={show} onHide={handleClose}>
+                  <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>How have you found the {plants.name} </Modal.Title>
                   </Modal.Header>
@@ -163,6 +165,41 @@ const PlantDetail = () => {
                     </button>
                   </Modal.Footer>
                 </Modal>
+
+                <button className="load-comments" onClick={showComments}>
+                    Show comments
+                </button>
+                <Modal show={allComments} onHide={closeComments} className = "comments-detail">
+                  <Modal.Header closeButton>
+                    <Modal.Title>All comments for the {plants.name} </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                  {plants.comments.map(comment => (
+                    <>
+                    <div className = 'comment-card'>
+                      <div className ='comment-left'>
+                        <h4>{comment.title}</h4>
+                        <h5>Added on {comment.createdAt}</h5>
+                        <p>{comment.text}</p>
+                      </div>
+                      <div className = 'comment-right'>
+                        <h1>{comment.rating}</h1>
+                        <img src='/images.png/favourite.png' alt='star'/>
+                      </div>
+                    </div>
+                    <hr/>
+                    </>
+                  ))}
+                    
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <button onClick={closeComments}>
+                      Close
+                    </button>
+                  </Modal.Footer>
+                </Modal>
+                </div>
+                
 
 
                 <div className="description">

@@ -15,12 +15,15 @@ const Home = () => {
           </div>
           <div className='navigation'>
             <Link to={'/plants'}><h4 className="zoom">Plants</h4></Link>
-            <Link to={'/glossary'}><h4 className="zoom">Glossary</h4></Link>
             {isUserAuth() ?
+            <>
               <Link to={`/profile/${getUserToken()}`}><h4 className='zoom'>Profile</h4></Link>
+              <Link to={'/comparison'}><h4 className="zoom">Buy plants</h4></Link>
+              </>
               :
               <Link to={'/login'}><h4 className="zoom">Login/ register</h4></Link>
             }
+            <Link to={'/glossary'}><h4 className="zoom">Glossary</h4></Link>
             <Link to={'/aboutus'}><h4 className="zoom">About Us</h4></Link>
           </div>
 

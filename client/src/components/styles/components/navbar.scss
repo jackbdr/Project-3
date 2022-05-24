@@ -7,17 +7,20 @@
   display: flex;
   width: 33%;
   align-items: center;
-  input{
-    color: black;
-    border-radius: 10px;
-    border: 1px solid lightgray;
-    padding-left: 10px;
-  }
+  
 }
 .nav_left{
   display: flex;
   width: 33%;
   align-items: center;
+  padding-left: 20px;;
+  input{
+    color: black;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding-left: 10px;
+    margin-left: 30px;
+  }
 }
 
 .nav_middle{

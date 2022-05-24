@@ -18,8 +18,8 @@ const PlantDetail = () => {
   const [plants, setPlants] = useState()
   const [errors, setErrors] = useState(false)
 
-  const [ profileInfo, setProfileInfo ] = useState(false)
-  const [ isFavorited, setIsFavorited ] = useState(false)
+  const [profileInfo, setProfileInfo] = useState(false)
+  const [isFavorited, setIsFavorited] = useState(false)
 
   useEffect(() => {
 
@@ -40,28 +40,28 @@ const PlantDetail = () => {
 
 
   // Setting up profile data to check favorites
-  
+
   useEffect(() => {
     const checkFavorite = () => {
-      if (profileInfo){
+      if (profileInfo) {
         const checkExists = profileInfo.favorites.filter(fav => {
           return fav.plantId._id === id
         })
-        if (checkExists.length > 0){
+        if (checkExists.length > 0) {
           setIsFavorited(true)
         }
       } else {
         setIsFavorited(false)
+      }
     }
-  }
-  checkFavorite()
+    checkFavorite()
 
   }, [profileInfo])
 
 
   // Getting User Data
   useEffect(() => {
-    if(isUserAuth()){
+    if (isUserAuth()) {
       try {
         const getUserData = async () => {
           const { data } = await axios.get(`/api/profile/${getUserToken()}`)
@@ -78,7 +78,7 @@ const PlantDetail = () => {
   // Favorite button handler
   const postFavorite = async () => {
     try {
-      const formData = 
+      const formData =
       {
         "plantId": id
       }
@@ -88,7 +88,7 @@ const PlantDetail = () => {
         }
       })
       console.log(data)
-      if(isFavorited === true){
+      if (isFavorited === true) {
         setIsFavorited(false)
       } else setIsFavorited(true)
     } catch (error) {
@@ -96,19 +96,19 @@ const PlantDetail = () => {
     }
   }
 
-    // Setting state and handles for add comment modal
-    const [show, setShow] = useState(false)
-    const handleClose = () => setShow(false)
-    const handleShow = () => setShow(true)
+  // Setting state and handles for add comment modal
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
-    // setting state and handles for all comments modal
-    const [allComments, setAllComments] = useState(false)
-    const closeComments = () => setAllComments(false)
-    const showComments = () => setAllComments(true)
+  // setting state and handles for all comments modal
+  const [allComments, setAllComments] = useState(false)
+  const closeComments = () => setAllComments(false)
+  const showComments = () => setAllComments(true)
 
   // * Uploading comments
   // Setting form information for submitting comments
-  const [formData, setFormData] = useState ({
+  const [formData, setFormData] = useState({
     title: '',
     text: '',
     rating: '',
@@ -139,7 +139,7 @@ const PlantDetail = () => {
     handleClose()
   }
 
-  
+
   return (
     <>
       {plants ?
@@ -185,95 +185,104 @@ const PlantDetail = () => {
                     <span className='hover-message'>Add a comment</span>
                   </button>
                   <Modal show={show} onHide={handleClose}>
-                  <Modal.Header closeButton>
-                    <Modal.Title>Tell us what you think about the {plants.name} </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Form>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Comment title</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder=""
-                          autoFocus 
-                          onChange={handleChange}
-                          name='title'/>
-                      </Form.Group>
-                      <div className="form-group">
-                        <label for="rating">Rating</label>
-                        <select className="form-control" id="rating" placeholder='---' onChange={handleChange} name = 'rating'>
-                          <option>---</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                      <Form.Group
-                        className="mb-3"
-                        controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Comment</Form.Label>
-                        <Form.Control as="textarea" rows={3} onChange={handleChange} name='text'/>
-                      </Form.Group>
-                    </Form>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <button onClick={handleClose}>
-                      Close
-                    </button>
-                    <button onClick={handleSubmit}>
-                      Save Changes
-                    </button>
-                  </Modal.Footer>
-                </Modal>
+                    <Modal.Header className="comments-header" closeButton>
+                      <Modal.Title className="comments-title" >Tell us what you think about the {plants.name} </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Form>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                          <Form.Label>Comment title</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder=""
+                            autoFocus
+                            onChange={handleChange}
+                            name='title' />
+                        </Form.Group>
+                        <div className="form-group">
+                          <label for="rating">How easy is this plant to look after?</label>
+                          <select className="form-control" id="rating" placeholder='---' onChange={handleChange} name='rating'>
+                            <option>---</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlTextarea1">
+                          <Form.Label>Comment</Form.Label>
+                          <Form.Control as="textarea" rows={3} onChange={handleChange} name='text' />
+                        </Form.Group>
+                      </Form>
+                    </Modal.Body>
+                    <Modal.Footer className="comments-footer">
+                      <button className='comments-save' onClick={handleSubmit}>
+                        Save Changes
+                      </button>
+                      <button className='comments-close' onClick={handleClose}>
+                        Close
+                      </button>
+                    </Modal.Footer>
+                  </Modal>
 
-                <button className="load-comments" onClick={showComments}>
+                  <button className="load-comments" onClick={showComments}>
                     (Show comments)
-                </button>
-                <Modal show={allComments} onHide={closeComments} className = "comments-detail">
-                  <Modal.Header closeButton>
-                    <Modal.Title>All comments for the {plants.name} </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                  {plants.comments.map(comment => (
-                    <>
-                    <div className = 'comment-card'>
-                      <div className ='comment-left'>
-                        <h4>{comment.title}</h4>
-                        <h5>Added on {comment.createdAt}</h5>
-                        <p>{comment.text}</p>
-                      </div>
-                      <div className = 'comment-right'>
-                        <h1>{comment.rating} </h1>
-                        <img src='/images.png/favourite.png' alt='star'/>
-                      </div>
-                    </div>
-                    <hr/>
-                    </>
-                  ))}
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <button onClick={closeComments}>
-                      Close
-                    </button>
-                  </Modal.Footer>
-                </Modal>
-                    <>
+                  </button>
+                  <Modal show={allComments} onHide={closeComments} className="comments-detail">
+                    <Modal.Header className="comments-header" closeButton>
+                      <Modal.Title className="comments-title">{plants.name}: Community reviews </Modal.Title>
+                      {plants.comments ? "" :
+                        <h2>Our users give this plant an average ease rating of {plants.avgRating}/5</h2>
+                      }
+                    </Modal.Header>
+                    <Modal.Body>
+
+                      {plants.comments ?
+                        <div className='comment-card'>
+                          <h4>No one has reviewed this plant yet</h4>
+                        </div>
+                        :
+                        plants.comments.map(comment => (
+                          <>
+                            <div className='comment-card'>
+                              <div className='comment-left'>
+                                <h4>{comment.title}</h4>
+                                <h5>Added on {comment.createdAt}</h5>
+                                <p>{comment.text}</p>
+                              </div>
+                              <div className='comment-right'>
+                                <h1>{comment.rating} </h1>
+                                <img src='/images.png/favourite.png' alt='star' />
+                              </div>
+                            </div>
+                            <hr />
+                          </>
+                        ))}
+                    </Modal.Body>
+                    <Modal.Footer className='comments-footer'>
+                      <button className='comments-close' onClick={closeComments}>
+                        Close
+                      </button>
+                    </Modal.Footer>
+                  </Modal>
+                  <>
                     {isFavorited ?
-                    <button id='btn-favorited' onClick={postFavorite}>
-                      💚
-                      {/* <img src='/images.png/heart-filled.png' alt='Heart with color' /> */}
-                    </button>
-                    :
-                    <button id='btn-notfavorited' onClick={postFavorite}>
-                      🤍
-                      {/* <img src='/images.png/heart.png' alt='Heart' /> */}
-                    </button>
-                  }
+                      <button id='btn-favorited' onClick={postFavorite}>
+                        💚
+                        {/* <img src='/images.png/heart-filled.png' alt='Heart with color' /> */}
+                      </button>
+                      :
+                      <button id='btn-notfavorited' onClick={postFavorite}>
+                        🤍
+                        {/* <img src='/images.png/heart.png' alt='Heart' /> */}
+                      </button>
+                    }
                   </>
                 </div>
-                
+
                 <div className="description">
                   <h4>About Me</h4>
                   <p>{plants.description}</p>
@@ -373,12 +382,18 @@ const PlantDetail = () => {
                       <small>{plants.poisonous && plants.poisonous}</small>
                     </div>
                   </div>
-                  <hr />
+
                 </div>
                 <div className="problem-section">
-                  <div className='problem-title'>
-                    <h4>Typical problems</h4>
-                  </div>
+
+                  {plants.problems[0][0].problem.length < 2 ? "" :
+                    <>
+                      <hr />
+                      <div className='problem-title'>
+                        <h4>Typical problems</h4>
+                      </div>
+                    </>
+                  }
                   {plants.problems[0][0].problem.length < 2 ? "" :
                     <>
                       <div className='problem-detail'>
@@ -419,8 +434,9 @@ const PlantDetail = () => {
                       </div>
                     </>
                   }
-                  <hr />
+
                   <div className="seeded-says">
+                    <hr />
                     <h3>Seeded says</h3>
                     <p>{plants.seededSays}</p>
                   </div>

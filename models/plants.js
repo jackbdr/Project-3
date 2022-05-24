@@ -19,7 +19,7 @@ const plantSchema = new mongoose.Schema({
   seed: { type: Number, required: false },
   name: { type: String, required: true, unique: true },
   sciName: { type: String, required: true, unique: true },
-  imageTrans: { type: String, required: true },
+  imageTrans: { type: String, required: false },
   imageHome: { type: String, required: false },
   imageWild: { type: String, required: false },
   origin: { type: String, required: true },

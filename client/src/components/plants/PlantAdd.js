@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
+import ImageUpload from '../helpers/ImageUpload.js'
 
 import { getToken } from '../helpers/Auth.js'
 
@@ -37,7 +38,8 @@ const PlantAdd = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
     setErrors({ ...errors, [e.target.name]: '' })
-    console.log(e.target.name)
+    console.log(e.target.value)
+    console.log('Form data -->' ,formData)
   }
 
   const handleSubmit = async (e) => {
@@ -57,7 +59,7 @@ const PlantAdd = () => {
 
 
   return (
-    <section className='form-page'>
+    <section className='bstrap-form-page'>
       <Form>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='name'>Plant name</Form.Label>
@@ -87,13 +89,6 @@ const PlantAdd = () => {
           </Form.Select>
         </Form.Group>
         <Form.Group className='mb-1'>
-          <Form.Label htmlFor='tempRange'>Temperature range</Form.Label>
-          <Form.Control name='tempRange' placeholder='Temperature range...' onChange={handleChange}/>
-          <Form.Text className='text-muted'>
-            e.g. 18-27°C
-          </Form.Text>
-        </Form.Group>
-        <Form.Group className='mb-1'>
           <Form.Label htmlFor='lightType'>Sunlight need</Form.Label>
           <Form.Select name='lightType' onChange={handleChange}>
             <option defaultValue>Sunlight need...</option>
@@ -106,7 +101,7 @@ const PlantAdd = () => {
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='brightType'>Brightness</Form.Label>
-          <Form.Select name='lightType' onChange={handleChange}>
+          <Form.Select name='brightType' onChange={handleChange}>
             <option defaultValue>Brightness...</option>
             <option>Bright</option>
             <option>Mainly bright</option>
@@ -114,6 +109,13 @@ const PlantAdd = () => {
             <option>Mainly low light</option>
             <option>Low light</option>
           </Form.Select>
+        </Form.Group>
+        <Form.Group className='mb-1'>
+          <Form.Label htmlFor='tempRange'>Temperature range</Form.Label>
+          <Form.Control name='tempRange' placeholder='Temperature range...' onChange={handleChange}/>
+          <Form.Text className='text-muted'>
+            e.g. 18-27°C
+          </Form.Text>
         </Form.Group>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='maxGrowth'>Max growth</Form.Label>
@@ -158,6 +160,12 @@ const PlantAdd = () => {
           <Form.Control name='problem3' placeholder='Problem 3...' onChange={handleChange}/>
           <Form.Label htmlFor='solution3'>Solution 3</Form.Label>
           <Form.Control name='solution3' placeholder='Solution 3...' onChange={handleChange}/>
+        </Form.Group>
+        <Form.Group className='mb-1'>
+          <ImageUpload 
+            formData={formData}
+            setFormData={setFormData}
+          />
         </Form.Group>
         <button type='submit' onClick={handleSubmit}>
           Add plant

@@ -30,7 +30,7 @@ const OwnProfile = () => {
       if (buttonActive === 'Your Favorites'){
         return <PlantsCollection userInfo={userInfo} />
       } else if (buttonActive === 'Your Comments'){
-        return <CommentsCollection />
+        return <CommentsCollection userInfo={userInfo}/>
       } else if (buttonActive === 'Your Added Plants'){
         return <RatingsCollection />
       }

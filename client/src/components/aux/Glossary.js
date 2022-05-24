@@ -2,6 +2,7 @@
 const Glossary = () => {
   return (
     <section className='glossary-container'>
+      <h1>Glossary</h1>
       <div className='entries-container'>
         <div className='entry'>
           <h4>North facing garden</h4>

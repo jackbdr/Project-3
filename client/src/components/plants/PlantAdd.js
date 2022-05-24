@@ -169,13 +169,15 @@ const PlantAdd = () => {
             <Form.Label htmlFor='solution3'>Solution 3</Form.Label>
             <Form.Control name='solution3' placeholder='Solution 3...' onChange={handleChange} />
           </Form.Group>
-          <ImageUpload
-            formData={formData}
-            setFormData={setFormData}
-          />
-          <button type='submit' onClick={handleSubmit}>
-            Add plant
-          </button>
+          <div className='imgs-button'>
+            <ImageUpload
+              formData={formData}
+              setFormData={setFormData}
+            />
+            <button type='submit' onClick={handleSubmit}>
+              Add plant
+            </button>
+          </div>
         </Form>
       </section>
     </div>

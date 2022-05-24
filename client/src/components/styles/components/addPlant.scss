@@ -1,7 +1,7 @@
 .addplant-container {
   height: 85vh;
   width: 100%;
-  background-image: url('./../../../../public/images.png/background-3.png');
+  background-image: url("./../../../../public/images.png/background-3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -24,6 +24,10 @@
       border: 0.3px solid #307351;
       border-radius: 5px;
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      .imgs-button {
+        display: flex;
+        flex-direction: column;
+      }
       button {
         background-color: rgba(48, 115, 81, 1);
         color: white;

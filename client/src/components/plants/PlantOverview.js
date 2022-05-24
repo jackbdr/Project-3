@@ -133,7 +133,18 @@ const PlantOverview = () => {
       })
       // console.log(filtered)
       // setFilteredPLants(filtered)
-      return filtered.sort()
+      return filtered.sort((a, b) => {
+        let fa = a.name.toLowerCase(),
+            fb = b.name.toLowerCase();
+    
+        if (fa < fb) {
+            return -1;
+        }
+        if (fa > fb) {
+            return 1;
+        }
+        return 0;
+    })
     }
   }
 

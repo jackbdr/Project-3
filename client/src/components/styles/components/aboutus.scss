@@ -1,8 +1,43 @@
+
+
 #aboutus-wrapper{
   display: flex;
-  .aboutus-left{
-    width: 33%;
-    margin-left: 2%;
+}
+
+.aboutus-left{
+  width: 33%;
+  margin-left: 2%;
+  margin-right: 4%;
+}
+.aboutus-right{
+  width: 50%;
+  margin-right: 2%;
+  h2{
+    margin-bottom: 0;
+  }
+  button{
+    background-color: white;
+    font-size: 1.25rem;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 1%;
+  }
+  button:focus{
+    text-decoration: underline;
+  }
+}
+
+#credits{
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 33%;
+  a{
+    text-decoration: none;
+    color: black;
     margin-right: 2%;
   }
+}
+#aboutus-header{
+  margin-top: 1%;
+  margin-bottom: 1%;
 }

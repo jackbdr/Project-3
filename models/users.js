@@ -10,6 +10,7 @@ const favoriteSchema = new mongoose.Schema({
 
 
 
+
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
@@ -21,6 +22,12 @@ const userSchema = new mongoose.Schema({
   favorites: [favoriteSchema],
   comments: [commentSchema],
   dateJoined: { type: Date, default: Date.now },
+})
+
+userSchema.virtual('plantsAdded', {
+  ref: 'Plant',
+  localField: '_id',
+  foreignField: 'addedBy',
 })
 
 // // ? reverse relationships 

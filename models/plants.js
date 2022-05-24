@@ -2,19 +2,7 @@ import mongoose from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
 // Comment Schema
-const commentSchema = new mongoose.Schema({
-  title: { type: String, required: true, maxLength: 100 },
-  text: { type: String, required: true, maxLength: 350 },
-  rating: { type: Number, required: true, min: 1, max: 5 },
-  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-}, {
-  timestamps: true,
-})
-
-// const favoriteSchema = new mongoose.Schema({
-//   plantId: { type: mongoose.Schema.ObjectId, ref: 'Plant', required: true },
-//   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-// })
+import { commentSchema } from './comments.js'
 
 const plantSchema = new mongoose.Schema({
   seed: { type: Number, required: false },
@@ -93,3 +81,4 @@ plantSchema.plugin(mongooseUniqueValidator)
 
 
 export default mongoose.model('Plant', plantSchema)
+

@@ -2,6 +2,8 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
+import { commentSchema } from './comments.js'
+
 const favoriteSchema = new mongoose.Schema({
   plantId: { type: mongoose.Schema.ObjectId, ref: 'Plant', required: true },
 })
@@ -17,6 +19,7 @@ const userSchema = new mongoose.Schema({
   // ],
   id: false,
   favorites: [favoriteSchema],
+  comments: [commentSchema],
   dateJoined: { type: Date, default: Date.now },
 })
 

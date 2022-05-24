@@ -37,18 +37,44 @@ export const PlantsCollection = ({ userInfo }) => {
 }
 
 
-
-
-
-
-
-
-
-export const CommentsCollection = () => {
+export const CommentsCollection = ({ userInfo }) => {
+  console.log(userInfo.comments[0].plantId)
   return(
-    <p>Comments:</p>
-    )
-  }
+    <>
+    {!userInfo ?
+      <p>Loading</p>
+      :
+      <ul id='profileFav'>
+      {userInfo.comments.map((comment, index) => {
+        return(
+          <li className='profileFav-item' key={index}>
+            <Link to={`/plants/${comment.plantId}`}>
+              <div className="profileFav-img">
+                <img src={comment.plantImg} alt={comment.name} />
+              </div>
+              <div className='profileFav-title'>
+                <p>
+                {comment.plantName} - Rating: {comment.rating}
+                </p>
+                <p className="profileFav-sciName">
+                {comment.title}
+                </p>
+                <p>
+                  {comment.text}
+                </p>
+              </div>
+              < hr/>
+            </Link>
+          </li>
+        )
+      })}
+      </ul>
+    }
+    </>
+  )
+}
+
+
 
 export const RatingsCollection = () => {
   return(

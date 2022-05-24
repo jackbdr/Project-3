@@ -50,7 +50,7 @@ const PlantDetail = () => {
 
   // Updating form data
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: e.target.value, "plantName": plants.name, "plantImg": plants.imageTrans, "plantId": plants._id })
     console.log(e.target.value, e.target.name)
     setErrors({ ...errors, [e.target.name]: '' })
   }

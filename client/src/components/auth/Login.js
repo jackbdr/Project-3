@@ -55,7 +55,7 @@ const Login = () => {
       <section className='new-user'>
         <h1>New to seeded?</h1>
         <h4>Sign up for tips tricks and everything you need to start your plant-keeping journey</h4>
-        <Link to={`/register`}>
+        <Link to={`/api/home`}>
           <button>Sign up</button>
         </Link>
 

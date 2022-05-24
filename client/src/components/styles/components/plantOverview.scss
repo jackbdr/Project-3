@@ -64,11 +64,12 @@
     padding: 5px;
     // height: 30vh;
     .card-img-container {
-      position: relative;
+      height:200px;
     }
     .card-img {
       transition: 0.5s ease;
       opacity: 1;
+      height: 100%;
     }
     // .middle {
     //   transition: 0.8s ease;
@@ -103,6 +104,10 @@
       font-size: 0.9rem;
     }
   }
+}
+
+.card-body{
+  height: 120px;
 }
 
 .text {

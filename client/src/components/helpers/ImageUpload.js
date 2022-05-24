@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Form from 'react-bootstrap/Form'
 
 const ImageUpload = ({ formData, setFormData }) => {
 
@@ -56,21 +57,17 @@ const ImageUpload = ({ formData, setFormData }) => {
   }
 
   return (
-    <div className='all-uploads'>
-      <div classname='upload'>
-        <div>
-          <label htmlFor="imageTrans" className="checkbox label">* Transparent image upload</label>
-        </div>
-        <div>
-          <input
-            name="imageTrans"
-            className="input"
-            type="file"
-            onChange={handleImageUpload1}
-          />
-        </div>
-      </div>
-      <div classname='upload'>
+    <>
+      <Form.Group classname='upload'>
+        <label htmlFor="imageTrans" className="checkbox label">* Transparent image upload</label>
+        <input
+          name="imageTrans"
+          className="input"
+          type="file"
+          onChange={handleImageUpload1}
+        />
+      </Form.Group>
+      <Form.Group classname='upload'>
         <label htmlFor="imageHome" className="checkbox label">Houseplant image upload</label>
         <input
           name="imageHome"
@@ -78,8 +75,8 @@ const ImageUpload = ({ formData, setFormData }) => {
           type="file"
           onChange={handleImageUpload2}
         />
-      </div>
-      <div classname='upload'>
+      </Form.Group>
+      <Form.Group classname='upload'>
         <label htmlFor="imageWild" className="checkbox label">Wild image upload</label>
         <input
           name="imageWild"
@@ -87,9 +84,8 @@ const ImageUpload = ({ formData, setFormData }) => {
           type="file"
           onChange={handleImageUpload3}
         />
-      </div>
-    </div>
-
+      </Form.Group>
+    </>
   )
 }
 

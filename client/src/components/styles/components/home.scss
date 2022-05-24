@@ -3,7 +3,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 110vh;
+  height: 105vh;
 }
 
 .home-content {
@@ -13,9 +13,11 @@
   h1 {
     text-align: left;
     font-size: 60px;
+    color: #0A3D3E;
   }
   h3 {
     font-size: 25px;
+    color: #0A3D3E;
   }
   .navigation{
     padding-top: 5%;
@@ -26,7 +28,7 @@
   }
   h4 {
     padding-top: 0.5%;
-    color: #307351;
+    color: #0A3D3E;
     font-weight: bold;
   }
   .zoom {
@@ -36,12 +38,3 @@
     transform: scale(1.5);
   }
 }
-
-// .content-wrap {
-//   display: none;
-// }
-
-
-
-
-

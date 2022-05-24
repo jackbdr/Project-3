@@ -75,8 +75,35 @@ export const CommentsCollection = ({ userInfo }) => {
 
 
 
-export const RatingsCollection = () => {
+export const PlantsAddedCollection = ({ userInfo }) => {
   return(
-    <p>Under Construction</p>
+    <>
+    {!userInfo ?
+    <p>Loading</p>
+    :
+    <ul id='profileFav'>
+      {userInfo.plantsAdded.map((plant, index) => {
+        return(
+          <li className='profileFav-item' key={index}>
+            <Link to={`/plants/${plant._id}`} >
+              <div className="profileFav-img">
+                <img src={plant.imageTrans} alt={plant.name} />
+              </div>
+              <div className='profileFav-title'>
+                <p>
+                {plant.name}
+                </p>
+                <p className="profileFav-sciName">
+                {plant.sciName}
+                </p>
+              </div>
+            </Link>
+            < hr/>
+          </li>
+        )
+      })}
+      </ul>
+    }
+    </>
   )
 }

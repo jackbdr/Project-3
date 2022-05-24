@@ -25,14 +25,15 @@ const App = () => {
 
   return (
     <main className="site-wrapper">
-      <BrowserRouter>
-        <div className='home-wrapper'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-          </Routes>
-        </div>
-        <div className='content-wrap'>
 
+      <BrowserRouter>
+        {/* <div className='home-wrapper'> */}
+
+        {/* </div> */}
+        <div className='content-wrap'>
+          <Routes>
+            <Route path='/home' element={<Home />} />
+          </Routes>
           <NavBar />
           <Routes>
             <Route path='/aboutus' element={<Aboutus />} />
@@ -48,7 +49,7 @@ const App = () => {
             <Route path='/comparison' element={<Websites />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
-            <Route path='*' element={<NotFound />} />
+            <Route path='/notfound' element={<NotFound />} />
           </Routes>
         </div>
         <Footer />

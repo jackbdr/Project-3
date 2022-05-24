@@ -27,7 +27,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <div className='nav_left'>
-            <Navbar.Brand as={Link} to='/'><img className='navLogo' src='/images.png/project3Logo.png' alt='Seeded logo' /></Navbar.Brand>
+            <Navbar.Brand as={Link} to='/home'><img className='navLogo' src='/images.png/project3Logo.png' alt='Seeded logo' /></Navbar.Brand>
             <form onSubmit={handleSubmit}>
               <input type='text' placeholder='Search...' value={searchInput} onChange={handleSearch} />
             </form>

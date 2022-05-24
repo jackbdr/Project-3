@@ -262,11 +262,13 @@ const PlantDetail = () => {
                     <>
                     {isFavorited ?
                     <button id='btn-favorited' onClick={postFavorite}>
-                      <img src='/images.png/heart-filled.png' alt='Heart with color' />
+                      💚
+                      {/* <img src='/images.png/heart-filled.png' alt='Heart with color' /> */}
                     </button>
                     :
                     <button id='btn-notfavorited' onClick={postFavorite}>
-                      <img src='/images.png/heart.png' alt='Heart' />
+                      🤍
+                      {/* <img src='/images.png/heart.png' alt='Heart' /> */}
                     </button>
                   }
                   </>

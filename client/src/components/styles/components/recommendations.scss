@@ -2,42 +2,65 @@
   margin-top: 3%;
   display: flex;
   margin-bottom: 3%;
+  background-image: url('../../../../public/images.png/background-1-flip.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.overview{
+.overview {
   width: 25%;
   margin-left: 7%;
   margin-right: 7%;
+  h3 {
+    color: #0A3D3E;
+  }
+  p {
+    color: #0A3D3E;
+  }
 }
 
+
 .card-detail {
-  .company-row{
+  .company-row {
     display: flex;
     align-items: center;
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
   }
+
   .comp-container {
     width: 100px;
+
     img {
       width: 70%;
-      padding: 2px;
+      padding: 5px;
     }
   }
+
   .company-info {
     width: 150px;
+
     h4 {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 5px;
     }
+
     h5 {
       font-size: 18px;
       font-style: italic;
       margin-bottom: 5px;
-      span{
+
+      span {
         font-weight: bold;
         font-size: 20px;
       }
     }
+
     button {
       margin-top: 0;
       border: 1px solid lightgray;
@@ -54,10 +77,13 @@
   flex-direction: row;
   width: 450px;
   justify-content: center;
+
   .rating-card {
     width: calc(100%/ 4 - 2px);
     text-align: center;
+
     .icon-container {
+
       // width: 100%;
       img {
         width: 30%;
@@ -66,3 +92,11 @@
     }
   }
 }
+
+
+
+
+
+
+
+

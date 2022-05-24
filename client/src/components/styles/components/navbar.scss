@@ -6,8 +6,9 @@
 .nav_right{
   display: flex;
   width: 33%;
-  align-items: center;
-  
+  align-items:center;
+  margin-right: 0;
+  justify-content: flex-end;
 }
 .nav_left{
   display: flex;

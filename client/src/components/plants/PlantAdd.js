@@ -73,6 +73,9 @@ const PlantAdd = () => {
           <Form.Label htmlFor='description'>Description</Form.Label>
           <Form.Control name='description' placeholder='Description...' onChange={handleChange}/>
         </Form.Group>
+        <Form.Text className='text-muted'>
+            Max 100 words
+          </Form.Text>
         <Form.Group className='mb-1'>
           <Form.Label htmlFor='origin'>Origin</Form.Label>
           <Form.Control name='origin' placeholder='Origin...' onChange={handleChange}/>

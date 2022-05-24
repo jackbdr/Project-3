@@ -16,6 +16,8 @@ const PlantAdd = () => {
     sciName: '',
     origin: '',
     imageTrans: '',
+    imageHome: '',
+    imageWild: '',
     description: '',
     wateringLevel: '',
     tempRange: '',
@@ -147,12 +149,13 @@ const PlantAdd = () => {
           </Form.Select>
         </Form.Group>
         <Form.Group className='mb-1'>
-          <Form.Text>
-            Potential Problems * required
-          </Form.Text>
-          <br />
+          <h4>Potential Problems</h4>
           <Form.Label htmlFor='problem1'>*Problem 1</Form.Label>
           <Form.Control name='problem1' placeholder='Problem 1...' onChange={handleChange}/>
+          <Form.Text className='text-muted'>
+            e.g. 'Brown leaves', 'Root rot',...
+          </Form.Text>
+          <br />
           <Form.Label htmlFor='solution1'>*Solution 1</Form.Label>
           <Form.Control name='solution1' placeholder='Solution 1...' onChange={handleChange}/>
           <Form.Label htmlFor='problem2'>Problem 2</Form.Label>

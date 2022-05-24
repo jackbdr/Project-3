@@ -52,6 +52,7 @@ const PlantOverview = () => {
         setPlants(data)
         setLoading(false)
       } catch (err) {
+        setLoading(false)
         console.log(err)
         setErrors(true)
       }

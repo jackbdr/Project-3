@@ -3,7 +3,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 110vh;
 }
 
 .home-content {
@@ -35,6 +35,10 @@
   .zoom:hover {
     transform: scale(1.5);
   }
+}
+
+.content-wrap {
+  display: none;
 }
 
 

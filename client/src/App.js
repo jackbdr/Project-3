@@ -26,27 +26,30 @@ const App = () => {
   return (
     <main className="site-wrapper">
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
-      <div className='content-wrap'>
-        <NavBar />
-        <Routes>
-          <Route path='/aboutus' element={<Aboutus />} />
-          <Route path='/glossary' element={<Glossary />} />
-          <Route path='/plants' element={<PlantOverview />} />
-          <Route path='/search/:searchInput' element={<Searchpage />} />
-          <Route path='/plants/:id' element={<PlantDetail />} />
-          <Route path='/plants/selector' element={<PlantRandom />} />
-          <Route path='/plants/add' element={<PlantAdd />} />
-          <Route path='/plants/:id/edit' element={<PlantEdit />} />
-          <Route path='/profile/:username' element={<OwnProfile />} /> 
-          <Route path='/accessories' element={<Accessories />} /> 
-          <Route path='/comparison' element={<Websites />} /> 
-          <Route path='/register' element={<Register />} /> 
-          <Route path='/login' element={<Login />} /> 
-          <Route path='*' element={<NotFound />} /> 
-        </Routes>
+        <div className='home-wrapper'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </div>
+        <div className='content-wrap'>
+
+          <NavBar />
+          <Routes>
+            <Route path='/aboutus' element={<Aboutus />} />
+            <Route path='/glossary' element={<Glossary />} />
+            <Route path='/plants' element={<PlantOverview />} />
+            <Route path='/search/:searchInput' element={<Searchpage />} />
+            <Route path='/plants/:id' element={<PlantDetail />} />
+            <Route path='/plants/selector' element={<PlantRandom />} />
+            <Route path='/plants/add' element={<PlantAdd />} />
+            <Route path='/plants/:id/edit' element={<PlantEdit />} />
+            <Route path='/profile/:username' element={<OwnProfile />} />
+            <Route path='/accessories' element={<Accessories />} />
+            <Route path='/comparison' element={<Websites />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
         </div>
         <Footer />
       </BrowserRouter>

@@ -431,3 +431,26 @@ Form {
     font-size: 12px;
   }
 }
+
+
+.no-auth-page {
+  background-image: url('../../../../public/images.png/background-2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  h1 {
+    padding-top: 5%;
+    font-size: 1.8rem;
+    margin-left: 10%;
+    width: 27%;
+    text-align: left;
+  }
+  button {
+    margin-left: 10%;
+    background-color: #0A3D3E;
+    color:#f2f2f2;
+    border-radius: 10px;
+    padding: 1%;
+  }
+}

@@ -4,6 +4,7 @@ export const ProjectBrief = () => {
   return (
     <section className='aboutus-left'>
     <h2>Project Brief </h2>
+    <hr />
       <h4>Technical Requirements </h4>
       <ol>
         <li>Build a full-stack application by making your own backend and your own front-end</li>
@@ -130,14 +131,30 @@ export const DayBreakdown = () => {
         </p>
         </>
       )
+    } else if (activeSection === 'Tues2'){
+      return (
+        <>
+        <h3>Tuesday - Week 2</h3>
+        <p>We got the last of the functionality sorted. The favourites {'&'} comments functionality are now working and displaying on the profile page correctly. You 
+        can also now add a new plant to the database and all of it is functioning as expecting.</p>
+        <p>We finished up the final styling decisions and started working on the styling we had left. This included redoing the profile page and some of the about-us page. 
+          We also have an issue where we can't seem to get the navbar to disappear on the homepage but we think it's becuase the nav is a global component in App.js. Not too 
+          sure how to fix this.
+        </p>
+        <p>Finishing the last of our tasks over the evening and hoping to get everything fully functional by tomorrow. Leaving all of tomorrow to try and get the website responsivite to mobile 
+          but we might run out of time before the deadline. 
+        </p>
+        </>
+      )
     }
   }
 
 
 
   return (
-    <section className='aboutus-section'>
+    <section className='aboutus-right'>
     <h2>Daily Breakdown</h2>
+    <hr />
     <div id='day-titles'>
       <button value='Mon1' onClick={handleClick}>Monday</button>
       <button value='Tues1'onClick={handleClick}>Tuesday</button>

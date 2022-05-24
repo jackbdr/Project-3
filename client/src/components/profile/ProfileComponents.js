@@ -38,7 +38,6 @@ export const PlantsCollection = ({ userInfo }) => {
 
 
 export const CommentsCollection = ({ userInfo }) => {
-  console.log(userInfo.comments[0].plantId)
   return(
     <>
     {!userInfo ?

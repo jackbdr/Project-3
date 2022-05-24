@@ -221,7 +221,7 @@ const PlantOverview = () => {
                 }
               </div>
             </div>
-            <div>
+            <div className='cross-container'>
               <button className='cross' onClick={resetCans}></button>
             </div>
           </div>
@@ -256,7 +256,7 @@ const PlantOverview = () => {
                 }
               </div>
             </div>
-            <div>
+            <div className='cross-container'>
               <button className='cross' onClick={resetSuns}></button>
             </div>
           </div>
@@ -291,7 +291,7 @@ const PlantOverview = () => {
                 }
               </div>
             </div>
-            <div>
+            <div className='cross-container'>
               <button className='cross' onClick={resetBulbs}></button>
             </div>
           </div>
@@ -326,7 +326,7 @@ const PlantOverview = () => {
                 }
               </div>
             </div>
-            <div>
+            <div className='cross-container'>
               <button className='cross' onClick={resetThumbs}></button>
             </div>
           </div>

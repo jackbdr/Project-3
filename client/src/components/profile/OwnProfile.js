@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { PlantsCollection, CommentsCollection, RatingsCollection } from './ProfileComponents'
+import { PlantsCollection, CommentsCollection, PlantsAddedCollection } from './ProfileComponents'
 
 const OwnProfile = () => {
   const { username } = useParams()
@@ -32,7 +32,7 @@ const OwnProfile = () => {
       } else if (buttonActive === 'Your Comments'){
         return <CommentsCollection userInfo={userInfo}/>
       } else if (buttonActive === 'Your Added Plants'){
-        return <RatingsCollection />
+        return <PlantsAddedCollection userInfo={userInfo}/>
       }
   }
 
@@ -74,10 +74,10 @@ const OwnProfile = () => {
                 <button value={'Your Favorites'} onClick={handleButtons}>Favorite Plants: {userInfo.favorites.length}</button>
               </li>
               <li className='profileSelector'>
-                <button value={'Your Comments'} onClick={handleButtons}>Comments Made</button>
+                <button value={'Your Comments'} onClick={handleButtons}>Comments Made: {userInfo.comments.length}</button>
               </li>
               <li className='profileSelector'>
-              <button value={'Your Added Plants'} onClick={handleButtons}>Plants Added</button>
+              <button value={'Your Added Plants'} onClick={handleButtons}>Plants Added: {userInfo.plantsAdded.length}</button>
               </li>
             </ul>
           </div>

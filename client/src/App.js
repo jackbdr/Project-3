@@ -28,14 +28,11 @@ const App = () => {
 
       <BrowserRouter>
         {/* <div className='home-wrapper'> */}
-
+        <NavBar />
         {/* </div> */}
         <div className='content-wrap'>
           <Routes>
-            <Route path='/home' element={<Home />} />
-          </Routes>
-          <NavBar />
-          <Routes>
+            <Route path='/' element={<Home />} />
             <Route path='/aboutus' element={<Aboutus />} />
             <Route path='/glossary' element={<Glossary />} />
             <Route path='/plants' element={<PlantOverview />} />

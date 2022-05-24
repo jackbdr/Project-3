@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { getUserToken, isUserAuth } from '../helpers/Auth'
 
 import Navbar from 'react-bootstrap/Navbar'
@@ -8,6 +8,14 @@ import Nav from 'react-bootstrap/Nav'
 
 
 const NavBar = () => {
+  // Hiding on homepage
+  let location = useLocation()
+  
+  const [ isHomePage, setIsHomePage ] = useState(false)
+
+  useEffect(() => {
+    location.pathname === '/' ? setIsHomePage(true) : setIsHomePage(false)
+  }, [location])
 
   const navigate = useNavigate()
   const [searchInput, setSearchInput] = useState('')
@@ -22,12 +30,17 @@ const NavBar = () => {
   }
 
   return (
+    <>
+    {isHomePage ? 
+    <>
+    </>
+    :
     <Navbar>
       <Container className='nav-container'>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <div className='nav_left'>
-            <Navbar.Brand as={Link} to='/home'><img className='navLogo' src='/images.png/project3Logo.png' alt='Seeded logo' /></Navbar.Brand>
+            <Navbar.Brand as={Link} to='/'><img className='navLogo' src='/images.png/project3Logo.png' alt='Seeded logo' /></Navbar.Brand>
             <form onSubmit={handleSubmit}>
               <input type='text' placeholder='Search...' value={searchInput} onChange={handleSearch} />
             </form>
@@ -55,6 +68,9 @@ const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+  }
+    </>
+    
   )
 }
 

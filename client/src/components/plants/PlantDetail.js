@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react'
-import Form from 'react'
+import Form from 'react-bootstrap/Form'
+import FormGroup from 'react-bootstrap/esm/FormGroup'
 
 const PlantDetail = () => {
 
@@ -36,7 +36,7 @@ const PlantDetail = () => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
-  const handleShow = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   return (
     <>
@@ -76,39 +76,53 @@ const PlantDetail = () => {
             <section className="right-page">
               <div className="key-content">
                 <h1>{plants.name}</h1>
-                <h3>{plants.sciName}</h3>
-                <Button variant="primary" onClick={handleShow}>
-                  Launch demo modal
-                </Button>
+                <div className='comment-section'>
+                  <h3>{plants.sciName}</h3>
+                  <button className="modal-launch" onClick={handleShow}>
+                    <img src='/images.png/comment.png' alt='comment' />
+                    <span className='hover-message'>Add a comment</span>
+                  </button>
+                </div>
 
                 <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>How have you found the {plants.name} </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
                     <Form>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>Comment Title</Form.Label>
                         <Form.Control
-                          type="email"
-                          placeholder="name@example.com"
-                          autoFocus/>
+                          type="text"
+                          placeholder=""
+                          autoFocus />
                       </Form.Group>
+                      <div className="form-group">
+                        <label for="rating">Rating</label>
+                        <select className="form-control" id="rating" placeholder='---'>
+                          <option>---</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
                       <Form.Group
                         className="mb-3"
                         controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Example textarea</Form.Label>
+                        <Form.Label>Comment</Form.Label>
                         <Form.Control as="textarea" rows={3} />
                       </Form.Group>
                     </Form>
                   </Modal.Body>
                   <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <button onClick={handleClose}>
                       Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    </button>
+                    <button onClick={handleClose}>
                       Save Changes
-                    </Button>
+                    </button>
                   </Modal.Footer>
                 </Modal>
 

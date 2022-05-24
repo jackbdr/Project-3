@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export const ProjectBrief = () => {
   return (
-    <section className='aboutus-section'>
+    <section className='aboutus-left'>
     <h2>Project Brief </h2>
       <h4>Technical Requirements </h4>
       <ol>

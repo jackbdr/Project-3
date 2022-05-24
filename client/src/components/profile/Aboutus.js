@@ -3,23 +3,16 @@ import { ProjectBrief, DayBreakdown } from './AboutusComponents'
 
 const Aboutus = () => {
 
-  const handleClick = (e) => {
-    console.log(e)
-  }
-
   return (
-    <div id='aboutus-page'>
-      <h1 id='aboutus-header'>Seeded - General Assembly Project 3</h1>
+    <>
+    <h1 id='aboutus-header'>Seeded - General Assembly Project 3</h1>
     <div id='aboutus-wrapper'>
-      <ProjectBrief />
-      <DayBreakdown />
+    <ProjectBrief />
+    <DayBreakdown />
     </div>
-    </div>
-
-
-
+    </>
     // <>
-    //   <h1 id='aboutus-header'>Seeded - General Assembly Project 3</h1>
+    //   
     //   <div id='aboutus-wrapper'>
     //     <div id='aboutus-btn'>
     //       <button value='ProjectBrief' onClick={handleClick}>Project Brief</button>

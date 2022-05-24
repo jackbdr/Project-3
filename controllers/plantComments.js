@@ -1,5 +1,5 @@
 import Plant from '../models/plants.js'
-
+import User from '../models/users.js'
 
 // Adding comments - POST request
 export const addCommentToPlant = async (req, res) => {
@@ -16,6 +16,15 @@ export const addCommentToPlant = async (req, res) => {
     plantToUpdate.comments.push(commentWithOwner)
     // Save updated comment
     await plantToUpdate.save()
+
+    // Adding Comment to the User 
+    const userToComment = await User.findById(req.verifiedUser._id)
+    userToComment.comments.push(req.body)
+    await userToComment.save()
+
+
+
+
     return res.status(200).json({ message: 'addComment worked' })
   } catch (err) {
     console.log(err)

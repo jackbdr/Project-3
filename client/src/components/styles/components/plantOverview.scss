@@ -6,6 +6,10 @@
   // background-repeat: no-repeat;
 }
 
+.italic {
+  font-style: italic;
+}
+
 // ? Plants display
 
 .plant {
@@ -43,6 +47,13 @@
   .display-filters {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+    h4 {
+      margin: 0;
+    }
   }
   .card {
     border: none;
@@ -156,15 +167,44 @@
     margin-left: 8%;
     width: 20%;
     height: fit-content;
+    .filters-addplant {
+      position: fixed;
+      .addplant {
+        background-color: #f2f2f2;
+        padding: 10px;
+        // position: fixed;
+        width: 260px;
+        // border: 1px solid #36454f;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin-top: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+        .add-button {
+          background-color:rgba(48, 115, 81, 1);
+          color: white;
+          font-weight: bold;
+          width: 50%;
+          margin: 15px auto;
+          border-radius: 30px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
+    }
   }
 }
 
 .filters-container {
   background-color: #f2f2f2;
   padding: 10px;
-  position: fixed;
-  width: 16%;
-  border: 1px solid #36454f;
+  // position: fixed;
+  width: 260px;
+  // border: 1px solid #36454f;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   .break {

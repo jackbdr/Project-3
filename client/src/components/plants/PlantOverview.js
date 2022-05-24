@@ -131,8 +131,6 @@ const PlantOverview = () => {
           return plant.name
         }
       })
-      // console.log(filtered)
-      // setFilteredPLants(filtered)
       return filtered.sort((a, b) => {
         let fa = a.name.toLowerCase(),
             fb = b.name.toLowerCase();
@@ -150,24 +148,6 @@ const PlantOverview = () => {
 
   const filtersEmpty = waterFilter.water === '' && lightFilter.light === '' && brightnessFilter.brightness === '' && easeFilter.ease === ''
 
-  // const reset = () => {
-  //   setWaterFilter({
-  //     water: '',
-  //   })
-  //   setLightFilter({
-  //     light: '',
-  //   })
-  //   setBrightnessFilter({
-  //     brightness: '',
-  //   })
-  //   setEaseFilter({
-  //     ease: '',
-  //   })
-  //   setCans(false)
-  //   setSuns(false)
-  //   setBulbs(false)
-  //   setThumbs(false)
-  // }
 
   const resetCans = () => {
     setWaterFilter({

@@ -6,7 +6,7 @@ import { PlantsCollection, CommentsCollection, PlantsAddedCollection } from './P
 const OwnProfile = () => {
   const { username } = useParams()
   const [ userInfo, setUserInfo ] = useState(null)
-  const [ buttonActive, setButtonActive ] = useState('Your Favorites')
+  const [ buttonActive, setButtonActive ] = useState(false)
 
   useEffect(() => {
     const getUser = async () => {
@@ -27,7 +27,7 @@ const OwnProfile = () => {
   }
 
   const asideChange = () => {
-      if (buttonActive === 'Your Favorites'){
+      if (buttonActive === 'Your Favourites'){
         return <PlantsCollection userInfo={userInfo} />
       } else if (buttonActive === 'Your Comments'){
         return <CommentsCollection userInfo={userInfo}/>
@@ -38,7 +38,7 @@ const OwnProfile = () => {
 
   const displayPicture = () => {
     if (userInfo.favorites.length === 0){
-      return <p>Add a favorite to display a picture!</p>
+      return <p>Add a favourite to display a picture!</p>
     } else {
       return <img id='profileImg' src={userInfo.favorites[0].plantId.imageHome} alt='pic' />
     }
@@ -71,7 +71,7 @@ const OwnProfile = () => {
           <div>
             <ul>
               <li className='profileSelector'>
-                <button value={'Your Favorites'} onClick={handleButtons}>Favorite Plants: {userInfo.favorites.length}</button>
+                <button value={'Your Favourites'} onClick={handleButtons}>Favourite Plants: {userInfo.favorites.length}</button>
               </li>
               <li className='profileSelector'>
                 <button value={'Your Comments'} onClick={handleButtons}>Comments Made: {userInfo.comments.length}</button>

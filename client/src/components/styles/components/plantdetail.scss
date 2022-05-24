@@ -191,6 +191,9 @@ Form {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    .comment-left{
+      padding-right: 10%;
+    }
     h4 {
       font-size: 20px;
       font-weight: bold;
@@ -211,6 +214,7 @@ Form {
       align-content: center;
       justify-content: center;
       align-items: center;
+      padding-right: 5%;
       h1{
         margin: 0;
         padding: 0;
@@ -220,9 +224,52 @@ Form {
         height: 20px;
       }
     }
-    
-    }
   }
+}
+
+.comments-header {
+  background-color: #0A3D3E;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+  align-items: flex-start !important;
+  padding-left: 3%;
+  h2 {
+    color:white;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.comments-title {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+}
+
+// .closeButton {
+//   color: #f2f2f2;
+// }
+
+.comments-footer {
+  background-color: #f2f2f2;
+}
+.comments-close {
+  background-color: #0A3D3E;
+  color: #f2f2f2;
+  font-weight: bold;
+  padding: 5px;
+  margin-right: 5%;
+  border-radius: 7px;
+}
+
+.comments-save {
+  background-color: #0A3D3E;
+  color: #f2f2f2;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 7px;
+}
 
 
 

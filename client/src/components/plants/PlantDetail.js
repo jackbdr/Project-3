@@ -91,7 +91,7 @@ const PlantDetail = () => {
                   <Modal.Body>
                     <Form>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Comment Title</Form.Label>
+                        <Form.Label>Comment title</Form.Label>
                         <Form.Control
                           type="text"
                           placeholder=""

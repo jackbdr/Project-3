@@ -773,7 +773,7 @@ export default [
       ]
     ],																					
     maxGrowth: '90 centimetres',																						
-    annualGrowth: '',																						
+    annualGrowth: '5-10cm',																						
     poisonous: 'Non toxic to pets',																						
     linkToBuy: '',																						
     seededEaseRating: 3,																						
@@ -877,7 +877,7 @@ export default [
       ]
     ],																					
     maxGrowth: '1.5 metres',																						
-    annualGrowth: '',																						
+    annualGrowth: '10-20cm',																						
     poisonous: 'Toxic to pets',																						
     linkToBuy: '',																						
     seededEaseRating: 5,																						
@@ -929,7 +929,7 @@ export default [
       ]
     ],																				
     maxGrowth: '30 metres',																						
-    annualGrowth: '',																						
+    annualGrowth: '20-60cm',																						
     poisonous: 'Non toxic to pets',																						
     linkToBuy: '',																						
     seededEaseRating: 3,																						
@@ -1713,7 +1713,7 @@ export default [
       ]
     ],																					
     maxGrowth: '30m',																						
-    annualGrowth: '50-75',																						
+    annualGrowth: '50-75cm',																						
     poisonous: 'Toxic to pets',																						
     linkToBuy: '',																						
     seededEaseRating: 3,																						

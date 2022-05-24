@@ -185,7 +185,7 @@ const PlantDetail = () => {
                     <span className='hover-message'>Add a comment</span>
                   </button>
                   <Modal show={show} onHide={handleClose}>
-                    
+
                     <Modal.Header className="comments-header" closeButton>
                       <Modal.Title className="comments-title" >Tell us what you think about the {plants.name} </Modal.Title>
                     </Modal.Header>
@@ -235,13 +235,13 @@ const PlantDetail = () => {
                   <Modal show={allComments} onHide={closeComments} className="comments-detail">
                     <Modal.Header className="comments-header" closeButton>
                       <Modal.Title className="comments-title">{plants.name}: Community reviews </Modal.Title>
-                      {plants.comments[0].length < 2 ? "" :
+                      {plants.comments.length < 2 ?  "" :
                         <h2>Our users give this plant an average ease rating of {plants.avgRating}/5</h2>
                       }
                     </Modal.Header>
                     <Modal.Body>
 
-                      {plants.comments[0].length < 2 ?
+                      {plants.comments.length < 2 ?
                         <div className='comment-card'>
                           <h4>No one has reviewed this plant yet</h4>
                         </div>

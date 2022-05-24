@@ -1,25 +1,39 @@
-.bstrap-form-page {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 6%;
-  Form {
-    height: 50vh;
-    overflow-y: auto;
-    width: 35%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    button {
-      background-color: rgba(48, 115, 81, 1);
-      color: white;
-      font-weight: bold;
-      width: 50%;
-      margin: 15px auto;
-      border-radius: 30px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+.addplant-container {
+  height: 85vh;
+  width: 100%;
+  background-image: url('./../../../../public/images.png/background-3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bstrap-form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 3%;
+    h1 {
+      margin-top: 4%;
+    }
+    Form {
+      height: 50vh;
+      overflow-y: auto;
+      width: 35%;
+      background-color: #f2f2f2;
+      margin-top: 1%;
+      padding: 1% 2%;
+      border: 0.3px solid #307351;
+      border-radius: 5px;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      button {
+        background-color: rgba(48, 115, 81, 1);
+        color: white;
+        font-weight: bold;
+        width: 50%;
+        margin: 15px auto;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
     }
   }
 }
@@ -29,4 +43,3 @@
   display: flex;
   align-items: center;
 }
-

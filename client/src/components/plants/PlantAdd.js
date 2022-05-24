@@ -41,7 +41,7 @@ const PlantAdd = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
     setErrors({ ...errors, [e.target.name]: '' })
     console.log(e.target.value)
-    console.log('Form data -->' ,formData)
+    console.log('Form data -->', formData)
   }
 
   const handleSubmit = async (e) => {
@@ -61,121 +61,124 @@ const PlantAdd = () => {
 
 
   return (
-    <section className='bstrap-form-page'>
-      <Form>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='name'>Plant name</Form.Label>
-          <Form.Control name='name' placeholder='Plant name...' onChange={handleChange}/>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='sciName'>Scientific name</Form.Label>
-          <Form.Control name='sciName' placeholder='Scientific name...' onChange={handleChange}/>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='description'>Description</Form.Label>
-          <Form.Control name='description' placeholder='Description...' onChange={handleChange}/>
-        </Form.Group>
-        <Form.Text className='text-muted'>
+    <div className='addplant-container'>
+      <section className='bstrap-form-page'>
+        <h1>Add to the collection</h1>
+        <Form>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='name'>* Plant name</Form.Label>
+            <Form.Control name='name' placeholder='Plant name...' onChange={handleChange} />
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='sciName'>* Scientific name</Form.Label>
+            <Form.Control name='sciName' placeholder='Scientific name...' onChange={handleChange} />
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='description'>* Description</Form.Label>
+            <Form.Control name='description' placeholder='Description...' onChange={handleChange} />
+          </Form.Group>
+          <Form.Text className='text-muted'>
             Max 100 words
           </Form.Text>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='origin'>Origin</Form.Label>
-          <Form.Control name='origin' placeholder='Origin...' onChange={handleChange}/>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='wateringLevel'>Watering need</Form.Label>
-          <Form.Select name='wateringLevel' onChange={handleChange}>
-            <option defaultValue>Watering need...</option>
-            <option>Every day</option>
-            <option>At least once a week</option>
-            <option>Every 8-14 days</option>
-            <option>Every 15-21 days</option>
-            <option>Once a month</option>
-          </Form.Select>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='lightType'>Sunlight need</Form.Label>
-          <Form.Select name='lightType' onChange={handleChange}>
-            <option defaultValue>Sunlight need...</option>
-            <option>Direct</option>
-            <option>Mainly direct</option>
-            <option>Mixed</option>
-            <option>Mainly indirect</option>
-            <option>Indirect</option>
-          </Form.Select>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='brightType'>Brightness</Form.Label>
-          <Form.Select name='brightType' onChange={handleChange}>
-            <option defaultValue>Brightness...</option>
-            <option>Bright</option>
-            <option>Mainly bright</option>
-            <option>Mixed</option>
-            <option>Mainly low light</option>
-            <option>Low light</option>
-          </Form.Select>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='tempRange'>Temperature range</Form.Label>
-          <Form.Control name='tempRange' placeholder='Temperature range...' onChange={handleChange}/>
-          <Form.Text className='text-muted'>
-            e.g. 18-27°C
-          </Form.Text>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='maxGrowth'>Max growth</Form.Label>
-          <Form.Control name='maxGrowth' placeholder='Max growth...' onChange={handleChange}/>
-          <Form.Text className='text-muted'>
-            What about in the wild!?
-          </Form.Text>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='annualGrowth'>Annual growth</Form.Label>
-          <Form.Control name='annualGrowth' placeholder='Annual growth...' onChange={handleChange}/>
-          <Form.Text className='text-muted'>
-            e.g. 50-70cm
-          </Form.Text>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='priceRange'>Price range</Form.Label>
-          <Form.Control name='priceRange' placeholder='Price range...' onChange={handleChange}/>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <Form.Label htmlFor='poisonous'>Toxicity</Form.Label>
-          <Form.Select name='poisonous' onChange={handleChange}>
-            <option>Toxicity...</option>
-            <option>Non toxic to pets</option>
-            <option>Toxic to pets</option>
-          </Form.Select>
-        </Form.Group>
-        <Form.Group className='mb-1'>
-          <h4>Potential Problems</h4>
-          <Form.Label htmlFor='problem1'>*Problem 1</Form.Label>
-          <Form.Control name='problem1' placeholder='Problem 1...' onChange={handleChange}/>
-          <Form.Text className='text-muted'>
-            e.g. 'Brown leaves', 'Root rot',...
-          </Form.Text>
-          <br />
-          <Form.Label htmlFor='solution1'>*Solution 1</Form.Label>
-          <Form.Control name='solution1' placeholder='Solution 1...' onChange={handleChange}/>
-          <Form.Label htmlFor='problem2'>Problem 2</Form.Label>
-          <Form.Control name='problem2' placeholder='Problem 2...' onChange={handleChange}/>
-          <Form.Label htmlFor='solution2'>Solution 2</Form.Label>
-          <Form.Control name='solution2' placeholder='Solution 2...' onChange={handleChange}/>
-          <Form.Label htmlFor='problem3'>Problem 3</Form.Label>
-          <Form.Control name='problem3' placeholder='Problem 3...' onChange={handleChange}/>
-          <Form.Label htmlFor='solution3'>Solution 3</Form.Label>
-          <Form.Control name='solution3' placeholder='Solution 3...' onChange={handleChange}/>
-        </Form.Group>
-          <ImageUpload 
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='origin'>* Origin</Form.Label>
+            <Form.Control name='origin' placeholder='Origin...' onChange={handleChange} />
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='wateringLevel'>* Watering need</Form.Label>
+            <Form.Select name='wateringLevel' onChange={handleChange}>
+              <option defaultValue>Watering need...</option>
+              <option>Every day</option>
+              <option>At least once a week</option>
+              <option>Every 8-14 days</option>
+              <option>Every 15-21 days</option>
+              <option>Once a month</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='lightType'>* Sunlight need</Form.Label>
+            <Form.Select name='lightType' onChange={handleChange}>
+              <option defaultValue>Sunlight need...</option>
+              <option>Direct</option>
+              <option>Mainly direct</option>
+              <option>Mixed</option>
+              <option>Mainly indirect</option>
+              <option>Indirect</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='brightType'>* Brightness</Form.Label>
+            <Form.Select name='brightType' onChange={handleChange}>
+              <option defaultValue>Brightness...</option>
+              <option>Bright</option>
+              <option>Mainly bright</option>
+              <option>Mixed</option>
+              <option>Mainly low light</option>
+              <option>Low light</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='tempRange'>* Temperature range</Form.Label>
+            <Form.Control name='tempRange' placeholder='Temperature range...' onChange={handleChange} />
+            <Form.Text className='text-muted'>
+              e.g. 18-27°C
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='maxGrowth'>* Max growth</Form.Label>
+            <Form.Control name='maxGrowth' placeholder='Max growth...' onChange={handleChange} />
+            <Form.Text className='text-muted'>
+              What about in the wild!?
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='annualGrowth'>* Annual growth</Form.Label>
+            <Form.Control name='annualGrowth' placeholder='Annual growth...' onChange={handleChange} />
+            <Form.Text className='text-muted'>
+              e.g. 50-70cm
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='priceRange'>* Price range</Form.Label>
+            <Form.Control name='priceRange' placeholder='Price range...' onChange={handleChange} />
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <Form.Label htmlFor='poisonous'>* Toxicity</Form.Label>
+            <Form.Select name='poisonous' onChange={handleChange}>
+              <option>Toxicity...</option>
+              <option>Non toxic to pets</option>
+              <option>Toxic to pets</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className='mb-1'>
+            <h4>Potential Problems</h4>
+            <Form.Label htmlFor='problem1'>* Problem 1</Form.Label>
+            <Form.Control name='problem1' placeholder='Problem 1...' onChange={handleChange} />
+            <Form.Text className='text-muted'>
+              e.g. 'Brown leaves', 'Root rot',...
+            </Form.Text>
+            <br />
+            <Form.Label htmlFor='solution1'>* Solution 1</Form.Label>
+            <Form.Control name='solution1' placeholder='Solution 1...' onChange={handleChange} />
+            <Form.Label htmlFor='problem2'>Problem 2</Form.Label>
+            <Form.Control name='problem2' placeholder='Problem 2...' onChange={handleChange} />
+            <Form.Label htmlFor='solution2'>Solution 2</Form.Label>
+            <Form.Control name='solution2' placeholder='Solution 2...' onChange={handleChange} />
+            <Form.Label htmlFor='problem3'>Problem 3</Form.Label>
+            <Form.Control name='problem3' placeholder='Problem 3...' onChange={handleChange} />
+            <Form.Label htmlFor='solution3'>Solution 3</Form.Label>
+            <Form.Control name='solution3' placeholder='Solution 3...' onChange={handleChange} />
+          </Form.Group>
+          <ImageUpload
             formData={formData}
             setFormData={setFormData}
           />
-        <button type='submit' onClick={handleSubmit}>
-          Add plant
-        </button>
-      </Form>
-    </section>
+          <button type='submit' onClick={handleSubmit}>
+            Add plant
+          </button>
+        </Form>
+      </section>
+    </div>
   )
 }
 

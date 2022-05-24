@@ -58,32 +58,38 @@ const ImageUpload = ({ formData, setFormData }) => {
 
   return (
     <>
-      <Form.Group classname='upload'>
-        <label htmlFor="imageTrans" className="checkbox label">* Transparent image upload</label>
-        <input
-          name="imageTrans"
-          className="input"
-          type="file"
-          onChange={handleImageUpload1}
-        />
+      <Form.Group>
+        <div className='upload'>
+          <label htmlFor="imageTrans" className="label">* Transparent image upload</label>
+          <input
+            name="imageTrans"
+            className="input"
+            type="file"
+            onChange={handleImageUpload1}
+          />
+        </div>
       </Form.Group>
-      <Form.Group classname='upload'>
-        <label htmlFor="imageHome" className="checkbox label">Houseplant image upload</label>
-        <input
-          name="imageHome"
-          className="input"
-          type="file"
-          onChange={handleImageUpload2}
-        />
+      <Form.Group>
+        <div className='upload'>
+          <label htmlFor="imageHome" className="label">* Houseplant image upload</label>
+          <input
+            name="imageHome"
+            className="input"
+            type="file"
+            onChange={handleImageUpload2}
+          />
+        </div>
       </Form.Group>
-      <Form.Group classname='upload'>
-        <label htmlFor="imageWild" className="checkbox label">Wild image upload</label>
-        <input
-          name="imageWild"
-          className="input"
-          type="file"
-          onChange={handleImageUpload3}
-        />
+      <Form.Group>
+        <div className='upload'>
+          <label htmlFor="imageWild" className="label">* Wild image upload</label>
+          <input
+            name="imageWild"
+            className="input"
+            type="file"
+            onChange={handleImageUpload3}
+          />
+        </div>
       </Form.Group>
     </>
   )

@@ -3,7 +3,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react'
+import Form from 'react'
 
 const PlantDetail = () => {
 
@@ -31,6 +33,10 @@ const PlantDetail = () => {
     getPlants()
   }, [id])
 
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(false)
 
   return (
     <>
@@ -71,6 +77,42 @@ const PlantDetail = () => {
               <div className="key-content">
                 <h1>{plants.name}</h1>
                 <h3>{plants.sciName}</h3>
+                <Button variant="primary" onClick={handleShow}>
+                  Launch demo modal
+                </Button>
+
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                          type="email"
+                          placeholder="name@example.com"
+                          autoFocus/>
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Example textarea</Form.Label>
+                        <Form.Control as="textarea" rows={3} />
+                      </Form.Group>
+                    </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                      Save Changes
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+
+
                 <div className="description">
                   <h4>About Me</h4>
                   <p>{plants.description}</p>
@@ -224,23 +266,6 @@ const PlantDetail = () => {
                 </div>
               </div>
             </section>
-            {/* <!--Carousel Wrapper--> */}
-            {/* <Carousel id="multi-item-carousel" className="carousel-multi-item" data-ride="carousel">
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <Carousel.Item className="row">
-                    <div className="col"><img src=".." alt="1 slide" /></div>
-                    <div className="col"><img src=".." alt="2 slide" /></div>
-                    <div className="col"><img src=".." alt="3 slide" /></div>
-                  </Carousel.Item>
-                  <Carousel.Item className="row">
-                    <div className="col"><img src=".." alt="4 slide" /></div>
-                    <div className="col"><img src=".." alt="5 slide" /></div>
-                    <div className="col"><img src=".." alt="6 slide" /></div>
-                  </Carousel.Item>
-                </div>
-              </div>
-            </Carousel> */}
           </section>
         </section>
         :

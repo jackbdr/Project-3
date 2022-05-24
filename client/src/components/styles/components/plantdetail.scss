@@ -137,6 +137,7 @@
 
 .modal-launch {
   margin-left: 15px;
+  margin-right: 15px;
   width: 40px;
   padding: 0;
 
@@ -147,11 +148,14 @@
   .hover-message {
     visibility: hidden;
     width: 150px;
+    // top: 100%;
+    margin-top: 40px;
+    margin-left: -100px;
     position: absolute;
     z-index: 1;
     color: #307351;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -161,9 +165,19 @@
   }
 }
 
+Form {
+  font-weight: bold;
+}
+
 .comment-section {
   display: flex;
   align-content: center;
+}
+
+.load-comments {
+  padding: 0;
+  color: #307351;
+  font-weight: bold;
 }
 
 .comments-detail {
@@ -293,8 +307,8 @@
       height: 75px;
 
       img {
-        width: 90%;
-        height: 72%;
+        width: 85%;
+        height: 69%;
       }
     }
   }

@@ -124,7 +124,7 @@ const PlantDetail = () => {
                   </button>
                   <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
-                    <Modal.Title>How have you found the {plants.name} </Modal.Title>
+                    <Modal.Title>Tell us what you think about the {plants.name} </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
                     <Form>
@@ -167,7 +167,7 @@ const PlantDetail = () => {
                 </Modal>
 
                 <button className="load-comments" onClick={showComments}>
-                    Show comments
+                    (Show comments)
                 </button>
                 <Modal show={allComments} onHide={closeComments} className = "comments-detail">
                   <Modal.Header closeButton>
@@ -183,14 +183,13 @@ const PlantDetail = () => {
                         <p>{comment.text}</p>
                       </div>
                       <div className = 'comment-right'>
-                        <h1>{comment.rating}</h1>
+                        <h1>{comment.rating} </h1>
                         <img src='/images.png/favourite.png' alt='star'/>
                       </div>
                     </div>
                     <hr/>
                     </>
                   ))}
-                    
                   </Modal.Body>
                   <Modal.Footer>
                     <button onClick={closeComments}>

@@ -81,7 +81,7 @@ export default [
       ],
       [
         {
-          problem: 'Brown leaves can be caused by low humidity and dry air.',
+          problem: 'Brown leaves',
           solution: 'Can be caused by low humidity and dry air. Try changing the pot, or adjusting the room\'s humidity.',
         }
       ],
@@ -923,7 +923,7 @@ export default [
       ],
       [
         {
-          problem: 'Die-back of the crown.',
+          problem: 'Die-back of the crown',
           solution: 'Usually due to cold damage, but may also be caused by rot, encouraged by excessive moisture, especially over winter. Move inside!',
         }
       ]
@@ -1597,7 +1597,7 @@ export default [
       ],
       [
         {
-          problem: 'No flowers.',
+          problem: 'No flowers',
           solution: 'Can be due to hot nights of 18°C (65°F) or more, and a dry atmosphere. Provide humidity by placing plants on a gravel tray and provide ventilation to reduce temperatures.',
         }
       ],

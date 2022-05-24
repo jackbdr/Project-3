@@ -4,12 +4,12 @@ const Glossary = () => {
     <section className='glossary-wrapper'>
       <div className='entry'>
         <h4>Brightness</h4>
-        <p>idjwjifbd</p>
+        <p>Brightness refers to how well lit a space is. Some plants can do well in a shady north facing garden like the Dragon Tree, whilst some will need a light environment throughout the day.</p>
       </div>
       <hr />
       <div className='entry'>
         <h4>Sunlight</h4>
-        <p>idjwjifbd</p>
+        <p>Sunlight refers to the amount of direct sunshine a plant enjoys. Whilst plants like to soak up as many rays as possible, others enjoy the sun in patches or short intervals. </p>
       </div>
       <hr />
       <div className='entry'>

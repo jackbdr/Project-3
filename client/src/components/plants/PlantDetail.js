@@ -34,6 +34,12 @@ const PlantDetail = () => {
     getPlants()
   }, [id])
 
+    // Setting state and handles for modals
+    const [show, setShow] = useState(false)
+
+    const handleClose = () => setShow(false)
+    const handleShow = () => setShow(true)
+
   // * Uploading comments
   // Setting form information for submitting comments
   const [formData, setFormData] = useState ({
@@ -49,6 +55,8 @@ const PlantDetail = () => {
     setErrors({ ...errors, [e.target.name]: '' })
   }
 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
@@ -62,20 +70,10 @@ const PlantDetail = () => {
     } catch (err) {
       setErrors(err.response.data)
     }
-    // handleClose()
+    handleClose()
   }
 
-  // const submission = () => {
-  //   handleSubmit()
-  //   handleClose()
-  // }
-
-  // Setting state and handles for modals
-  const [show, setShow] = useState(false)
-
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-
+  
   return (
     <>
       {plants ?

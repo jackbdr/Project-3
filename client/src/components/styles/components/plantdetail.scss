@@ -92,6 +92,10 @@
     font-size: 15px;
     padding-right: 20px;
   }
+  button {
+    background-color: white;
+    padding: 0;
+  }
 }
 
 .key-content {
@@ -178,6 +182,7 @@ Form {
   padding: 0;
   color: #307351;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .comments-detail {

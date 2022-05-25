@@ -13,16 +13,12 @@ input{
 .nav-left{
   display: flex;
   align-items: center;
-  width: 33%;
-  margin-right: 33%;
 }
 .nav-right{
   display: flex;
-  margin-left: 33%;
 }
 
 .navbar-collapse{
-  width: 33%;
   text-align: center;
 }
 
@@ -31,9 +27,11 @@ input{
   margin-bottom: 0;
 }
 
-.navbar-brand{
-  width: 33%;
-  text-align: center;
+.navbar-h2{
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;
+  display: block;
 }
 
 .nav-link{

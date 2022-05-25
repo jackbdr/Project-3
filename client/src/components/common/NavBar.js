@@ -50,10 +50,10 @@ const NavBar = () => {
         <input type='text' placeholder='Search...' value={searchInput} onChange={handleSearch} />
       </form>
     </div>
-    <Navbar.Brand className='brand-centre'><h2>Seeded</h2></Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav" className='nav-right'>
-      <Nav className="me-auto">
+    <h2 className='navbar-h2'>Seeded</h2>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" className='mr-auto ml-auto' />
+    <Navbar.Collapse id="basic-navbar-nav" className='nav-right mr-auto ml-auto' >
+      <Nav className="mr-auto ms-auto ml-auto">
         <div className='nav-right'>
           <Nav.Link as={Link} to='/plants'>Plants</Nav.Link>
           <Nav.Link as={Link} to='/aboutus'>About Us</Nav.Link>

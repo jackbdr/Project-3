@@ -8,7 +8,7 @@ export const PlantsCollection = ({ userInfo }) => {
     {!userInfo ?
       <p>Loading</p>
       :
-      <ul id='profileFav'>
+      <div id='profileFav'>
         {userInfo.favorites.length === 0 ? 
         <h2>No Favorites Added</h2>
         :
@@ -16,7 +16,7 @@ export const PlantsCollection = ({ userInfo }) => {
         {userInfo.favorites.map((plant, index) => {
           const { plantId } = plant
           return(
-            <li className='profileFav-item' key={index}>
+            <div className='profileFav-item' key={index}>
               <Link to={`/plants/${plantId._id}`} >
                 <div className="profileFav-img">
                   <img src={plantId.imageTrans} alt={plantId.name} />
@@ -30,13 +30,12 @@ export const PlantsCollection = ({ userInfo }) => {
                   </p>
                 </div>
               </Link>
-              < hr/>
-            </li>
+            </div>
           )
         })}
       </>
       }
-      </ul>
+      </div>
     }
     </>
   )
@@ -49,14 +48,14 @@ export const CommentsCollection = ({ userInfo }) => {
     {!userInfo ?
       <p>Loading</p>
       :
-      <ul id='profileFav'>
+      <div id='profileFav'>
         {userInfo.comments.length === 0 ? 
       <h2>No Comments Added</h2>
       :
       <>
         {userInfo.comments.map((comment, index) => {
           return(
-            <li className='profileFav-item' key={index}>
+            <div className='profileFav-item' key={index}>
             <Link to={`/plants/${comment.plantId}`}>
               <div className="profileFav-img">
                 <img src={comment.plantImg} alt={comment.name} />
@@ -74,12 +73,12 @@ export const CommentsCollection = ({ userInfo }) => {
               </div>
               < hr/>
             </Link>
-          </li>
+          </div>
         )
       })}
       </>
       }
-      </ul>
+      </div>
     }
     </>
   )
@@ -93,14 +92,14 @@ export const PlantsAddedCollection = ({ userInfo }) => {
     {!userInfo ?
     <p>Loading</p>
     :
-    <ul id='profileFav'>
+    <div id='profileFav'>
       {userInfo.plantsAdded.length === 0 ? 
         <h2>No Plants Added</h2>
       :
       <>
       {userInfo.plantsAdded.map((plant, index) => {
         return(
-          <li className='profileFav-item' key={index}>
+          <div className='profileFav-item' key={index}>
             <Link to={`/plants/${plant._id}`} >
               <div className="profileFav-img">
                 <img src={plant.imageTrans} alt={plant.name} />
@@ -115,12 +114,12 @@ export const PlantsAddedCollection = ({ userInfo }) => {
               </div>
             </Link>
             < hr/>
-          </li>
+          </div>
         )
       })}
       </>
     }
-      </ul>
+      </div>
     }
     </>
   )

@@ -8,7 +8,7 @@
   background-image: url('../../../../public/images.png/profile-plant.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
 
   #profile-left{
     width: 15%;
@@ -70,7 +70,7 @@
     margin-right: 5%;
 
     h2{
-      text-align: center;
+      text-align: left;
       margin-bottom: 50px;
     }
 
@@ -79,6 +79,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      
+      h2 {
+        text-align: left;
+      }
 
       .profileFav-img{
         display: inline-block;
@@ -86,6 +90,12 @@
           max-width: 100px;
           margin-right: 40px;
         }
+      }
+      .profileFav-item {
+        margin-top:10px;
+        margin-bottom: 10px;
+        background-color: white;
+        border-radius: 20px;
       }
 
       .profileFav-title{

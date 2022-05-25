@@ -137,6 +137,10 @@ const PlantDetail = () => {
     handleClose()
   }
 
+  // const changeDate = () => {
+  //   const newDate = new Date(userInfo.dateJoined)
+  //   return newDate.toISOString().substring(0, 10)
+  // }
 
   return (
     <>

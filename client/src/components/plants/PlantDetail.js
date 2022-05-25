@@ -98,7 +98,10 @@ const PlantDetail = () => {
 
   // Setting state and handles for add comment modal
   const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
+  const handleClose = () => {
+    setShow(false)
+    window.location.reload()
+  }
   const handleShow = () => setShow(true)
 
   // setting state and handles for all comments modal

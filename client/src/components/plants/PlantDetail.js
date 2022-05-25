@@ -140,6 +140,7 @@ const PlantDetail = () => {
     handleClose()
   }
 
+  // Date change function
   const changeDate = (isoDate) => {
   const newDate = new Date(isoDate)
   return newDate.toISOString().substring(0, 10)

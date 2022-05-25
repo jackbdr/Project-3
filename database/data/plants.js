@@ -1253,58 +1253,58 @@ export default [
     favourited: '',																						
     seededSays: 'Staghorn ferns are quite easy to take care of because they don\'t mind the changes in temperature too much . A good rule of thumb is to water once per week in dry, hot times of year, and once every two to three weeks during cooler months. Keeping it in a well-lit room without direct sunlight and ',																						
   },																						
-  {																						
-    seed: 25,																						
-    name: 'Pigs ear plant',																						
-    sciName: 'Cotyledon orbiculata',
-    imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652968883/plant_pngs/pigsear_burs7w.png',																				
-    imageHome: ' ',
-    imageWild: ' ',
-    origin: 'South Africa',																						
-    wateringLevel: 'Every 7-14 days',																						
-    waterCategory: 3,																						
-    wateringDetail: 'Try not to overwater Cotyledon orbiculata as the plant prefers a more arid environment and will rot if too much moisture is present in the soil.\n\nCotyledon orbiculata plants will often have better luck being watered from the top of their soil. This is because Cotyledon orbiculata succulent plants are sensitive to water droplets on their leaves and stems, which can cause rot or other problems.\n\nIf you are unsure about how much or little watering your Cotyledon orbiculata needs, then stick with giving them an inch of water per week until they show signs of struggling, at which point you can adjust accordingly.',																						
-    tempRange: '16-21ºC',																						
-    tempCategory: 'Average',																						
-    tempDetail: 'Cotyledon Orbiculata plants thrive in warm temperatures of at least 70 degrees Fahrenheit (21 degrees Celsius) during the day. Still, they require a lower nighttime temperature of 60-65 F (16-18 C).\n\nCotyledon Orbiculata is tolerant of temperature fluctuations as long as they\'re not too drastic (i.e., below freezing at night).',																						
-    lightDetail: 'Cotyledon orbiculata is a sun-loving succulent. It will need about six hours of full sunlight per day to thrive. Still, it can survive in partial shade if it has good air circulation and receives water regularly.',																						
-    lightType: 'Mixed',																						
-    sunlightFilter: 3,																						
-    brightType: 'Mainly bright',																						
-    brightnessFilter: 4,																						
-    fertilizer: 'Pig\'s ear succulents are not heavy feeders and do well with a light feeding once or twice a year. The best time to fertilize is in late spring or early summer.\n\nA balanced “slow-release” organic fertilizer is best, but a water-soluble fertilizer can also be used.\n\nIf you use a granular fertilizer, use half the normal dose because succulents don\'t need much to grow and become leggy.',																						
-    pruning: 'Pruning Cotyledon orbiculata is unnecessary but can be done if you want to shape the plant into a bush-like form with fewer leaves.',																						
-    problems: [
-      [
-        {
-          problem: 'Root rot',
-          solution: 'Often caused by over-watering. To combat this, you should thoroughly check your plant\'s moisture levels at least once a week. If it appears too wet or moist, you may need to allow more time between each watering session until the soil dries out completely before adding any more water again. If your Pig\'s Ear succulent does not respond favorably to this, it may need repotting into a drier soil mix.',
-        }
-      ],
-      [
-        {
-          problem: '',
-          solution: '',
-        }
-      ],
-      [
-        {
-          problem: '',
-          solution: '',
-        }
-      ]
-    ],																					
-    maxGrowth: '1 metre',																						
-    annualGrowth: '10-30cm',																						
-    poisonous: 'Toxic to pets',																						
-    linkToBuy: '',																						
-    seededEaseRating: 4,																						
-    description: 'The Pig\'s ear or Round-leafed navel-wort, is a succulent plant from South Africa. The noticebale feature is their fleshy, red-rimmed leaves that closely resemble a pig\'s ear.',																						
-    priceRange: '£8-30',																						
-    categorisation: '',																						
-    favourited: '',																						
-    seededSays: 'Pigs ears are really easy to care for and can be placed in most areas without any negative effects. Unlike other plants, Pigs ear needs quite a lot of direct sunlight to grow, try to give it about 6 hours of full sunlight everyday.  Without these, the plant cant still grow but will need some extra watering to grow. Otherwise,  try to water it once a week or every other week. ',																						
-  },																						
+  // {																						
+  //   seed: 25,																						
+  //   name: 'Pigs ear plant',																						
+  //   sciName: 'Cotyledon orbiculata',
+  //   imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652968883/plant_pngs/pigsear_burs7w.png',																				
+  //   imageHome: ' ',
+  //   imageWild: ' ',
+  //   origin: 'South Africa',																						
+  //   wateringLevel: 'Every 7-14 days',																						
+  //   waterCategory: 3,																						
+  //   wateringDetail: 'Try not to overwater Cotyledon orbiculata as the plant prefers a more arid environment and will rot if too much moisture is present in the soil.\n\nCotyledon orbiculata plants will often have better luck being watered from the top of their soil. This is because Cotyledon orbiculata succulent plants are sensitive to water droplets on their leaves and stems, which can cause rot or other problems.\n\nIf you are unsure about how much or little watering your Cotyledon orbiculata needs, then stick with giving them an inch of water per week until they show signs of struggling, at which point you can adjust accordingly.',																						
+  //   tempRange: '16-21ºC',																						
+  //   tempCategory: 'Average',																						
+  //   tempDetail: 'Cotyledon Orbiculata plants thrive in warm temperatures of at least 70 degrees Fahrenheit (21 degrees Celsius) during the day. Still, they require a lower nighttime temperature of 60-65 F (16-18 C).\n\nCotyledon Orbiculata is tolerant of temperature fluctuations as long as they\'re not too drastic (i.e., below freezing at night).',																						
+  //   lightDetail: 'Cotyledon orbiculata is a sun-loving succulent. It will need about six hours of full sunlight per day to thrive. Still, it can survive in partial shade if it has good air circulation and receives water regularly.',																						
+  //   lightType: 'Mixed',																						
+  //   sunlightFilter: 3,																						
+  //   brightType: 'Mainly bright',																						
+  //   brightnessFilter: 4,																						
+  //   fertilizer: 'Pig\'s ear succulents are not heavy feeders and do well with a light feeding once or twice a year. The best time to fertilize is in late spring or early summer.\n\nA balanced “slow-release” organic fertilizer is best, but a water-soluble fertilizer can also be used.\n\nIf you use a granular fertilizer, use half the normal dose because succulents don\'t need much to grow and become leggy.',																						
+  //   pruning: 'Pruning Cotyledon orbiculata is unnecessary but can be done if you want to shape the plant into a bush-like form with fewer leaves.',																						
+  //   problems: [
+  //     [
+  //       {
+  //         problem: 'Root rot',
+  //         solution: 'Often caused by over-watering. To combat this, you should thoroughly check your plant\'s moisture levels at least once a week. If it appears too wet or moist, you may need to allow more time between each watering session until the soil dries out completely before adding any more water again. If your Pig\'s Ear succulent does not respond favorably to this, it may need repotting into a drier soil mix.',
+  //       }
+  //     ],
+  //     [
+  //       {
+  //         problem: '',
+  //         solution: '',
+  //       }
+  //     ],
+  //     [
+  //       {
+  //         problem: '',
+  //         solution: '',
+  //       }
+  //     ]
+  //   ],																					
+  //   maxGrowth: '1 metre',																						
+  //   annualGrowth: '10-30cm',																						
+  //   poisonous: 'Toxic to pets',																						
+  //   linkToBuy: '',																						
+  //   seededEaseRating: 4,																						
+  //   description: 'The Pig\'s ear or Round-leafed navel-wort, is a succulent plant from South Africa. The noticebale feature is their fleshy, red-rimmed leaves that closely resemble a pig\'s ear.',																						
+  //   priceRange: '£8-30',																						
+  //   categorisation: '',																						
+  //   favourited: '',																						
+  //   seededSays: 'Pigs ears are really easy to care for and can be placed in most areas without any negative effects. Unlike other plants, Pigs ear needs quite a lot of direct sunlight to grow, try to give it about 6 hours of full sunlight everyday.  Without these, the plant cant still grow but will need some extra watering to grow. Otherwise,  try to water it once a week or every other week. ',																						
+  // },																						
   {																						
     seed: 26,																						
     name: 'Juniper Bonsai',																						
@@ -1619,58 +1619,58 @@ export default [
     favourited: '',																						
     seededSays: 'Gardenia plants are best grown outdoors and dislike being moved. You should pick a spot that has some partial shade to help them during the long summer days. If there isn\'t much rain give them around 1\' water every week but if the roots are drying out then give them a little bit more. You can help shape these by doing light pruning in February or March once the flowering is over.',																						
   },																						
-  {																						
-    seed: 32,																						
-    name: 'Baby\'s Tears',																						
-    sciName: 'Micranthemum callitrichoides',		
-    imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652968967/plant_pngs/babytears_fhv9eh.png',																				
-    imageHome: ' ',
-    imageWild: ' ',
-    origin: 'Italy',																						
-    wateringLevel: 'Every 7 days',																						
-    waterCategory: 4,																						
-    wateringDetail: 'Baby\'s tears plants are thirsty plants that never like to dry out. If you allow your plants to dry out, you\'ll notice a dramatic wilting. Water as soon as you notice wilting, and within a day, they should recover.',																						
-    tempRange: '10-26ºC',																						
-    tempCategory: 'Low to Average',																						
-    tempDetail: 'If the temperature changes suddenly, it will take a while for the plant to adapt to the transitional climate, but with proper care, it will survive the change.',																						
-    lightDetail: 'Like most leafy plants, Baby\'s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage',																						
-    lightType: 'Indirect',																						
-    sunlightFilter: 1,																						
-    brightType: 'Bright',																						
-    brightnessFilter: 5,																						
-    fertilizer: 'Liquid fertilizers are the best choice, as they are easier to dilute. As it goes with most fertilizers, it is best if it does not touch the leaves, which can be tricky with a low-growing plant',																						
-    pruning: 'As far as pruning goes, it depends on how you want the plant to look. You should always prune the dry leaves.',																						
-    problems: [
-      [
-        {
-          problem: '',
-          solution: '',
-        }
-      ],
-      [
-        {
-          problem: '',
-          solution: '',
-        }
-      ],
-      [
-        {
-          problem: '',
-          solution: '',
-        }
-      ]
-    ],																				
-    maxGrowth: '30cm',																						
-    annualGrowth: '10-20cm',																						
-    poisonous: 'Non toxic to pets',																						
-    linkToBuy: '',																						
-    seededEaseRating: 5,																						
-    description: 'Baby\'s Tears are a fun and easy plant to take care of. They make for a great groundcover in terrariums because of their low maintenance. ',																						
-    priceRange: '£5-20',																						
-    categorisation: '',																						
-    favourited: '',																						
-    seededSays: 'Baby\'s tears plants are thirsty plants that never like to dry out. Water it once a week and they\'ll be more than happy. If you allow your plants to dry out, you\'ll notice a dramatic wilting. Water as soon as you notice wilting, and within a day, they should recover. Like most leafy plants, Baby\'s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage. As far as pruning goes, it depends on how you want the plant to look. You should always prune the dry leaves.',																						
-  },																						
+  // {																						
+  //   seed: 32,																						
+  //   name: 'Baby\'s Tears',																						
+  //   sciName: 'Micranthemum callitrichoides',		
+  //   imageTrans: 'https://res.cloudinary.com/dtzeqjcsa/image/upload/v1652968967/plant_pngs/babytears_fhv9eh.png',																				
+  //   imageHome: ' ',
+  //   imageWild: ' ',
+  //   origin: 'Italy',																						
+  //   wateringLevel: 'Every 7 days',																						
+  //   waterCategory: 4,																						
+  //   wateringDetail: 'Baby\'s tears plants are thirsty plants that never like to dry out. If you allow your plants to dry out, you\'ll notice a dramatic wilting. Water as soon as you notice wilting, and within a day, they should recover.',																						
+  //   tempRange: '10-26ºC',																						
+  //   tempCategory: 'Low to Average',																						
+  //   tempDetail: 'If the temperature changes suddenly, it will take a while for the plant to adapt to the transitional climate, but with proper care, it will survive the change.',																						
+  //   lightDetail: 'Like most leafy plants, Baby\'s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage',																						
+  //   lightType: 'Indirect',																						
+  //   sunlightFilter: 1,																						
+  //   brightType: 'Bright',																						
+  //   brightnessFilter: 5,																						
+  //   fertilizer: 'Liquid fertilizers are the best choice, as they are easier to dilute. As it goes with most fertilizers, it is best if it does not touch the leaves, which can be tricky with a low-growing plant',																						
+  //   pruning: 'As far as pruning goes, it depends on how you want the plant to look. You should always prune the dry leaves.',																						
+  //   problems: [
+  //     [
+  //       {
+  //         problem: '',
+  //         solution: '',
+  //       }
+  //     ],
+  //     [
+  //       {
+  //         problem: '',
+  //         solution: '',
+  //       }
+  //     ],
+  //     [
+  //       {
+  //         problem: '',
+  //         solution: '',
+  //       }
+  //     ]
+  //   ],																				
+  //   maxGrowth: '30cm',																						
+  //   annualGrowth: '10-20cm',																						
+  //   poisonous: 'Non toxic to pets',																						
+  //   linkToBuy: '',																						
+  //   seededEaseRating: 5,																						
+  //   description: 'Baby\'s Tears are a fun and easy plant to take care of. They make for a great groundcover in terrariums because of their low maintenance. ',																						
+  //   priceRange: '£5-20',																						
+  //   categorisation: '',																						
+  //   favourited: '',																						
+  //   seededSays: 'Baby\'s tears plants are thirsty plants that never like to dry out. Water it once a week and they\'ll be more than happy. If you allow your plants to dry out, you\'ll notice a dramatic wilting. Water as soon as you notice wilting, and within a day, they should recover. Like most leafy plants, Baby\'s Tears prefers bright, indirect light. It can also handle partly shady locations, but direct sunlight is out of the question as it will burn the thin, delicate foliage. As far as pruning goes, it depends on how you want the plant to look. You should always prune the dry leaves.',																						
+  // },																						
   {																						
     seed: 33,																						
     name: 'Norfolk Island Pine Tree',																						

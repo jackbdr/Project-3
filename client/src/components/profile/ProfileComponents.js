@@ -99,7 +99,9 @@ export const PlantsAddedCollection = ({ userInfo }) => {
         :
         <div id='profileFav'>
           {userInfo.plantsAdded.length === 0 ?
-            <h2>No Plants Added</h2>
+            <div className='no-content'>
+              <h2>No Plants Added</h2>
+            </div>
             :
             <>
               {userInfo.plantsAdded.map((plant, index) => {

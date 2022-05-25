@@ -372,7 +372,7 @@ const PlantOverview = () => {
                           <Link to={`/plants/${_id}`} >
                             <Card className='card'>
                               {/* <div className='sciname-container'>
-                    </div> */}
+                              </div> */}
                               <div className='card-img-container'>
                                 <Card.Img className='card-img' variant='top' src={imageTrans} />
                               </div>

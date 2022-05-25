@@ -83,16 +83,17 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
+      min-height: 100vh;
       h2 {
         text-align: left;
       }
 
       .profileFav-img{
-        display: inline-block;
+        display: inline-flex;
         img{
           max-width: 100px;
-          margin-right: 40px;
+          // margin-right: %
         }
       }
       .profileFav-item {
@@ -100,16 +101,19 @@
         margin-bottom: 10px;
         background-color: white;
         border-radius: 20px;
+        
       }
 
       .profileFav-title{
         display: inline-block;
+        margin-left: 1%;
       }
     }
 
     p{
       margin-bottom: 0px;
       font-size: 1.2em;
+      padding-right: 20%;
     }
 
     .profileFav-sciName{

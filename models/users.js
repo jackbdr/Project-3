@@ -15,9 +15,6 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  // favorites: [
-  //   { type: mongoose.Schema.ObjectId }
-  // ],
   id: false,
   favorites: [favoriteSchema],
   comments: [commentSchema],
@@ -29,13 +26,6 @@ userSchema.virtual('plantsAdded', {
   localField: '_id',
   foreignField: 'addedBy',
 })
-
-// // ? reverse relationships 
-// userSchema.virtual('favorites', {
-//   ref: 'Plant',
-//   localField: '_id',
-//   foreignField: 'favoritedBy',
-// })
 
 // Anytime userSchema is passed back to JSON, password is deleted
 userSchema.set('toJSON', {

@@ -69,7 +69,7 @@ plantSchema
     const sum = this.comments.reduce((acc, comment) => {
       return acc + comment.rating
     }, 0)
-    return (sum / this.comments.length).toFixed(2)
+    return (sum / this.comments.length).toFixed(1)
   })
 
 plantSchema.set('toJSON', {

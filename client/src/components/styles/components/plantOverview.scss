@@ -27,8 +27,10 @@
 .bstrap-container {
   display: flex;
   width: 100%;
+  margin-left: 5%;
+  justify-content: flex-start;
   .bstrap-row {
-    align-items: end;
+    align-items: start;
     width: 100%;
   }
 }
@@ -41,11 +43,11 @@
 .plants-container {
   // float: right;
   margin-top: 5%;
-  margin-right: 10%;
+  margin-bottom: 5%;
   width: 80%;
   // background-color: white;
 
-  padding: 25px;
+  padding: 20px;
   .display-filters {
     display: flex;
     justify-content: space-between;
@@ -63,10 +65,10 @@
     background-color: #f2f2f2;
     transition: 0.5s ease;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    padding: 5px;
+    padding: 3px;
     // height: 30vh;
     .card-img-container {
-      height:200px;
+      height:215px;
     }
     .card-img {
       transition: 0.5s ease;
@@ -163,10 +165,10 @@
 .index-wrapper {
   display: flex;
   // justify-content: space-between;
-  background-image: url("../../../../public/images.png/home-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  // background-image: url("../../../../public/images.png/home-1.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
   min-height: 85vh;
   .filters {
     margin-top: 4%;
@@ -192,11 +194,11 @@
           margin: 0;
         }
         .add-button {
-          background-color:rgba(48, 115, 81, 1);
+          background-color:#0A3D3E;
           color: white;
           font-weight: bold;
-          width: 50%;
-          margin: 15px auto;
+          width: 70%;
+          margin: 10px 0px 5px 0px;
           border-radius: 30px;
           text-transform: uppercase;
           letter-spacing: 2px;
@@ -214,15 +216,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 3%;
         p {
           margin: 0;
         }
         .login-button {
-          background-color:rgba(48, 115, 81, 1);
+          background-color: #0A3D3E;
           color: white;
           font-weight: bold;
-          width: 50%;
-          margin: 15px auto;
+          width: 60%;
+          margin: 10px 0px 5px 0px;
           border-radius: 30px;
           text-transform: uppercase;
           letter-spacing: 2px;

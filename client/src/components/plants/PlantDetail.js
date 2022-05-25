@@ -137,10 +137,12 @@ const PlantDetail = () => {
     handleClose()
   }
 
-  // const changeDate = () => {
-  //   const newDate = new Date(userInfo.dateJoined)
-  //   return newDate.toISOString().substring(0, 10)
-  // }
+  const changeDate = (isoDate) => {
+  const newDate = new Date(isoDate)
+  return newDate.toISOString().substring(0, 10)
+  }
+
+
 
   return (
     <>
@@ -150,7 +152,7 @@ const PlantDetail = () => {
           {/* SPLITTING UP THE PAGE INTO SECTIONS FOR SCROLLING - TOP SECTION */}
           <section className="top-page">
             <section className="left-page">
-              <Carousel className='plant-pic'>
+              <Carousel variant='dark' className='plant-pic'>
                 <Carousel.Item>
                   <img
                     className="d-block w-75"
@@ -232,23 +234,25 @@ const PlantDetail = () => {
                   <Modal show={allComments} onHide={closeComments} className="comments-detail">
                     <Modal.Header className="comments-header" closeButton>
                       <Modal.Title className="comments-title">{plants.name}: Community reviews </Modal.Title>
-                      {plants.comments.length < 2 ? "" :
+                      {plants.comments.length < 1 ? "" :
                         <h2>Our users give this plant an average ease rating of {plants.avgRating}/5</h2>
                       }
                     </Modal.Header>
                     <Modal.Body>
 
-                      {plants.comments.length < 2 ?
+                      {plants.comments.length < 1 ?
+                      
                         <div className='comment-card'>
                           <h4>No one has reviewed this plant yet</h4>
                         </div>
                         :
                         plants.comments.map(comment => (
+                          
                           <>
                             <div className='comment-card'>
                               <div className='comment-left'>
                                 <h4>{comment.title}</h4>
-                                <h5>Added on {comment.createdAt}</h5>
+                                <h5>Added on {changeDate(comment.createdAt)}</h5>
                                 <p>{comment.text}</p>
                               </div>
                               <div className='comment-right'>

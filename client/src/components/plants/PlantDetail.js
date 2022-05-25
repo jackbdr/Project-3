@@ -140,7 +140,7 @@ const PlantDetail = () => {
 
   return (
     <>
-      {//isUserAuth() ? 
+      {isUserAuth() ? 
       plants ?
         <section className="overall-container">
           {/* SPLITTING UP THE PAGE INTO SECTIONS FOR SCROLLING - TOP SECTION */}
@@ -441,15 +441,15 @@ const PlantDetail = () => {
         </section>
         :
         <h2>{errors ? 'Sorry, something went wrong with the connection, try reloading' : ''}</h2>
-        // :
-        // <div className="no-auth-page">
-        //   <div ClassName="access-denied">
-        //     <h1>Sorry! This content is for our members only. If you want to see more, then join the community. Follow the link below to sign up.</h1>
-        //     <Link to={`/register`}>
-        //       <button>Join Seeded</button>
-        //     </Link>
-        //   </div>
-        // </div>
+        :
+        <div className="no-auth-page">
+          <div ClassName="access-denied">
+            <h1>Sorry! This content is for our members only. If you want to see more, then join the community. Follow the link below to sign up.</h1>
+            <Link to={`/register`}>
+              <button>Join Seeded</button>
+            </Link>
+          </div>
+        </div>
       }
     </>
   )

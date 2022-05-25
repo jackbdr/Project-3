@@ -8,7 +8,9 @@
   background-image: url('../../../../public/images.png/profile-plant.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+  height: 100vh;
 
   #profile-left{
     width: 15%;
@@ -79,7 +81,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
       h2 {
         text-align: left;
       }

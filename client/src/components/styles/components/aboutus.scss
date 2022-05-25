@@ -16,6 +16,21 @@
 .aboutus-right{
   width: 50%;
   margin-right: 5%;
+  #day-titles {
+    display: flex;
+    justify-content: space-between;
+  }
+  img{ 
+    width: 40px;
+  }
+
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
   h2{
     margin-bottom: 0;
     font-weight: bold;
@@ -23,15 +38,27 @@
   }
   button{
     background-color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 1%;
+    padding-right: 0;
+    text-align: center;
+    margin-top:10%;
+    margin-bottom: 10%
   }
   button:focus{
     text-decoration: underline;
   }
 }
+
+
+.day-titles {
+  // display: flex;
+  // flex-direction: row;
+  
+}
+  
 
 #credits{
   margin-left: 6%;

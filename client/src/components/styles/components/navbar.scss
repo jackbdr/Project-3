@@ -14,9 +14,11 @@ input{
   display: flex;
   align-items: center;
   width: 33%;
+  margin-right: 33%;
 }
 .nav-right{
   display: flex;
+  margin-left: 33%;
 }
 
 .navbar-collapse{
@@ -32,4 +34,8 @@ input{
 .navbar-brand{
   width: 33%;
   text-align: center;
+}
+
+.nav-link{
+  width: 100px;
 }

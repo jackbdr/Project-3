@@ -52,24 +52,27 @@ const NavBar = () => {
     </div>
     <Navbar.Brand className='brand-centre'><h2>Seeded</h2></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
+    <Navbar.Collapse id="basic-navbar-nav" className='nav-right'>
       <Nav className="me-auto">
-        <Nav.Link as={Link} to='/plants'>Plants</Nav.Link>
-        <Nav.Link as={Link} to='/aboutus'>About Us</Nav.Link>
-        {!isUserAuth() ? 
         <div className='nav-right'>
+          <Nav.Link as={Link} to='/plants'>Plants</Nav.Link>
+          <Nav.Link as={Link} to='/aboutus'>About Us</Nav.Link>
+          {!isUserAuth() ? 
+          <>
           <Nav.Link as={Link} to='/register'>Register</Nav.Link>
           <Nav.Link as={Link} to='/login'>Log in</Nav.Link>
+          </>
+          :
+            <NavDropdown title="☰" id="basic-nav-dropdown">
+            <NavDropdown.Item as={Link} to={`/profile/${getUserToken()}`} href="#action/3.1">Profile</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to='/comparison' href="#action/3.2">Buy Plants</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to='/glossary' href="#action/3.3">Glossary</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4" onClick={handleLogout}><p className='nav-logout'>Logout</p></NavDropdown.Item>
+          </NavDropdown>
+          }
         </div>
-        :
-        <NavDropdown title="☰" id="basic-nav-dropdown">
-          <NavDropdown.Item as={Link} to={`/profile/${getUserToken()}`} href="#action/3.1">Profile</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to='/comparison' href="#action/3.2">Buy Plants</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to='/glossary' href="#action/3.3">Glossary</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4" onClick={handleLogout}><p className='nav-logout'>Logout</p></NavDropdown.Item>
-        </NavDropdown>
-        }
+      
       </Nav>
     </Navbar.Collapse>
   </Container>

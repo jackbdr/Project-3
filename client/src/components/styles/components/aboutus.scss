@@ -37,6 +37,8 @@
     color:#0A3D3E;
   }
   button{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     font-size: 1rem;
     padding-left: 0;

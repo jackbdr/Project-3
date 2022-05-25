@@ -337,9 +337,8 @@ const PlantOverview = () => {
             </div>
             :
             <div className='login-to-add'>
-              <p>Do <span className='italic'>you</span> know your plants?</p>
-              <p>Log in to add to the collection!</p>
-              <Link className='btn login-button' to='/login'>Log in</Link>
+              <p>Do <span className='italic'>you</span> know your plants? Sign in to add to the collection.</p>
+              <Link className='btn login-button' to='/login'>Join Seeded</Link>
             </div>
           }
         </div>
@@ -369,7 +368,7 @@ const PlantOverview = () => {
                   {handleFilter().map(plant => {
                     const { _id, name, imageTrans, sciName, seededEaseRating } = plant
                     return (
-                      <Col md='6' lg='4' xl='3' className='plant mb-5' key={_id}>
+                      <Col md='6' lg='4' xl='3' className='plant mb-4' key={_id}>
                         <div className='link-container'>
                           <Link to={`/plants/${_id}`} >
                             <Card className='card'>

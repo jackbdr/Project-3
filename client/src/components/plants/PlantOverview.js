@@ -331,8 +331,7 @@ const PlantOverview = () => {
           </div>
           {isUserAuth() ?
             <div className='addplant'>
-              <p>Do <span className='italic'>you</span> know your plants?</p>
-              <p>Why not add to the collection!</p>
+              <p>Do <span className='italic'>you</span> know your plants? Why not add to the collection!</p>
               <Link className='btn add-button' to='/plants/add'>Add a plant</Link>
             </div>
             :

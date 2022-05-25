@@ -131,8 +131,6 @@ const PlantDetail = () => {
           Authorization: `Bearer ${getToken()}`,
         }
       })
-      // console.log(data)
-      // navigate(`/api/plants/${id}/comments/${data._id}`)
     } catch (err) {
       setErrors(err.response.data)
     }

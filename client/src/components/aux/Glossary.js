@@ -40,7 +40,11 @@ const Glossary = () => {
     <section className='glossary-container'>
       <h1>Glossary</h1>
       <div className="glossary-filter">
+        {filter === '' ? 
+        <button className='button-active' value={''} onClick={handleClick}>All</button>
+        :
         <button value={''} onClick={handleClick}>All</button>
+      }
         <>
         {letters.map((letter, index) => {
           return(

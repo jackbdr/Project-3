@@ -13,4 +13,20 @@
       color: #307351;
     }
   }
+  .glossary-filter{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 10px;
+
+    button{
+      background-color: #ffff;
+      margin: 0;
+      padding: 0 1px 0 3px;
+    }
+    .button-active{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
 }

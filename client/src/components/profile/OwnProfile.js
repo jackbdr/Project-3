@@ -6,7 +6,7 @@ import { PlantsCollection, CommentsCollection, PlantsAddedCollection } from './P
 const OwnProfile = () => {
   const { username } = useParams()
   const [ userInfo, setUserInfo ] = useState(null)
-  const [ buttonActive, setButtonActive ] = useState(false)
+  const [ buttonActive, setButtonActive ] = useState('Your Favourites')
 
   useEffect(() => {
     const getUser = async () => {

@@ -1,7 +1,7 @@
 .recommendation-wrapper {
   margin-top: 3%;
   display: flex;
-  margin-bottom: 3%;
+  // margin-bottom: 3%;
   background-image: url('../../../../public/images.png/background-1-flip.png');
   background-position: center;
   background-size: cover;
@@ -15,12 +15,20 @@
   margin-right: 7%;
   h3 {
     color: #0A3D3E;
+    font-weight:  bold;
   }
   p {
     color: #0A3D3E;
   }
 }
 
+.recommendations {
+  margin-bottom: 5%;
+  h3 {
+    color: #0A3D3E;
+    font-weight:  bold;
+  }
+}
 
 .card-detail {
   .company-row {

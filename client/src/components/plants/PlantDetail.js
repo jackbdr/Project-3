@@ -7,6 +7,7 @@ import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import FormGroup from 'react-bootstrap/esm/FormGroup'
 import { getToken, getUserToken, isUserAuth } from '../helpers/Auth'
+import Button from 'react-bootstrap/Button'
 
 
 const PlantDetail = () => {
@@ -20,6 +21,11 @@ const PlantDetail = () => {
 
   const [profileInfo, setProfileInfo] = useState(false)
   const [isFavorited, setIsFavorited] = useState(false)
+
+  // Setting state and handles for detele plant modal
+  const [showDelete, setShowDelete] = useState(false)
+  const handleCloseDelete = () => setShowDelete(false)
+  const handleShowDelete = () => setShowDelete(true)
 
   useEffect(() => {
 
@@ -146,6 +152,19 @@ const PlantDetail = () => {
   return newDate.toISOString().substring(0, 10)
   }
 
+  const deletePlant = async() => {
+    try {
+      await axios.delete(`/api/plants/${id}`, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        },
+      })
+      navigate('/plants')
+    } catch (error) {
+      
+    }
+  }
+  
 
 
   return (
@@ -329,6 +348,22 @@ const PlantDetail = () => {
                   </div>
                 </div>
               </div>
+              <div className='user-buttons'>
+                <Button onClick={handleShowDelete} className='delete-edit-buttons delete'>Delete</Button>
+                <Link className='btn delete-edit-buttons edit' to={`/plants/${plants._id}/edit`}>Edit</Link>
+              </div>
+              <Modal show={showDelete} onHide={handleCloseDelete} className='modal-delete'>
+                <Modal.Header className='delete-modal-header'>
+                  <h2>Delete Plant</h2>
+                </Modal.Header>
+                <Modal.Body>
+                  Are you sure you want to delete your plant?
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button className='close-btn-modal delete-edit-buttons' onClick={handleCloseDelete}>cancel</Button>
+                  <Button className='delete-btn-modal delete-edit-buttons' onClick={deletePlant}>Delete</Button>
+                </Modal.Footer>
+              </Modal>
             </section>
           </section>
           {/* SMALL MIDDLE SECTION FOR THE PAGE BREAK */}

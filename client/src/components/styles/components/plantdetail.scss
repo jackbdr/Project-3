@@ -468,3 +468,63 @@ Form {
     padding: 1%;
   }
 }
+
+.user-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 22%;
+  margin-top: 1%;
+  .edit:hover {
+    color: #F2F2F2;
+  }
+  .delete:hover {
+    color: #F2F2F2;
+    background-color: #7C0D0E;
+  }
+  .delete-edit-buttons {
+    background-color: #0A3D3E;
+    color: #F2F2F2;
+    padding: .375rem .75rem;
+    margin-left: 2px;
+    border: none;
+  }
+}
+
+modal-delete {
+  .delete-modal-header {
+    background-color: #0A3D3E;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    align-items: flex-start !important;
+    padding-left: 3%;
+    h2 {
+      color:white;
+      // font-size: 16px;
+      margin-bottom: 0;
+    }
+  }
+  .close-btn-modal {
+    background-color: white;
+    color: #36454F;
+    border: none;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+  .close-btn-modal:hover {
+    background-color: white;
+    color: #36454F;
+  }
+  .delete-btn-modal {
+    background-color: #0A3D3E;
+    color: #F2F2F2;
+    border: none;
+    // font-style: italic;
+    font-size: 1.2em;
+  }
+  .delete-btn-modal:hover {
+    color: #F2F2F2;
+    background-color: #7C0D0E
+  }
+}

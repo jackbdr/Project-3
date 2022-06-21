@@ -57,7 +57,6 @@ const plantSchema = new mongoose.Schema({
   id: false,
   seededSays: { type: String, required: false },
   createdAt: { type: Date, default: Date.now },
-  // favoritedBy: [favoriteSchema],
   comments: [commentSchema],
 })
 

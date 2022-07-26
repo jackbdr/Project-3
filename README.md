@@ -66,7 +66,11 @@ Early on we decided that we were going for a clean, professional looking website
 
 On the first evening of our project, we all spent time gathering information about as many plants as possible. Referring to our plant model in the Excalidraw, we gathered information from the internet and placed it all into a google sheet. On the first evening, we had gathered information and images for around 35 plants. We felt this was a great way to get started as we now had a good amount of data we could use for seeding. 
 
-← Screen recording of google sheet →
+
+
+https://user-images.githubusercontent.com/101710474/181003423-3250fe03-c656-4902-befc-f79d3d196515.mov
+
+
 
 ### Converting to Json
 

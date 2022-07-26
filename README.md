@@ -7,33 +7,33 @@ Working in a group of three, this was my first opportunity to create a full stac
 We created a site to share and view information about all different kinds of plants. 
 
 ### Technical requirements
-Build a full-stack application by making your own backend and your own front-end
-Use an Express API to serve your data from a Mongo database. Consume your API with a separate front-end built with React
-Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
-Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
-Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients and employers.
-Be deployed online so it's publicly accessible.
+* Build a full-stack application by making your own backend and your own front-end
+* Use an Express API to serve your data from a Mongo database. Consume your API with a separate front-end built with React
+* Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
+* Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
+* Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients and employers.
+* Be deployed online so it's publicly accessible.
+
 ### Technologies used
 Front-end:
-React
-Bootstrap
-SASS
-React multi-carousel
-Back-end:
-Node.js
-Mongodb
-Express
-Bcrypt
-Mongoose
-Jsonwebtoken
-Cloudinary
+* React
+* Bootstrap
+* SASS
+* React multi-carousel
 
+Back-end:
+* Node.js
+* Mongodb
+* Express
+* Bcrypt
+* Mongoose
+* Jsonwebtoken
+* Cloudinary
 
 
 On the back-end, I largely worked on structuring our API and models in order to effectively integrate the back-end with our React app. On the front-end, I mainly worked on the plants page, glossary page, add/edit a plant page. Also, authorisation on front-end and back-end.
 
 Please look here for a day to day breakdown of the project.
- 
  
  
 ## Planning and working together
@@ -42,6 +42,7 @@ We made sure to plan as thoroughly as possible and I think this is the main reas
 ### Excalidraw
 After having looked at the brief, we spent the day all planning together on Excalidraw:
 
+![Seeded excalidraw](https://user-images.githubusercontent.com/101710474/181002142-19d73a89-8043-49ed-a615-e5b6ceefcd33.png)
 
 
 ### Traffic light MVP
@@ -69,7 +70,7 @@ On the first evening of our project, we all spent time gathering information abo
 
 ### Converting to Json
 
-I dealt with converting all this data we added to a google sheet into Json. This was much more tricky than expected. James had found an online converter which got me halfway there but there was still a lot to be done before the Json could be used for seeding. 
+I dealt with converting all this data we added to a google sheet into Json. This was much more tricky than expected. We had found an online converter which got me halfway there but there was still a lot to be done before the Json could be used for seeding. 
 
 
 Here is our first plant after it had been through the converter:
@@ -171,11 +172,14 @@ Here is our first plant the final Json form:
 
 ```
 
-The search and replace feature in VS code was great for switching from double quotes to single quotes. Also, removing quotes from the keys. However, there was no shortcut for removing the “\n”s from the plant’s problems/ solutions or for structuring the plant’s problems/ solutions.
+The search and replace feature in VS code was great for switching from double quotes to single quotes. Also, removing quotes from the keys. However, there was no shortcut for structuring the plant’s problems/ solutions in way which enabled effective integration with the frontend. 
 
 ### Structuring of each plant’s problems
 
 Iconography plays a big part on our plant detail page: 
+
+![plant detail 1](https://user-images.githubusercontent.com/101710474/181001917-cb58fbea-9366-46eb-9bf2-8fa77c7fb850.png)
+![plant detail 2](https://user-images.githubusercontent.com/101710474/181001941-6c95726b-f779-485f-9301-668d7e74900e.png)
 
 
 We needed to structure each problem and solution pairing so that we could use iconography here also. 
@@ -437,14 +441,14 @@ export const addPlant = async (req, res) => {
 Merge conflicts. Although we only ran into two or three, this was always on our mind and we didn’t feel completely comfortable with version control. This was a learning experience!
 
 ## Wins
-Working together as a team: keeping up to date with each other, planning well and splitting up tasks. 
-Building a full-stack application was a massive learning experience. 
-Particularly learnt the value of planning
+* Working together as a team: keeping up to date with each other, planning well and splitting up tasks. 
+* Building a full-stack application was a massive learning experience. 
+* Particularly learnt the value of planning
 
 ## Key learnings
-Group development 
-Learnt about Bootstrap modals
-Using Git for version control
+* Group development 
+* Learnt about Bootstrap modals
+* Using Git for version control
 
 ## Future improvements
 Currently users cannot edit or delete plants that they have added. This was actually completed but we ran into a merge conflict and frustratingly it got last right at the last minute. The functionality is all there on the back-end so it is an easy fix to get this going on the front-end again. 

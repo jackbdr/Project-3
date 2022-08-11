@@ -6,6 +6,8 @@ Working in a group of three, this was my first opportunity to create a full stac
 
 We created a site to share and view information about all different kinds of plants. 
 
+Check out Seeded here
+
 ### Technical requirements
 * Build a full-stack application by making your own backend and your own front-end
 * Use an Express API to serve your data from a Mongo database. Consume your API with a separate front-end built with React

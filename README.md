@@ -2,7 +2,7 @@
 
 ## Overview
 
-Working in a group of three, this was my first opportunity to create a full stack react app using Node.js, Express and MongoDB. The project was developed over a period of 9 days.
+Working in a group of three, this was my first opportunity to create a full stack react app using Node.js, Express and MongoDB. The project was developed over a week.
 
 We created a site to share and view information about all different kinds of plants. 
 

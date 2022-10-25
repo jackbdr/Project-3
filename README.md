@@ -33,9 +33,7 @@ Back-end:
 * Cloudinary
 
 
-On the back-end, I largely worked on structuring our API and models in order to effectively integrate the back-end with our React app. On the front-end, I mainly worked on the plants page, glossary page, add/edit a plant page. Also, authorisation on front-end and back-end.
-
-Please look here for a day to day breakdown of the project.
+On the back-end, I largely worked on structuring our API, models and relationships between documents in order to succinctly integrate the back-end with our React app. On the front-end, I mainly worked on the plants page, glossary page, add/edit a plant page. Also, authorisation on front-end and back-end.
  
  
 ## Planning and working together
